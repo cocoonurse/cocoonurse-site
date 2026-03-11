@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocoonurse - Maternity Nurse | Genève</title>
+    <meta name="description" content="Cocoonurse — Maternity nurse à Genève. Soins du nouveau-né, nuits, allaitement, bains thérapeutiques. Disponible 24h/7j à votre domicile dans tout le canton de Genève.">
+    <meta name="keywords" content="maternity nurse Genève, infirmière maternité Genève, puéricultrice Genève, soins nouveau-né Genève, aide nuit bébé Genève">
+    <meta property="og:title" content="Cocoonurse — Maternity Nurse à Genève">
+    <meta property="og:description" content="Accompagnement professionnel des nouveau-nés et de leurs familles à domicile, Genève.">
+    <link rel="icon" type="image/png" href="images/Cocoonurse.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Cocoonurse",
+      "description": "Puéricultrice diplômée à Genève — soins du nouveau-né, nuits, allaitement, bains thérapeutiques. Disponible 24h/7j à domicile.",
+      "url": "https://cocoonurse.ch",
+      "telephone": "+41783005417",
+      "email": "contact@cocoonurse.ch",
+      "image": "https://cocoonurse.ch/images/Cocoonurse.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Genève",
+        "addressRegion": "GE",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.2044,
+        "longitude": 6.1432
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "CHF 450 – CHF 5000",
+      "areaServed": ["Genève", "Vaud", "France voisine"]
+    }
+    </script>
+    <link rel="preload" as="image" href="images/hero-new.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              champagne: {
+                50: '#fcf9f5', 100: '#f8f1e6', 200: '#f0e0c5', 300: '#e6c99c',
+                400: '#d9a969', 500: '#d19c5a', 600: '#c2874b', 700: '#a16c3e',
+                800: '#825836', 900: '#6a4730',
+              },
+              sand: {
+                50: '#faf9f6', 100: '#f4f2ea', 200: '#e8e2d3', 300: '#d8cdb0',
+                400: '#c4b386', 500: '#b5a16d', 600: '#9f8a5a', 700: '#806e47',
+                800: '#6a5b3d', 900: '#584c34',
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-sans text-sand-900">
+<!-- Navigation -->
+<nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-lg z-50 shadow-sm transition-all duration-500">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <span class="text-2xl font-serif font-light tracking-wider text-[#d9a969]">Cocoonurse</span>
+                <img src="images/Cocoonurse.png" alt="Logo Cocoonurse" style="width:58px; height:58px; border-radius:50%; box-shadow: 0 0 0 3px rgba(230,168,184,0.3), 0 6px 18px rgba(212,137,157,0.22);">
+            </a>
+<div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-champagne-600 transition" data-i18n="navAbout">À Propos</a>
+                <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
+                <a href="#how-it-works" class="hover:text-champagne-600 transition" data-i18n="navHow">Comment ça marche</a>
+                <a href="#pricing" class="hover:text-champagne-600 transition" data-i18n="navPricing">Tarifs</a>
+<a href="#contact" class="text-white px-4 py-2 rounded-full transition" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%); box-shadow: 0 4px 14px rgba(230,168,184,0.35);" onmouseover="this.style.boxShadow='0 6px 20px rgba(230,168,184,0.5)'" onmouseout="this.style.boxShadow='0 4px 14px rgba(230,168,184,0.35)'" data-i18n="navContact">Contact</a>
+                <!-- Bouton FR/EN -->
+                <div class="flex items-center gap-2 ml-4 border-l pl-4 border-gray-300">
+                    <button onclick="setLanguage('fr')" class="lang-btn text-sm px-2 py-1 transition" data-lang="fr">FR</button>
+                    <span class="text-gray-300">|</span>
+                    <button onclick="setLanguage('en')" class="lang-btn text-sm px-2 py-1 transition" data-lang="en">EN</button>
+                </div>
+</div>
+<!-- Boutons FR/EN + Menu burger sur mobile -->
+<div class="md:hidden flex items-center gap-3">
+    <button onclick="setLanguage('fr')" class="lang-btn text-xs px-2 py-1 transition" data-lang="fr">FR</button>
+    <span class="text-gray-400">|</span>
+    <button onclick="setLanguage('en')" class="lang-btn text-xs px-2 py-1 transition" data-lang="en">EN</button>
+    <button class="focus:outline-none p-2 -mr-2 touch-manipulation" id="menu-btn" aria-label="Ouvrir le menu" style="min-width:44px; min-height:44px; display:flex; align-items:center; justify-content:center;">
+        <i data-feather="menu"></i>
+    </button>
+</div>
+        </div>
+        <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-champagne-100 px-6 py-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="hover:text-champagne-600 transition" data-i18n="navAbout">À Propos</a>
+                <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
+                <a href="#how-it-works" class="hover:text-champagne-600 transition" data-i18n="navHow">Comment ça marche</a>
+                <a href="#pricing" class="hover:text-champagne-600 transition" data-i18n="navPricing">Tarifs</a>
+<a href="#contact" class="text-white px-4 py-2 rounded-full transition text-center" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%);" data-i18n="navContact">Contact</a>
+</div>
+<p class="text-center mt-8 text-sand-700 flex items-center justify-center gap-2">
+                <i data-feather="briefcase" class="w-5 h-5"></i>
+                <span data-i18n="mobileMenuNote">Tous mes forfaits sont personnalisables selon vos besoins. Contactez-moi pour un devis sur mesure.</span>
+            </p>
+</div>
+</nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-asymmetric">
+
+        <!-- Fond radial décoratif -->
+        <div class="hero-async-bg"></div>
+
+        <!-- Particules lumineuses -->
+        <div class="hero-particle" style="top:15%;left:8%;animation-delay:0s"></div>
+        <div class="hero-particle" style="top:35%;left:42%;animation-delay:2s"></div>
+        <div class="hero-particle" style="top:60%;left:18%;animation-delay:4s"></div>
+        <div class="hero-particle" style="top:20%;right:12%;animation-delay:1.5s"></div>
+        <div class="hero-particle" style="top:55%;right:20%;animation-delay:3s"></div>
+
+        <!-- Grande image en haut à droite -->
+        <div class="hero-img-container">
+            <img src="images/hero-new.webp" alt="Alicia avec bébé" class="hero-main-img" id="hero-main-img" width="900" height="1350" loading="eager" fetchpriority="high">
+        </div>
+
+        <!-- Carte flottante glassmorphism -->
+        <div class="hero-card-float">
+
+            <h1 class="hero-card-title">Cocoonurse</h1>
+
+            <p class="hero-card-tagline" data-i18n="heroTagline">Reposez-vous. Je m'occupe de tout.</p>
+
+            <p class="hero-card-subtitle" data-i18n="heroSubtitle">Maternity Nurse | Genève</p>
+
+            <div class="hero-card-divider-line"></div>
+
+            <div class="hero-card-stats">
+                <div class="hero-card-stat">
+                    <span class="hero-card-stat-num" data-counter="11" data-suffix="+">0+</span>
+                    <span class="hero-card-stat-label"><span data-i18n="heroYears">ans</span> <span data-i18n="heroYearsLabel">d'expérience</span></span>
+                </div>
+                <div class="hero-card-sep">|</div>
+                <div class="hero-card-stat">
+                    <span class="hero-card-stat-num" data-counter="100" data-suffix="+">0+</span>
+                    <span class="hero-card-stat-label"><span data-i18n="heroFamilies">familles</span> <span data-i18n="heroFamiliesLabel">accompagnées</span></span>
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#contact" class="hero-card-cta" data-i18n="heroButton">Me Contacter</a>
+                <a href="https://wa.me/41783005417" class="hero-whatsapp" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Citation en bas pleine largeur -->
+        <div class="hero-quote-abs">
+            <p data-i18n="heroQuote">Puéricultrice diplômée, à vos côtés dans ces moments précieux.</p>
+        </div>
+
+        <!-- Flèche scroll -->
+        <div class="hero-scroll-abs">
+            <a href="#about" class="hero-scroll-lnk">
+                <i data-feather="chevron-down"></i>
+                <span data-i18n="heroDiscover">Découvrir</span>
+            </a>
+        </div>
+
+    </section>
+    <!-- About Section (fusionnée avec Parcours) -->
+    <section id="about" class="relative overflow-hidden pt-24 pb-20" style="background: linear-gradient(rgba(255,248,250,0.30), rgba(252,240,245,0.30)), url('images/ventre.jpg') center/cover fixed;">
+        <div class="absolute inset-0" style="pointer-events:none;"></div>
+        <div class="relative z-10 container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center text-champagne-700" data-i18n="aboutMainTitle">À Propos de Cocoonurse</h2>
+
+            <div class="grid md:grid-cols-5 gap-10 items-start mb-10">
+
+                <!-- Colonne gauche : photos (2/5) -->
+                <div class="md:col-span-2 flex flex-col gap-3">
+                    <img src="images/Thalasso-Bain-Bebe.jpg" alt="Bain bébé thérapeutique" class="rounded-2xl shadow-lg w-full h-72 object-cover object-center">
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="images/pied 3.jpg" alt="Soins bébé" class="rounded-xl shadow-md w-full h-40 object-cover">
+                        <img src="images/pied.jpg" alt="Soins bébé" class="rounded-xl shadow-md w-full h-40 object-cover">
+                    </div>
+                </div>
+
+                <!-- Colonne droite : texte riche (3/5) -->
+                <div class="md:col-span-3 flex flex-col gap-6">
+
+                    <!-- Bio -->
+                    <div>
+                        <p class="text-sm text-sand-800 leading-relaxed mb-3" data-i18n="aboutBioP1_html">Depuis <strong>11 ans</strong>, j'accompagne avec tendresse et professionnalisme les nouveau-nés et leurs familles dans les moments les plus précieux de leur vie. Mon approche se fonde sur une écoute attentive, une présence rassurante et une expertise qui apaise les bébés et sécurise les parents, même dans les moments de doute les plus profonds.</p>
+                        <p class="text-sm text-sand-600 leading-relaxed" data-i18n="aboutBioP2_html">Formée en <strong>France</strong>, à <strong>Genève</strong> et en <strong>Australie</strong>, j'apporte une vision internationale et humaine du soin néonatal — toujours au service de votre famille, sans jamais imposer de méthode. Je me déplace directement chez vous, à toute heure du jour et de la nuit, pour que vous puissiez vous reposer l'esprit tranquille.</p>
+                    </div>
+
+                    <!-- Parcours + Qualifications -->
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="rounded-2xl p-4 shadow-sm" style="background: rgba(255,255,255,0.82);">
+                            <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:#D4899D;" data-i18n="aboutParcoursTitle">Mon Parcours</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-xs text-sand-700"><i data-feather="check-circle" class="text-champagne-400 w-3.5 h-3.5 mt-0.5 flex-shrink-0"></i><span data-i18n="aboutP1li1_html">+5 ans — HUG : soins intensifs · néonatologie · oncologie · chirurgie · unité de développement</span></li>
+                                <li class="flex items-start gap-2 text-xs text-sand-700"><i data-feather="check-circle" class="text-champagne-400 w-3.5 h-3.5 mt-0.5 flex-shrink-0"></i><span data-i18n="aboutP1li2_html">France — structures petite enfance, familles &amp; pouponnière médico-sociale</span></li>
+                            </ul>
+                        </div>
+                        <div class="rounded-2xl p-4 shadow-sm" style="background: rgba(255,255,255,0.82);">
+                            <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:#D4899D;" data-i18n="aboutQualTitle">Qualifications</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium" style="background:rgba(230,168,184,0.18);color:#C8595E;">🎓 <span data-i18n="aboutQ1">Puéricultrice diplômée</span></span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium" style="background:rgba(230,168,184,0.18);color:#C8595E;">📜 <span data-i18n="aboutQ2">Auxiliaire de Puériculture CRS</span></span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium" style="background:rgba(230,168,184,0.18);color:#C8595E;">🤱 <span data-i18n="aboutQ3">Conseillère en allaitement certifiée</span></span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium" style="background:rgba(230,168,184,0.18);color:#C8595E;">👶 <span data-i18n="aboutQ4">Massages bébés &amp; bains thérapeutiques</span></span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium" style="background:rgba(230,168,184,0.18);color:#C8595E;">🏥 <span data-i18n="aboutQ5">Soins intensifs néonataux</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zones d'intervention -->
+                    <div class="rounded-2xl p-5 shadow-sm" style="background: rgba(255,255,255,0.82); border: 1px solid rgba(230,168,184,0.25);">
+                        <p class="text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2" style="color:#D4899D;">
+                            <i data-feather="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="aboutZonesTitle">Zones d'intervention — Je me déplace à votre domicile</span>
+                        </p>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="text-center rounded-xl py-3 px-2" style="background: linear-gradient(135deg, rgba(230,168,184,0.2), rgba(212,137,157,0.15));">
+                                <div class="text-lg mb-1">📍</div>
+                                <p class="text-xs font-bold text-sand-800" data-i18n="aboutZone1">Canton de Genève</p>
+                                <p class="text-xs font-semibold mt-1" style="color:#D4899D;" data-i18n="aboutZone1inc">Inclus</p>
+                            </div>
+                            <div class="text-center rounded-xl py-3 px-2" style="background: rgba(250,245,238,0.8);">
+                                <div class="text-lg mb-1">🗺️</div>
+                                <p class="text-xs font-bold text-sand-800" data-i18n="aboutZone2">Vaud (proche GE)</p>
+                                <p class="text-xs font-semibold mt-1 text-sand-600">+50 CHF</p>
+                            </div>
+                            <div class="text-center rounded-xl py-3 px-2" style="background: rgba(250,245,238,0.8);">
+                                <div class="text-lg mb-1">🇫🇷</div>
+                                <p class="text-xs font-bold text-sand-800" data-i18n="aboutZone3">France voisine</p>
+                                <p class="text-xs font-semibold mt-1 text-sand-600">+80 CHF</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Philosophie -->
+            <div class="rounded-2xl p-7" style="background: rgba(255,255,255,0.82); border: 1px solid rgba(230,168,184,0.2);">
+                <p class="text-base text-sand-800 leading-relaxed italic text-center" data-i18n="aboutPhilosophyQuote">"Je crois profondément que chaque famille mérite un accompagnement respectueux de ses valeurs, de son rythme et de ses choix. Mon rôle n'est pas d'imposer une méthode, mais de vous guider, vous soutenir et vous transmettre les outils pour gagner en confiance et en sérénité."</p>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 relative overflow-hidden" style="background: linear-gradient(rgba(255,245,247,0.72), rgba(255,245,247,0.72)), url('images/Thalasso-Bain-Bebe.jpg') center/cover fixed;">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-3xl font-serif font-bold mb-16 text-center text-champagne-700" data-i18n="servicesTitle">Mes Services</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- SERVICE 1 — Soins Quotidiens -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="droplet" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard1Title">Soins Quotidiens du Nouveau-Né</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard1P1">Chaque geste compte dans les premiers mois de vie. Je prends soin de votre bébé avec une douceur infinie et une attention méticuleuse à chaque détail. De l'alimentation aux changes, du bain quotidien aux soins du cordon ombilical, je veille à ce que votre nouveau-né reçoive les meilleurs soins possibles dans un environnement apaisant et sécurisant.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard1P2">Mon expérience en néonatologie me permet d'identifier rapidement les besoins spécifiques de votre bébé et d'adapter mes soins en conséquence. Je ne me contente pas d'exécuter des tâches : je crée une routine personnalisée qui respecte le rythme naturel de votre enfant.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Alimentation adaptée :</strong> allaitement maternel, biberon, diversification — je m'adapte à vos choix et vous guide pour une alimentation sereine et efficace</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Soins de peau et hygiène :</strong> bain quotidien thérapeutique, changes doux, soins du cordon, prévention érythème fessier avec produits naturels</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Surveillance médicale continue :</strong> température, respiration, coloration, éliminations — je détecte le moindre signe nécessitant une attention particulière</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Soins du visage et des yeux :</strong> nettoyage délicat, prévention des croûtes de lait</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Soins du nez et des oreilles</strong> avec douceur et précision</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SERVICE 2 — Nuit & Jour -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="moon" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard2Title">Accompagnement Nuit & Jour</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard2P1">Le sommeil est l'une des plus grandes préoccupations des jeunes parents. Je vous aide à établir des routines de sommeil saines dès les premières semaines, tout en prenant en charge intégralement les soins nocturnes pour vous permettre de récupérer.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard2P2">Mes interventions nocturnes sont discrètes et efficaces : je m'occupe des réveils, des changes, des biberons, tout en créant progressivement les conditions d'un sommeil de meilleure qualité pour votre bébé. Vous vous réveillez reposés, pendant que votre nouveau-né a reçu tous les soins nécessaires dans le calme de la nuit.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Stratégies d'endormissement personnalisées :</strong> techniques douces adaptées au tempérament de votre bébé, rituels apaisants, environnement optimal</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Gestion experte des réveils nocturnes :</strong> changes discrets, biberons ou mise au sein, bercement, identification des causes de réveil</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Soins nocturnes en toute discrétion :</strong> je veille sur votre bébé sans perturber votre sommeil, gestion des pleurs, surveillance continue</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Routines jour/nuit progressives :</strong> aide à la distinction, exposition lumineuse adaptée, rythme progressif</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Formation des parents :</strong> je vous transmets mes techniques pour que vous gagniez en autonomie et en confiance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SERVICE 3 — Éveil & Développement -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="sun" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard3Title">Éveil & Développement</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard3P1">Les premiers mois sont cruciaux pour le développement cognitif, moteur et sensoriel de votre bébé. Je propose des activités d'éveil adaptées à chaque étape de son développement, dans le respect de son rythme et de ses capacités.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard3P2">Du tummy time aux jeux sensoriels, des comptines aux massages stimulants, chaque interaction est pensée pour favoriser son épanouissement tout en renforçant le lien d'attachement. Je ne me contente pas de garder votre bébé : je l'accompagne activement dans sa découverte du monde.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Éveil sensoriel adapté :</strong> stimulation visuelle, tactile, auditive selon l'âge, jouets et objets adaptés au développement</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Jeux éducatifs et interactions :</strong> comptines, lectures, jeux de mains, découverte des textures, éveil musical</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Suivi des étapes clés :</strong> sourire social, préhension, retournements, babillage — je vous guide sur les acquisitions normales</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Tummy time et motricité :</strong> renforcement musculaire progressif, prévention de la plagiocéphalie, accompagnement moteur</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Temps de qualité :</strong> je ne laisse jamais un bébé sans stimulation adaptée et bienveillante</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SERVICE 4 — Soutien Parental -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="users" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard4Title">Soutien & Accompagnement des Parents</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard4P1">Devenir parent est une aventure merveilleuse mais parfois déstabilisante. Je suis là non seulement pour votre bébé, mais aussi pour vous. Mon rôle est de vous transmettre confiance, outils et savoir-faire pour que vous trouviez votre propre style parental.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard4P2">Je réponds à toutes vos questions sans jugement, je vous rassure dans vos moments de doute, et je vous apprends les gestes essentiels pour gagner en autonomie. Mon accompagnement est bienveillant, respectueux de vos choix, et toujours orienté vers votre bien-être familial.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Conseils en allaitement certifiés :</strong> positions optimales, résolution des difficultés (crevasses, engorgement, frein), accompagnement au sevrage si souhaité</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Gestion du stress et du baby-blues :</strong> écoute empathique, conseils pratiques, orientation vers professionnels si nécessaire</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Environnement sécurisant :</strong> aménagement optimal de la chambre, sécurité domestique, prévention accidents</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Décryptage des pleurs :</strong> réponses adaptées, prévention du syndrome du bébé secoué</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Transmission de compétences :</strong> je vous apprends bain, change, portage, massage pour que vous deveniez autonomes et confiants</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span><strong class="text-sand-800">Soutien au co-parent :</strong> implication équilibrée, partage des tâches, dynamique familiale harmonieuse</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Comment ça marche -->
+    <section id="how-it-works" class="py-24 relative overflow-hidden" style="background: url('images/bebe-se-couvre-visage-en-dormant.jpg') center/cover no-repeat;">
+        <!-- Voile doux par-dessus l'image -->
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(255,240,245,0.68) 0%, rgba(255,248,250,0.65) 50%, rgba(255,235,242,0.68) 100%);"></div>
+
+        <div class="relative z-10 container mx-auto max-w-4xl px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-3 text-champagne-700" data-i18n="howTitle">Comment Ça Marche ?</h2>
+            <p class="text-center text-sand-600 text-sm mb-14" data-i18n="howSubtitle">Du premier contact jusqu'à votre sérénité retrouvée — un processus simple et bienveillant.</p>
+
+            <div class="flex flex-col md:flex-row items-stretch justify-center gap-4 mx-auto" style="max-width: 1100px;">
+
+                <!-- Étape 1 -->
+                <div class="text-center rounded-2xl flex-1" style="padding: 40px 25px; min-height: 280px; display:flex; flex-direction:column; align-items:center; justify-content:center; background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); border: 1px solid rgba(230,168,184,0.2); box-shadow: 0 8px 30px rgba(230,168,184,0.12);">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: linear-gradient(135deg, #F2D4DC, #E6A8B8);">
+                        <span class="text-xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="font-semibold text-champagne-700 mb-3 text-base" data-i18n="howStep1Title">Contact</h3>
+                    <p class="text-sm text-sand-600 leading-relaxed" data-i18n="howStep1Desc">Appelez-moi ou écrivez sur WhatsApp. Je réponds sous 2h.</p>
+                </div>
+
+                <!-- Flèche -->
+                <div class="hidden md:flex items-center justify-center flex-shrink-0" style="color:#E6A8B8; font-size:28px;">→</div>
+
+                <!-- Étape 2 -->
+                <div class="text-center rounded-2xl flex-1" style="padding: 40px 25px; min-height: 280px; display:flex; flex-direction:column; align-items:center; justify-content:center; background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); border: 1px solid rgba(230,168,184,0.2); box-shadow: 0 8px 30px rgba(230,168,184,0.12);">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);">
+                        <span class="text-xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="font-semibold text-champagne-700 mb-3 text-base" data-i18n="howStep2Title">Entretien</h3>
+                    <p class="text-sm text-sand-600 leading-relaxed" data-i18n="howStep2Desc">Discussion gratuite à domicile pour comprendre vos besoins et créer un plan sur-mesure.</p>
+                </div>
+
+                <!-- Flèche -->
+                <div class="hidden md:flex items-center justify-center flex-shrink-0" style="color:#E6A8B8; font-size:28px;">→</div>
+
+                <!-- Étape 3 -->
+                <div class="text-center rounded-2xl flex-1" style="padding: 40px 25px; min-height: 280px; display:flex; flex-direction:column; align-items:center; justify-content:center; background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); border: 1px solid rgba(230,168,184,0.2); box-shadow: 0 8px 30px rgba(230,168,184,0.12);">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: linear-gradient(135deg, #D4899D, #C8959E);">
+                        <span class="text-xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="font-semibold text-champagne-700 mb-3 text-base" data-i18n="howStep3Title">Mission</h3>
+                    <p class="text-sm text-sand-600 leading-relaxed" data-i18n="howStep3Desc">J'interviens à la date convenue, de jour ou de nuit selon vos besoins.</p>
+                </div>
+
+                <!-- Flèche -->
+                <div class="hidden md:flex items-center justify-center flex-shrink-0" style="color:#E6A8B8; font-size:28px;">→</div>
+
+                <!-- Étape 4 -->
+                <div class="text-center rounded-2xl flex-1" style="padding: 40px 25px; min-height: 280px; display:flex; flex-direction:column; align-items:center; justify-content:center; background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); border: 1px solid rgba(230,168,184,0.2); box-shadow: 0 8px 30px rgba(230,168,184,0.12);">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: linear-gradient(135deg, #C8959E, #B8798C);">
+                        <span class="text-xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="font-semibold text-champagne-700 mb-3 text-base" data-i18n="howStep4Title">Sérénité</h3>
+                    <p class="text-sm text-sand-600 leading-relaxed" data-i18n="howStep4Desc">Vous retrouvez sommeil, confiance et joie de vivre ces précieux moments.</p>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <a href="https://wa.me/41783005417" target="_blank" class="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-medium text-sm" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%); box-shadow: 0 6px 20px rgba(230,168,184,0.4);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span data-i18n="howCta">Commencer — Réponse sous 2h</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 relative overflow-hidden" style="background: linear-gradient(rgba(255,240,245,0.72), rgba(255,240,245,0.72)), url('images/ik-naitre-grandir-bebe-2-mois-motricite-fine.jpg') center/cover fixed;">
+        <div class="absolute inset-0" style="pointer-events:none;"></div>
+        <div class="relative z-10 container mx-auto max-w-6xl px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-3 text-champagne-700" data-i18n="pricMainTitle">Tarifs Transparents</h2>
+            <p class="text-center text-sand-600 text-sm mb-14" data-i18n="pricSubtitle">Investissez dans votre sérénité</p>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <!-- Nuit Découverte -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pric1Title">Nuit Découverte</h3>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">450 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pric1Desc">Une nuit (20h – 8h)</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pric1Context">Idéal après la maternité ou pour une nuit de récupération ponctuelle.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric1li1">12h de surveillance</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric1li2">Tous soins bébé</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric1li3">Parents dorment</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric1li4">Sans engagement</span></li>
+                    </ul>
+                    <a href="https://wa.me/41783005417" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Pack Retour Maison -->
+                <div class="rounded-2xl p-6 shadow-xl flex flex-col relative" style="border: 2px solid #D4899D; background: linear-gradient(160deg, #FFF0F5 0%, #ffffff 100%); transform: scale(1.03);">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 text-white px-5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-md" style="background: linear-gradient(135deg, #D4899D, #C8595E); letter-spacing: 0.05em;" data-i18n="pricBadge">⭐ LE + DEMANDÉ</div>
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-2 mt-3" data-i18n="pric2Title">Pack Retour Maison</h3>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">2 100 CHF</div>
+                    <p class="text-sm line-through text-sand-400">2 400 CHF</p>
+                    <p class="text-sm font-semibold mb-2" style="color: #7BC8A4;" data-i18n="pric2Save">Économie 300 CHF</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pric2Context">La formule préférée des familles pour une transition sereine à domicile.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric2li1">3 jours (10h – 20h)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric2li2">3 nuits (20h – 8h)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric2li3">Formation complète</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric2li4">Suivi WhatsApp 2 sem.</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric2li5">Guide personnalisé</span></li>
+                    </ul>
+                    <a href="https://wa.me/41783005417" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #D4899D, #C8959E);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Semaine Sérénité -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pric3Title">Semaine Sérénité</h3>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">2 800 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pric3Desc">7 nuits (–10%)</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pric3Context">Pour s'offrir une semaine complète de sérénité et de soutien professionnel.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric3li1">7 nuits complètes</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric3li2">Formation soins</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric3li3">Conseils allaitement</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric3li4">Routines sommeil</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric3li5">Paiement fin de semaine</span></li>
+                    </ul>
+                    <a href="https://wa.me/41783005417" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Sur-Mesure -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pric4Title">Sur-Mesure</h3>
+                    <div class="text-3xl font-bold mb-2" style="color: #D4899D;" data-i18n="pric4Amount">Devis</div>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pric4Context">Pour les familles souhaitant un accompagnement complet sur la durée — jumeaux, prématurés ou grande disponibilité.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric4li1">2 à 4 semaines</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric4li2">Jours + nuits</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric4li3">Jumeaux / prématurés</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric4li4">Tarif dégressif</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pric4li5">Paiement / semaine</span></li>
+                    </ul>
+                    <a href="https://wa.me/41783005417" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pric4Book">Devis gratuit</a>
+                </div>
+
+            </div>
+
+            <!-- Infos paiement & zone -->
+            <div class="mt-10 text-center text-sm text-sand-600 space-y-2">
+                <div class="flex items-center justify-center gap-3 flex-wrap">
+                    <img src="images/twint-official.svg" alt="Twint" width="60" style="height:auto; vertical-align:middle;">
+                    <span class="text-sand-500">•</span>
+                    <span data-i18n="pricPaymentBank">Virement bancaire</span>
+                    <span class="text-sand-500">•</span>
+                    <span data-i18n="pricPaymentCash">Espèces</span>
+                </div>
+                <p data-i18n="pricZones_html">📍 <strong>Genève inclus</strong> &nbsp;|&nbsp; Vaud (proche) +50 CHF &nbsp;|&nbsp; France voisine +80 CHF</p>
+            </div>
+        </div>
+    </section>
+<!-- Stats Section -->
+    <section class="py-24 relative overflow-hidden" style="background: linear-gradient(rgba(242,212,220,0.70), rgba(212,137,157,0.70)), url('images/pied.jpg') center/cover fixed;">
+<div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-5xl font-bold mb-2" data-counter="100" data-suffix="+">0+</div>
+                    <div class="text-sm uppercase tracking-wider">Familles accompagnées</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2" data-counter="24">0</div>
+                    <div class="text-sm uppercase tracking-wider" data-i18n="stat2">Heures sur 24</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2" data-counter="7">0</div>
+                    <div class="text-sm uppercase tracking-wider" data-i18n="stat3">Jours sur 7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Me Section -->
+    <section class="py-20 px-6 relative overflow-hidden" style="background: linear-gradient(rgba(254,253,248,0.72), rgba(250,245,238,0.72)), url('images/Bebe_Massage.webp') center/cover fixed;">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-3xl font-serif font-bold mb-14 text-center text-champagne-700" data-i18n="whyMainTitle">Un Accompagnement Sur-Mesure Pour Votre Bébé et Vous</h2>
+
+            <!-- Bloc Allaitement -->
+            <div class="why-block flex flex-col md:flex-row gap-8 items-start mb-12 bg-white rounded-2xl p-8 shadow-sm border border-champagne-100">
+                <div class="flex-shrink-0 flex flex-col items-center gap-2 md:w-20">
+                    <div class="bg-champagne-100 p-4 rounded-full">
+                        <i data-feather="heart" class="text-champagne-600 w-7 h-7"></i>
+                    </div>
+                    <span class="text-xs text-champagne-500 font-semibold uppercase tracking-wider text-center">Allaitement</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-4" data-i18n="whyAllaitTitle">Conseillère en Allaitement Certifiée</h3>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="whyAllaitP1">L'allaitement, c'est naturel... mais pas toujours évident. En tant que conseillère en allaitement formée et certifiée, je connais intimement les défis que vous pouvez rencontrer : la fatigue écrasante des premières semaines, les douleurs qui peuvent décourager, les questionnements incessants sur la quantité de lait, la bonne position, la fréquence des tétées.</p>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="whyAllaitP2">Je suis là pour vous écouter sans jugement, identifier précisément la source de vos difficultés — qu'il s'agisse de la position du bébé, de problèmes de succion, d'un frein de langue restrictif, ou simplement d'un besoin de réassurance. Mon objectif ? Que l'allaitement devienne un moment de douceur et de connexion, et non une source de stress ou de culpabilité.</p>
+                    <p class="text-sm text-sand-700 italic leading-relaxed" data-i18n="whyAllaitP3_html">Si vous choisissez le biberon, je vous accompagne également avec le même respect et la même expertise. <strong>Votre choix est le bon choix.</strong></p>
+                </div>
+            </div>
+
+            <!-- Bloc Bains Thérapeutiques -->
+            <div class="why-block flex flex-col md:flex-row gap-8 items-start mb-12 bg-white rounded-2xl p-8 shadow-sm border border-champagne-100">
+                <div class="flex-shrink-0 flex flex-col items-center gap-2 md:w-20">
+                    <div class="bg-champagne-100 p-4 rounded-full">
+                        <i data-feather="droplet" class="text-champagne-600 w-7 h-7"></i>
+                    </div>
+                    <span class="text-xs text-champagne-500 font-semibold uppercase tracking-wider text-center">Bains</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-4" data-i18n="whyBainsTitle">Bains Thérapeutiques Sensoriels</h3>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="whyBainsP1">Au-delà de la simple hygiène, les bains thérapeutiques que je pratique sont de véritables soins sensoriels qui transforment ce moment quotidien en expérience apaisante profonde pour votre nouveau-né.</p>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="whyBainsP2">L'eau chaude à température parfaite, les mouvements fluides et enveloppants, la lumière tamisée, les gestes doux et rythmés... tout est pensé pour recréer l'environnement rassurant du ventre maternel. Ces bains apaisent les pleurs même les plus intenses, régulent le sommeil, facilitent la digestion et aident votre bébé à s'adapter en douceur à son nouvel environnement.</p>
+                    <p class="text-sm text-sand-700 italic leading-relaxed" data-i18n="whyBainsP3_html">Je ne fais pas qu'un bain : je crée un rituel de bien-être que vous pourrez reproduire et qui deviendra un <strong>moment privilégié entre vous et votre enfant.</strong></p>
+                </div>
+            </div>
+
+            <!-- Bloc Massages -->
+            <div class="why-block flex flex-col md:flex-row gap-8 items-start mb-14 bg-white rounded-2xl p-8 shadow-sm border border-champagne-100">
+                <div class="flex-shrink-0 flex flex-col items-center gap-2 md:w-20">
+                    <div class="bg-champagne-100 p-4 rounded-full">
+                        <i data-feather="activity" class="text-champagne-600 w-7 h-7"></i>
+                    </div>
+                    <span class="text-xs text-champagne-500 font-semibold uppercase tracking-wider text-center">Massages</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-champagne-700 mb-4" data-i18n="whyMassageTitle">Massages Bébé Traditionnels</h3>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="whyMassageP1">Le massage bébé est un art ancestral aux bienfaits scientifiquement prouvés. Formée aux techniques traditionnelles et modernes, je pratique des massages qui soulagent les maux de ventre et coliques, favorisent une digestion harmonieuse, renforcent le système immunitaire, améliorent la qualité du sommeil et créent un lien d'attachement unique.</p>
+                    <p class="text-sm text-sand-700 italic leading-relaxed" data-i18n="whyMassageP2_html">Mais plus encore, <strong>je vous apprends ces gestes sacrés.</strong> Je vous transmets les techniques pour que vous puissiez les reproduire vous-même, transformant chaque moment de soin en instant de connexion pure avec votre enfant. Vos mains deviendront source de réconfort et d'amour.</p>
+                </div>
+            </div>
+
+            <!-- 3 valeurs -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-champagne-100 text-center">
+                    <div class="bg-champagne-100 p-4 rounded-full w-fit mx-auto mb-4">
+                        <i data-feather="shield" class="w-8 h-8 text-champagne-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-champagne-700" data-i18n="whyVal1Title">Sécurité</h3>
+                    <p class="text-sm text-sand-700 leading-relaxed" data-i18n="whyVal1Text">Formation médicale approfondie et expérience en soins intensifs pour une prise en charge sécurisée de votre nouveau-né, même fragile ou prématuré</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-champagne-100 text-center">
+                    <div class="bg-champagne-100 p-4 rounded-full w-fit mx-auto mb-4">
+                        <i data-feather="heart" class="w-8 h-8 text-champagne-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-champagne-700" data-i18n="whyVal2Title">Empathie</h3>
+                    <p class="text-sm text-sand-700 leading-relaxed" data-i18n="whyVal2Text">Approche bienveillante, écoute active et respectueuse de chaque famille, de vos choix parentaux et de votre rythme unique</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-champagne-100 text-center">
+                    <div class="bg-champagne-100 p-4 rounded-full w-fit mx-auto mb-4">
+                        <i data-feather="clock" class="w-8 h-8 text-champagne-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-champagne-700" data-i18n="whyVal3Title">Disponibilité 24/7</h3>
+                    <p class="text-sm text-sand-700 leading-relaxed" data-i18n="whyVal3Text">Flexibilité totale pour m'adapter à vos besoins spécifiques, interventions d'urgence possibles, présence rassurante quand vous en avez besoin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="py-16 relative overflow-hidden" style="background: linear-gradient(rgba(245,241,232,0.72), rgba(245,241,232,0.72)), url('images/flou.jpeg') center/cover fixed;">
+<div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center text-champagne-700" data-i18n="galleryTitle">Moments de Soin</h2>
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="images/pied2.webp" alt="Soins" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="275" height="183" loading="lazy">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/ik-naitre-grandir.webp" alt="Bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="819" height="482" loading="lazy">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/ventre.webp" alt="Maternité" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="323" height="156" loading="lazy">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/Bebe_Massage.webp" alt="Massage bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/bebe-se-couvre-visage-en-dormant.webp" alt="Bébé dormant" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1017" height="679" loading="lazy">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/difrax-lovi-mammafeel-biberon-bebe-opt.webp" alt="Soins de bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/359-mouvements-foetus.webp" alt="Développement du bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/dents-de-bebe-poussee-dentaire-scaled.webp" alt="Bébé et poussée dentaire" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/bebe-joue-voiture-bois.webp" alt="Bébé qui joue" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1024" height="1024" loading="lazy">
+                </div>
+</div>
+</div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="relative" style="background: #FAE8EF;">
+        <div class="flex flex-col md:flex-row">
+
+            <!-- Colonne formulaire — moitié gauche -->
+            <div class="w-full md:w-1/2 py-10 md:py-16 px-6 md:pl-10 md:pr-8">
+                <h2 class="text-3xl font-serif font-bold mb-10 text-champagne-700" data-i18n="contactTitle">Contact</h2>
+                <form id="contact-form" class="space-y-5" action="https://formspree.io/contact@cocoonurse.ch" method="POST">
+                    <input type="hidden" name="_replyto" value="">
+                    <input type="hidden" name="_subject" value="Nouvelle demande via Cocoonurse.ch">
+                    <div>
+                        <label for="name" class="block mb-1 font-medium" data-i18n="contactName">Nom</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-1 font-medium" data-i18n="contactEmail">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-1 font-medium" data-i18n="contactPhone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="address" class="block mb-1 font-medium" data-i18n="contactAddress">Adresse</label>
+                        <input type="text" id="address" name="address" class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent" placeholder="Rue, code postal, ville">
+                    </div>
+                    <div>
+                        <label for="birthdate" class="block mb-1 font-medium" data-i18n="contactBirthdate">Date de naissance prévue du bébé</label>
+                        <input type="date" id="birthdate" name="birthdate" class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="babies" class="block mb-1 font-medium" data-i18n="contactBabies">Nombre de bébés</label>
+                        <select id="babies" name="babies" class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent">
+                            <option value="" data-i18n="contactBabiesPlaceholder">— Sélectionner —</option>
+                            <option value="1" data-i18n="contactBaby1">1 bébé</option>
+                            <option value="2" data-i18n="contactBaby2">2 bébés (jumeaux)</option>
+                            <option value="3" data-i18n="contactBaby3">3 bébés (triplés)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="needs" class="block mb-1 font-medium" data-i18n="contactNeeds">Vos Besoins</label>
+                        <textarea id="needs" name="needs" rows="4" required class="w-full px-4 py-2 border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne-500 focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="text-white font-medium px-6 py-3 rounded-full shadow-md transition w-full" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="contactButton">Envoyer</button>
+                </form>
+            </div>
+
+            <!-- Colonne coordonnées + logo — moitié droite -->
+            <div class="w-full md:w-1/2 py-10 md:py-16 px-6 md:px-12 flex flex-col">
+                <h3 class="text-xl font-semibold mb-4" style="color:#D4899D;" data-i18n="contactInfoTitle">Coordonnées</h3>
+                <p class="mb-6 text-sand-700 text-sm" data-i18n="contactInfoText">Disponible dans tout le canton de Genève, à votre domicile ou en établissement.</p>
+                <div class="space-y-4 text-sand-800">
+                    <div class="flex items-center gap-3">
+                        <i data-feather="mail" class="w-5 h-5 flex-shrink-0" style="color:#D4899D;"></i>
+                        <a href="mailto:contact@cocoonurse.ch" class="hover:text-champagne-600 transition text-sm">contact@cocoonurse.ch</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <a href="https://wa.me/41783005417" target="_blank" class="hover:text-champagne-600 transition font-medium text-sm">+41 78 300 54 17</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-feather="map-pin" class="w-5 h-5 flex-shrink-0" style="color:#D4899D;"></i>
+                        <span class="text-sm" data-i18n="contactLocation">Genève, Suisse</span>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="font-medium mb-2" style="color:#D4899D;" data-i18n="contactAvailTitle">Disponibilités</h4>
+                    <p class="text-sm text-sand-700" data-i18n="contactAvailText">Du lundi au dimanche, de jour comme de nuit, selon vos besoins.</p>
+                </div>
+                <!-- Logo juste sous les disponibilités -->
+                <div id="contact-logo-wrap" class="mt-6">
+                    <img id="contact-logo-img" src="images/Cocoonurse-trim.webp" alt="Logo Cocoonurse" style="width:160px; height:auto; object-fit:contain; mix-blend-mode:multiply; display:block;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-champagne-800 text-champagne-100 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+    <h3 class="text-2xl font-serif font-light tracking-wider mb-2">Cocoonurse</h3>
+    <p class="text-champagne-300" data-i18n="footerSubtitle">Maternity Nurse | Genève</p>
+</div>
+                <div class="flex space-x-6 items-center">
+                    <a href="#about" class="hover:text-white transition" data-i18n="navAbout">À Propos</a>
+                    <a href="#services" class="hover:text-white transition" data-i18n="navServices">Services</a>
+                    <a href="#pricing" class="hover:text-white transition" data-i18n="navPricing">Tarifs</a>
+                    <a href="#contact" class="hover:text-white transition" data-translate="contact">Contact</a>
+                    <a href="https://www.instagram.com/cocoonurse" target="_blank" class="hover:text-white transition flex items-center gap-1.5" aria-label="Instagram Cocoonurse">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="border-t border-champagne-700 mt-6 pt-6 text-center text-champagne-400 space-y-2">
+                <p data-i18n="footerCopyright">© 2026 Cocoonurse — Tous droits réservés</p>
+                <p class="text-xs">
+                    <button onclick="document.getElementById('mentions-modal').classList.remove('hidden')" class="underline hover:text-champagne-200 transition" data-i18n="mentionsLink">Mentions légales & Politique de confidentialité</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4">
+        <button class="absolute top-4 right-4 text-white text-4xl" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" class="max-h-full max-w-full" src="" alt="">
+    </div>
+    <button id="back-to-top" aria-label="Retour en haut de page" class="fixed top-6 right-6 w-14 h-14 rounded-full bg-champagne-500 bg-opacity-80 hover:bg-opacity-100 shadow-md flex items-center justify-center text-white transition-all duration-300 opacity-0 invisible">
+        <i data-feather="arrow-up" class="w-6 h-6"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/contact-modal.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <contact-modal></contact-modal>
+<script>
+feather.replace();
+        
+        // Lightbox functions
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = element.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+    </script>
+<!-- Modal Mentions Légales -->
+<div id="mentions-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(0,0,0,0.6);">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-8 relative">
+        <button onclick="document.getElementById('mentions-modal').classList.add('hidden')" class="absolute top-4 right-4 text-sand-400 hover:text-sand-700 text-2xl font-light">&times;</button>
+        <h2 class="text-xl font-serif font-semibold mb-6" style="color:#D4899D;" data-i18n="mentionsTitle">Mentions légales & Confidentialité</h2>
+
+        <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsResp">Responsable du site</h3>
+        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsRespText">Alicia Carli — Cocoonurse | Genève, Suisse | contact@cocoonurse.ch</p>
+
+        <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsHost">Hébergement</h3>
+        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsHostText">Vercel Inc. — vercel.com | Nom de domaine : Infomaniak Network SA, Genève</p>
+
+        <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsData">Protection des données (LPD)</h3>
+        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsDataText">Conformément à la Loi fédérale suisse sur la protection des données (LPD), les informations transmises via le formulaire de contact (nom, email, téléphone, message) sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni transmises à des tiers.</p>
+
+        <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsCookies">Cookies</h3>
+        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsCookiesText">Ce site n'utilise aucun cookie de suivi ni outil d'analyse. La préférence de langue est enregistrée localement dans votre navigateur (localStorage).</p>
+
+        <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsRights">Droits</h3>
+        <p class="text-sm text-sand-600" data-i18n="mentionsRights_html">Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <a href="mailto:contact@cocoonurse.ch" class="underline" style="color:#D4899D;">contact@cocoonurse.ch</a></p>
+    </div>
+</div>
+</body>
+</html>
