@@ -6,6 +6,7 @@
     <title>Cocoonurse - Maternity Nurse | Genève</title>
     <meta name="description" content="Cocoonurse — Maternity nurse à Genève. Soins du nouveau-né, nuits, allaitement, bains thérapeutiques. Disponible 24h/7j à votre domicile dans tout le canton de Genève.">
     <meta name="keywords" content="maternity nurse Genève, infirmière maternité Genève, puéricultrice Genève, soins nouveau-né Genève, aide nuit bébé Genève">
+    <link rel="canonical" href="https://cocoonurse.ch/">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW32JDH6J6"></script>
     <script>
@@ -38,14 +39,48 @@
         "latitude": 46.2044,
         "longitude": 6.1432
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
       "priceRange": "CHF 300 – CHF 5000",
-      "areaServed": ["Genève", "Vaud", "France voisine"]
+      "areaServed": ["Genève", "Vaud", "France voisine"],
+      "sameAs": [
+        "https://www.instagram.com/cocoonurse"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Alicia Carli",
+        "jobTitle": "Puéricultrice diplômée",
+        "hasCredential": [
+          "Puéricultrice diplômée",
+          "Auxiliaire de Puériculture CRS",
+          "Conseillère en allaitement certifiée"
+        ]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Formules Cocoonurse",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Nuit Découverte",
+            "price": "300",
+            "priceCurrency": "CHF",
+            "description": "Une nuit de 12h (20h-8h) de surveillance et soins bébé."
+          },
+          {
+            "@type": "Offer",
+            "name": "Pack Retour Maison",
+            "price": "1600",
+            "priceCurrency": "CHF",
+            "description": "3 jours et 3 nuits avec formation complète et suivi WhatsApp."
+          },
+          {
+            "@type": "Offer",
+            "name": "Semaine Sérénité",
+            "price": "1900",
+            "priceCurrency": "CHF",
+            "description": "7 nuits complètes avec formation soins et conseils allaitement."
+          }
+        ]
+      }
     }
     </script>
     <link rel="preload" as="image" href="images/hero-new.webp" type="image/webp">
@@ -89,6 +124,7 @@
                 <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
                 <a href="#how-it-works" class="hover:text-champagne-600 transition" data-i18n="navHow">Comment ça marche</a>
                 <a href="#pricing" class="hover:text-champagne-600 transition" data-i18n="navPricing">Tarifs</a>
+                <a href="#faq" class="hover:text-champagne-600 transition" data-i18n="faqTitle">FAQ</a>
 <a href="#contact" class="text-white px-4 py-2 rounded-full transition" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%); box-shadow: 0 4px 14px rgba(230,168,184,0.35);" onmouseover="this.style.boxShadow='0 6px 20px rgba(230,168,184,0.5)'" onmouseout="this.style.boxShadow='0 4px 14px rgba(230,168,184,0.35)'" data-i18n="navContact">Contact</a>
                 <!-- Bouton FR/EN -->
                 <div class="flex items-center gap-2 ml-4 border-l pl-4 border-gray-300">
@@ -114,6 +150,7 @@
                 <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
                 <a href="#how-it-works" class="hover:text-champagne-600 transition" data-i18n="navHow">Comment ça marche</a>
                 <a href="#pricing" class="hover:text-champagne-600 transition" data-i18n="navPricing">Tarifs</a>
+                <a href="#faq" class="hover:text-champagne-600 transition" data-i18n="faqTitle">FAQ</a>
 <a href="#contact" class="text-white px-4 py-2 rounded-full transition text-center" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%);" data-i18n="navContact">Contact</a>
 </div>
 <p class="text-center mt-8 text-sand-700 flex items-center justify-center gap-2">
@@ -143,11 +180,9 @@
         <!-- Carte flottante glassmorphism -->
         <div class="hero-card-float">
 
-            <h1 class="hero-card-title">Cocoonurse</h1>
+            <h1 class="hero-card-title">Cocoonurse<span class="hero-card-subtitle" style="display:block;" data-i18n="heroSubtitle">Maternity Nurse &amp; Garde de Nuit Bébé | Genève</span></h1>
 
             <p class="hero-card-tagline" data-i18n="heroTagline">Reposez-vous. Je m'occupe de tout.</p>
-
-            <p class="hero-card-subtitle" data-i18n="heroSubtitle">Maternity Nurse | Genève</p>
 
             <div class="hero-card-divider-line"></div>
 
@@ -706,6 +741,43 @@
                 </div>
 </div>
 </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-6 relative overflow-hidden" style="background: #FFF8F5;">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-4 text-champagne-700" data-i18n="faqTitle">FAQ</h2>
+            <p class="text-center text-sand-600 text-sm mb-14" data-i18n="faqSubtitle">Vos questions, mes réponses</p>
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq1Q">Quand engager une infirmière de maternité ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq1A">Idéalement pendant la grossesse pour préparer l'arrivée du bébé, ou immédiatement après la naissance pour un soutien complet.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq6Q">Combien coûte une garde de nuit à Genève ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq6A">La Nuit Découverte (12h, 20h–8h) est à 300 CHF. Des forfaits dégressifs existent pour plusieurs nuits ou une semaine complète — voir la section Tarifs ci-dessus.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq2Q">Quelle est la durée typique d'intervention ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq2A">Varie selon les besoins: de quelques jours à plusieurs semaines, souvent 2-4 semaines pour établir de bonnes routines.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq3Q">Prenez-vous en charge les bébés prématurés ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq3A">Oui, mon expérience néonatale me permet de prendre en charge spécifiquement les bébés prématurés ou ayant des besoins particuliers.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq4Q">Quelle est votre disponibilité ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq4A">Je m'adapte à vos besoins : jours, nuits ou 24/7 selon la période, avec un planning établi à l'avance.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq7Q">Que se passe-t-il en cas d'imprévu ou d'indisponibilité ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq7A">En tant qu'indépendante, je vous préviens immédiatement en cas d'imprévu afin de trouver ensemble la meilleure solution pour votre famille.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq5Q">Proposez-vous des forfaits ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faq5A">Oui, des forfaits hebdomadaires comprenant jour et nuit sont disponibles avec des tarifs avantageux.</p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Contact Section -->
     <section id="contact" class="relative" style="background: #FAE8EF;">

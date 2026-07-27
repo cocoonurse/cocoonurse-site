@@ -11,7 +11,7 @@ const translations = {
         navContact: "Contact",
         
         // Hero
-        heroSubtitle: "Maternity Nurse | Genève",
+        heroSubtitle: "Maternity Nurse & Garde de Nuit Bébé | Genève",
         heroTagline: "Reposez-vous. Je m'occupe de tout.",
         heroYears: "ans",
         heroYearsLabel: "d'expérience",
@@ -219,6 +219,7 @@ const translations = {
         
         // FAQ
         faqTitle: "FAQ",
+        faqSubtitle: "Vos questions, mes réponses",
         faq1Q: "Quand engager une infirmière de maternité ?",
         faq1A: "Idéalement pendant la grossesse pour préparer l'arrivée du bébé, ou immédiatement après la naissance pour un soutien complet.",
         faq2Q: "Quelle est la durée typique d'intervention ?",
@@ -229,6 +230,10 @@ const translations = {
         faq4A: "Je m'adapte à vos besoins : jours, nuits ou 24/7 selon la période, avec un planning établi à l'avance.",
         faq5Q: "Proposez-vous des forfaits ?",
         faq5A: "Oui, des forfaits hebdomadaires comprenant jour et nuit sont disponibles avec des tarifs avantageux.",
+        faq6Q: "Combien coûte une garde de nuit à Genève ?",
+        faq6A: "La Nuit Découverte (12h, 20h–8h) est à 300 CHF. Des forfaits dégressifs existent pour plusieurs nuits ou une semaine complète — voir la section Tarifs ci-dessus.",
+        faq7Q: "Que se passe-t-il en cas d'imprévu ou d'indisponibilité ?",
+        faq7A: "En tant qu'indépendante, je vous préviens immédiatement en cas d'imprévu afin de trouver ensemble la meilleure solution pour votre famille.",
         
         // Testimonials
         testimonialsTitle: "Témoignages",
@@ -345,7 +350,7 @@ const translations = {
         mentionsData: "Protection des données (LPD)",
         mentionsDataText: "Conformément à la Loi fédérale suisse sur la protection des données (LPD), les informations transmises via le formulaire de contact (nom, email, téléphone, message) sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni transmises à des tiers.",
         mentionsCookies: "Cookies",
-        mentionsCookiesText: "Ce site n'utilise aucun cookie de suivi ni outil d'analyse. La préférence de langue est enregistrée localement dans votre navigateur (localStorage).",
+        mentionsCookiesText: "Ce site utilise Google Analytics (statistiques de fréquentation anonymisées) afin d'améliorer l'expérience utilisateur. La préférence de langue est enregistrée localement dans votre navigateur (localStorage). Vous pouvez refuser le suivi via les paramètres de votre navigateur (Do Not Track) ou une extension de blocage.",
         mentionsRights: "Droits",
         mentionsRights_html: "Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <a href=\"mailto:contact@cocoonurse.ch\" class=\"underline\" style=\"color:#D4899D;\">contact@cocoonurse.ch</a>"
     },
@@ -358,7 +363,7 @@ const translations = {
         navContact: "Contact",
         
         // Hero
-        heroSubtitle: "Maternity Nurse | Geneva",
+        heroSubtitle: "Maternity Nurse & Night Nanny | Geneva",
         heroTagline: "Rest. I'll take care of everything.",
         heroYears: "years",
         heroYearsLabel: "of experience",
@@ -566,6 +571,7 @@ const translations = {
         
         // FAQ
         faqTitle: "FAQ",
+        faqSubtitle: "Your questions, my answers",
         faq1Q: "When to hire a maternity nurse?",
         faq1A: "Ideally during pregnancy to prepare for baby's arrival, or immediately after birth for complete support.",
         faq2Q: "What is the typical duration of service?",
@@ -576,6 +582,10 @@ const translations = {
         faq4A: "I adapt to your needs: days, nights or 24/7 depending on the period, with planning established in advance.",
         faq5Q: "Do you offer packages?",
         faq5A: "Yes, weekly packages including day and night are available with advantageous rates.",
+        faq6Q: "How much does a night nurse cost in Geneva?",
+        faq6A: "The Discovery Night (12h, 8pm-8am) is 300 CHF. Discounted packages are available for multiple nights or a full week — see the Pricing section above.",
+        faq7Q: "What happens if you're unavailable or sick?",
+        faq7A: "As an independent practitioner, I let you know immediately if anything comes up so we can find the best solution together for your family.",
         
         // Testimonials
         testimonialsTitle: "Testimonials",
@@ -694,7 +704,7 @@ const translations = {
         mentionsData: "Data Protection (FADP)",
         mentionsDataText: "In accordance with the Swiss Federal Act on Data Protection (FADP), information submitted via the contact form (name, email, phone, message) is used solely to respond to your enquiry. It is never sold or shared with third parties.",
         mentionsCookies: "Cookies",
-        mentionsCookiesText: "This site uses no tracking cookies or analytics tools. Language preference is stored locally in your browser (localStorage).",
+        mentionsCookiesText: "This site uses Google Analytics (anonymized usage statistics) to improve user experience. Language preference is stored locally in your browser (localStorage). You can opt out of tracking via your browser settings (Do Not Track) or a blocking extension.",
         mentionsRights: "Rights",
         mentionsRights_html: "You have the right to access, correct and delete your data. For any request: <a href=\"mailto:contact@cocoonurse.ch\" class=\"underline\" style=\"color:#D4899D;\">contact@cocoonurse.ch</a>"
     }

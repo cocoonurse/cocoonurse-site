@@ -481,48 +481,6 @@ const testimonials = [
         renderTestimonials();
         if (typeof updateContent === 'function') updateContent();
     }, 5000);
-    // Accordéon FAQ
-const faqItems = [
-        { question: "Quand engager une infirmière de maternité ?", answer: "Idéalement pendant la grossesse pour préparer l'arrivée du bébé, ou immédiatement après la naissance pour un soutien complet." },
-        { question: "Quelle est la durée typique d'intervention ?", answer: "Varie selon les besoins: de quelques jours à plusieurs semaines, souvent 2-4 semaines pour établir de bonnes routines." },
-        { question: "Prenez-vous en charge les bébés prématurés ?", answer: "Oui, mon expérience néonatale me permet de prendre en charge spécifiquement les bébés prématurés ou ayant des besoins particuliers." },
-        { question: "Quelle est votre disponibilité ?", answer: "Je m'adapte à vos besoins : jours, nuits ou 24/7 selon la période, avec un planning établi à l'avance." },
-        { question: "Proposez-vous des forfaits ?", answer: "Oui, des forfaits hebdomadaires comprenant jour et nuit sont disponibles avec des tarifs avantageux." }
-];
-const faqSection = document.createElement('section');
-    faqSection.id = 'faq';
-    faqSection.className = 'py-20 px-6 relative overflow-hidden';
-    faqSection.style.cssText = "background: linear-gradient(rgba(252,248,244,0.72), rgba(252,248,244,0.72)), url('images/pied 2.jpg') center/cover fixed;";
-    faqSection.innerHTML = `
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl font-serif font-bold mb-12 text-center text-champagne-700" data-i18n="faqTitle">FAQ</h2>
-            <div class="faq-container space-y-4"></div>
-        </div>
-    `;
-    document.querySelector('section#contact').before(faqSection);
-
-    faqItems.forEach((item, index) => {
-        const faqItem = document.createElement('div');
-        faqItem.className = 'faq-item bg-white rounded-lg shadow-sm overflow-hidden';
-        faqItem.innerHTML = `
-            <button class="faq-question w-full text-left p-6 font-medium flex justify-between items-center hover:bg-champagne-100 transition">
-                <span data-i18n="faq${index + 1}Q">${item.question}</span>
-                <i data-feather="chevron-down" class="faq-icon transition-transform"></i>
-            </button>
-            <div class="faq-answer hidden p-6 pt-0 border-t border-champagne-100">
-                <p data-i18n="faq${index + 1}A">${item.answer}</p>
-            </div>
-        `;
-        document.querySelector('.faq-container').appendChild(faqItem);
-
-        const question = faqItem.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const answer = faqItem.querySelector('.faq-answer');
-            const icon = faqItem.querySelector('.faq-icon');
-            answer.classList.toggle('hidden');
-            icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-        });
-    });
     // Toggle menu mobile
 const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
