@@ -255,6 +255,7 @@ function updatePageLanguage() {
     // Bouton retour en haut
     const backToTopButton = document.createElement('button');
     backToTopButton.id = 'back-to-top';
+    backToTopButton.setAttribute('aria-label', 'Retour en haut de page');
     backToTopButton.innerHTML = '<i data-feather="arrow-up" class="w-6 h-6"></i>';
     document.body.appendChild(backToTopButton);
     
@@ -352,14 +353,19 @@ const progressBar = document.createElement('div');
 // Bouton flottant Contact
 const contactBtn = document.createElement('a');
     contactBtn.href = '#contact';
-    contactBtn.className = 'fixed bottom-28 right-6 bg-champagne-500 text-white p-4 rounded-full shadow-lg z-40 hover:bg-champagne-600 transition-all';
+    contactBtn.id = 'floating-contact-btn';
+    contactBtn.setAttribute('aria-label', 'Aller à la section contact');
+    contactBtn.className = 'fixed bottom-28 right-6 bg-champagne-500 text-white p-4 rounded-full shadow-lg z-40 hover:bg-champagne-600 transition-all opacity-0 invisible pointer-events-none';
     contactBtn.innerHTML = '<i data-feather="mail" class="w-6 h-6"></i>';
     document.body.appendChild(contactBtn);
     feather.replace();
     // Style pour le bouton contact flottant
 const style = document.createElement('style');
     style.textContent = `
-        .fixed.bottom-28.right-6 {
+        #floating-contact-btn {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        #floating-contact-btn.show {
             animation: pulse 2s infinite;
         }
         @keyframes pulse {
@@ -369,6 +375,16 @@ const style = document.createElement('style');
         }
     `;
     document.head.appendChild(style);
+    // N'afficher le bouton contact flottant qu'après avoir quitté le hero
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+            contactBtn.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+            contactBtn.classList.add('show');
+        } else {
+            contactBtn.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+            contactBtn.classList.remove('show');
+        }
+    });
     // Compteurs animés avec easing
 function animateCounter(element, target, duration = 2000) {
         const start = 0;
@@ -432,10 +448,10 @@ const testimonials = [
         <h2 class="text-3xl font-serif font-bold mb-12 text-center text-champagne-700" data-i18n="testimonialsTitle">Témoignages</h2>
         <div class="relative max-w-3xl mx-auto">
             <div class="testimonial-slides"></div>
-            <button class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="prev-testimonial">
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="prev-testimonial" aria-label="Témoignage précédent">
                 <i data-feather="chevron-left" class="w-8 h-8"></i>
             </button>
-            <button class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="next-testimonial">
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="next-testimonial" aria-label="Témoignage suivant">
                 <i data-feather="chevron-right" class="w-8 h-8"></i>
             </button>
         </div>
@@ -529,7 +545,7 @@ if (contactForm) {
                         <div class="text-5xl mb-4">🌸</div>
                         <h3 class="text-xl font-serif font-semibold mb-3" style="color:#D4899D;">${successTitle}</h3>
                         <p class="text-sand-600 text-sm leading-relaxed mb-4">${successMsg}</p>
-                        <a href="https://wa.me/41783005417" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-medium" style="background:linear-gradient(135deg,#E6A8B8,#D4899D);">
+                        <a href="https://wa.me/41784500624" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-medium" style="background:linear-gradient(135deg,#E6A8B8,#D4899D);">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             ${waLabel}
                         </a>
@@ -627,9 +643,13 @@ function initReadMore() {
             paragraphs[1].parentNode.insertBefore(extra, paragraphs[1]);
             extra.appendChild(paragraphs[1]);
         }
-        listItems.forEach((li, i) => {
-            if (i >= 3) extra.appendChild(li);
-        });
+        const extraItems = listItems.filter((li, i) => i >= 3);
+        if (extraItems.length) {
+            const extraList = document.createElement('ul');
+            extraList.className = ul.className;
+            extraItems.forEach(li => extraList.appendChild(li));
+            extra.appendChild(extraList);
+        }
 
         const btn = makeReadMoreBtn('btnSeeMore');
         btn.addEventListener('click', () => {

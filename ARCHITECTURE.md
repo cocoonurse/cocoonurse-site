@@ -16,7 +16,7 @@
 - **Propriétaire** : Alicia Carli, Maternity Nurse à Genève
 - **Domaine** : `cocoonurse.ch` (acheté et géré sur **Infomaniak**)
 - **Email professionnel** : contact@cocoonurse.ch
-- **WhatsApp** : +41 78 300 54 17
+- **WhatsApp** : +41 78 450 06 24
 - **Instagram** : @cocoonurse → https://www.instagram.com/cocoonurse
 
 ---
@@ -133,7 +133,7 @@ git push
 | Photo hero (nouvelle) | ✅ `hero-new.webp` |
 | Images WebP optimisées | ✅ |
 | Formulaire contact (Formspree) | ✅ Intégré — à tester en prod |
-| WhatsApp +41 78 300 54 17 | ✅ |
+| WhatsApp +41 78 450 06 24 | ✅ |
 | Instagram @cocoonurse | ✅ |
 | Schema.org LocalBusiness | ✅ |
 | sitemap.xml + robots.txt | ✅ |

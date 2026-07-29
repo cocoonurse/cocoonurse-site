@@ -135,7 +135,7 @@ class ContactModal extends HTMLElement {
           </div>
           <div class="contact-item">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
-            <a href="https://wa.me/41783005417" target="_blank" class="contact-link">+41 78 300 54 17</a>
+            <a href="https://wa.me/41784500624" target="_blank" class="contact-link">+41 78 450 06 24</a>
           </div>
         </div>
       </div>
