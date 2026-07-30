@@ -236,6 +236,8 @@ const translations = {
         faq7A: "En tant qu'indépendante, je vous préviens immédiatement en cas d'imprévu afin de trouver ensemble la meilleure solution pour votre famille.",
         faq8Q: "Dans quelles villes intervenez-vous autour de Genève ?",
         faq8A: "Je me déplace dans tout le canton de Genève (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), dans le canton de Vaud proche (Nyon, Coppet) ainsi qu'en France voisine (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+        faq9Q: "Quelle différence entre garde d'enfant, infirmière à domicile et puéricultrice ?",
+        faq9A: "Une garde d'enfant classique surveille l'enfant sans formation médicale, une infirmière à domicile intervient pour des soins ponctuels. Cocoonurse combine les deux : je suis puéricultrice diplômée et auxiliaire de puériculture CRS, avec 11 ans d'expérience en néonatologie — je réunis la surveillance, les soins et l'accompagnement parental en une seule prestation, jour et nuit.",
 
         // Testimonials
         testimonialsTitle: "Témoignages",
@@ -250,6 +252,7 @@ const translations = {
         // About – nouvelle mise en page
         aboutBioP1_html: "Depuis <strong>11 ans</strong>, j'accompagne avec tendresse et professionnalisme les nouveau-nés et leurs familles dans les moments les plus précieux de leur vie. Mon approche se fonde sur une écoute attentive, une présence rassurante et une expertise qui apaise les bébés et sécurise les parents, même dans les moments de doute les plus profonds.",
         aboutBioP2_html: "Formée en <strong>France</strong> et à <strong>Genève</strong>, j'ai exercé en structures de la petite enfance, auprès de familles à domicile et en milieu hospitalier — une expérience complète qui me permet de m'adapter à chaque situation. Je me déplace directement chez vous, à toute heure du jour et de la nuit, pour que vous puissiez vous reposer l'esprit tranquille.",
+        aboutBioP3_html: "Que vous recherchiez une <strong>garde d'enfant à domicile</strong> pour votre nouveau-né, une <strong>infirmière à domicile</strong> spécialisée en néonatologie ou une <strong>maternity nurse</strong> expérimentée, Cocoonurse répond à ce besoin avec un accompagnement professionnel unique à Genève, alliant rigueur des soins et douceur humaine.",
         aboutQuote: "\"Chaque nuit sereine est un cadeau que vous méritez.\"",
         aboutParcoursTitle: "Mon Parcours",
         aboutP1li1_html: "+5 ans — HUG : soins intensifs · néonatologie · oncologie · chirurgie · unité de développement",
@@ -590,6 +593,8 @@ const translations = {
         faq7A: "As an independent practitioner, I let you know immediately if anything comes up so we can find the best solution together for your family.",
         faq8Q: "Which cities around Geneva do you cover?",
         faq8A: "I travel throughout the canton of Geneva (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), the nearby canton of Vaud (Nyon, Coppet), and neighbouring France (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+        faq9Q: "What's the difference between childcare, a home nurse, and a maternity nurse?",
+        faq9A: "Standard childcare watches the child without medical training, and a home nurse handles one-off medical care. Cocoonurse combines both: I'm a qualified pediatric nurse (puéricultrice) and Swiss Red Cross childcare assistant with 11 years of neonatal experience — bringing together supervision, care, and parental support in a single service, day and night.",
 
         // Testimonials
         testimonialsTitle: "Testimonials",
@@ -604,6 +609,7 @@ const translations = {
         // About – new layout
         aboutBioP1_html: "For <strong>11 years</strong>, I have been supporting newborns and their families with tenderness and professionalism during the most precious moments of their lives. My approach is rooted in attentive listening, a reassuring presence, and expertise that soothes babies and gives parents confidence, even in their deepest moments of doubt.",
         aboutBioP2_html: "Trained in <strong>France</strong> and <strong>Geneva</strong>, I have worked in private childcare settings, with families at home, and in hospital environments — a complete background that allows me to adapt to every situation. I come directly to you, day or night, so you can rest with complete peace of mind.",
+        aboutBioP3_html: "Whether you're looking for <strong>in-home childcare</strong> for your newborn, a <strong>home nurse</strong> specialized in neonatal care, or an experienced <strong>maternity nurse</strong>, Cocoonurse meets this need with unique professional support in Geneva, combining medical rigor and human warmth.",
         aboutQuote: "\"Every peaceful night is a gift you deserve.\"",
         aboutParcoursTitle: "My Background",
         aboutP1li1_html: "+5 years — HUG: intensive care · neonatology · oncology · surgery · developmental unit",
