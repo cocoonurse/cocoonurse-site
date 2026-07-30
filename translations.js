@@ -234,7 +234,9 @@ const translations = {
         faq6A: "La Nuit Découverte (12h, 20h–8h) est à 300 CHF. Des forfaits dégressifs existent pour plusieurs nuits ou une semaine complète — voir la section Tarifs ci-dessus.",
         faq7Q: "Que se passe-t-il en cas d'imprévu ou d'indisponibilité ?",
         faq7A: "En tant qu'indépendante, je vous préviens immédiatement en cas d'imprévu afin de trouver ensemble la meilleure solution pour votre famille.",
-        
+        faq8Q: "Dans quelles villes intervenez-vous autour de Genève ?",
+        faq8A: "Je me déplace dans tout le canton de Genève (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), dans le canton de Vaud proche (Nyon, Coppet) ainsi qu'en France voisine (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+
         // Testimonials
         testimonialsTitle: "Témoignages",
         testimonial1Text: "\"Alicia a été d'une aide précieuse lors des premières semaines avec notre jumeaux. Professionnelle et bienveillante.\"",
@@ -586,7 +588,9 @@ const translations = {
         faq6A: "The Discovery Night (12h, 8pm-8am) is 300 CHF. Discounted packages are available for multiple nights or a full week — see the Pricing section above.",
         faq7Q: "What happens if you're unavailable or sick?",
         faq7A: "As an independent practitioner, I let you know immediately if anything comes up so we can find the best solution together for your family.",
-        
+        faq8Q: "Which cities around Geneva do you cover?",
+        faq8A: "I travel throughout the canton of Geneva (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), the nearby canton of Vaud (Nyon, Coppet), and neighbouring France (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+
         // Testimonials
         testimonialsTitle: "Testimonials",
         testimonial1Text: "\"Alicia was a precious help during the first weeks with our twins. Professional and caring.\"",
