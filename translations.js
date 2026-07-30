@@ -208,7 +208,7 @@ const translations = {
         contactAvailTitle: "Disponibilités",
         contactAvailText: "Du lundi au dimanche, de jour comme de nuit, selon vos besoins.",
         contactPhone2: "Sur demande",
-        contactLocation: "Genève, Suisse",
+        contactLocation: "Genève, Suisse — Voir sur Google Maps",
         
         // Footer
         footerSubtitle: "Maternity Nurse | Genève",
@@ -565,7 +565,7 @@ const translations = {
         contactAvailTitle: "Availability",
         contactAvailText: "Monday to Sunday, day and night, according to your needs.",
         contactPhone2: "On request",
-        contactLocation: "Geneva, Switzerland",
+        contactLocation: "Geneva, Switzerland — View on Google Maps",
         
         // Footer
         footerSubtitle: "Maternity Nurse | Geneva",
