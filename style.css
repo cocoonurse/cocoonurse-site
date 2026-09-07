@@ -1219,17 +1219,15 @@ section .bg-white:hover .bg-champagne-100 i {
 
 /* --- Titre dans la carte --- */
 .hero-card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 58px;
     font-weight: 600;
     line-height: 1.05;
     margin: 0 0 12px;
     margin-left: -5px;
-    letter-spacing: 0.02em;
-    background: linear-gradient(135deg, #C8959E 0%, #E6A8B8 60%, #D4899D 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: 0.01em;
+    color: #C8595E;
 }
 
 /* --- Tagline dans la carte --- */
@@ -1248,12 +1246,12 @@ section .bg-white:hover .bg-champagne-100 i {
 .hero-card-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 300;
-    color: #8B7D7B;
+    font-weight: 500;
+    color: #C8595E;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin: 0 0 25px;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* --- Séparateur décoratif dans la carte --- */
