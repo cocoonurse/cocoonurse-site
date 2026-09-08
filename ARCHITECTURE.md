@@ -123,6 +123,38 @@ git push
 - Langues disponibles : `fr` et `en`. Fichier : `translations.js`. Générateur : `scripts/generate-en.js`
   (dépendance dev `jsdom`, utilisée uniquement en local — jamais au runtime/déploiement).
 
+## 5bis. Pages dédiées par service (08/09/2026)
+
+2e recommandation de l'audit SEO du 07/09 : une seule page à ancres a moins de surface de mots-clés
+que les concurrents multi-pages (topnanny.ch, bee-boo.ch, yoopies.ch...). 3 premières pages créées :
+
+- `/garde-de-nuit-bebe-geneve/` (+ `/en/garde-de-nuit-bebe-geneve/`)
+- `/puericultrice-domicile-geneve/` (+ `/en/puericultrice-domicile-geneve/`)
+- `/tarifs/` (+ `/en/tarifs/`)
+
+Générées par **`scripts/build-service-pages.js`** — à relancer après toute modif de
+index.html/translations.js touchant les fragments réutilisés (cartes de service, cartes de
+tarifs, questions FAQ, qualifications, zones) :
+```bash
+node scripts/build-service-pages.js
+```
+Principe : le script charge `index.html`, **réutilise par clonage** les fragments déjà existants
+(carte service 1/2, cartes tarifs pric1-3, questions FAQ, bloc qualifications, zone d'intervention,
+section tarifs complète) pour rester single-source-of-truth sur les prix/contenus, et n'ajoute que
+du contenu réellement nouveau (intro, titres de section, différenciateur puéricultrice/garde
+d'enfant/infirmière) via de nouvelles clés `translations.js` préfixées `pageNight*` / `pagePueri*` /
+`pageTarifs*`. Chaque page a son propre JSON-LD (`BreadcrumbList` + `FAQPage` limité aux questions
+affichées) en plus du `LocalBusiness` repris tel quel. La version EN est générée à partir du même
+DOM via `scripts/lib/translate-en.js` (logique partagée avec `generate-en.js`).
+
+Liens internes : les 2 cartes de service et le titre de la section tarifs sur la home pointent vers
+ces pages (`.card-more-link`, retiré automatiquement quand le fragment est réutilisé sur sa propre
+page pour éviter un lien vers soi-même) ; le footer (partagé sur toutes les pages) les liste aussi.
+
+**Reste à faire si on étend à d'autres services** (bain thalasso, massage bébé, consultation sommeil,
+retour de maternité) : ajouter une entrée dans le tableau `PAGES` du script + les clés
+`translations.js` correspondantes, puis mettre à jour `sitemap.xml`.
+
 **Clés des bullet points services (ajoutées cette session) :**
 - `servCard1Li1_html` à `servCard1Li5_html`
 - `servCard2Li1_html` à `servCard2Li5_html`

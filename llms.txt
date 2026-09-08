@@ -29,3 +29,6 @@ Canton de Genève (Genève-ville, Carouge, Lancy, Meyrin, Vernier, Onex, Thônex
 
 - [Site principal (français)](https://cocoonurse.ch/): présentation, services, tarifs, FAQ, contact.
 - [English version](https://cocoonurse.ch/en/): same content in English.
+- [Garde de Nuit Bébé Genève](https://cocoonurse.ch/garde-de-nuit-bebe-geneve/): détail de la garde de nuit à domicile (English: /en/garde-de-nuit-bebe-geneve/).
+- [Puéricultrice à Domicile Genève](https://cocoonurse.ch/puericultrice-domicile-geneve/): détail des soins quotidiens du nouveau-né (English: /en/puericultrice-domicile-geneve/).
+- [Tarifs](https://cocoonurse.ch/tarifs/): grille tarifaire complète (English: /en/tarifs/).

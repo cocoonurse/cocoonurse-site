@@ -7,11 +7,15 @@
 // par sa traduction anglaise (déjà présente dans translations.js), et corrige
 // les balises <head> spécifiques à la langue (title, meta, hreflang, canonical, og:*).
 // Le site reste 100% statique : aucun build n'est nécessaire au déploiement.
+//
+// Voir aussi scripts/build-service-pages.js, qui utilise la même logique de
+// traduction (scripts/lib/translate-en.js) pour les pages dédiées.
 
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { JSDOM } = require('jsdom');
+const { translateDocumentToEnglish, rootifyRelativePaths } = require('./lib/translate-en');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -29,7 +33,6 @@ vm.runInContext(translationsSrc, sandbox);
 // pas sur l'objet sandbox lui-même : on le relit via une nouvelle évaluation.
 const translations = vm.runInContext('translations', sandbox);
 const en = translations.en;
-const fr = translations.fr;
 
 // --- 2. Charger le HTML FR ---
 const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
@@ -37,38 +40,12 @@ const dom = new JSDOM(html);
 const document = dom.window.document;
 
 // --- 3. Traduire tous les éléments data-i18n / data-i18n-placeholder ---
-let translated = 0;
-let missing = [];
-document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const key = el.getAttribute('data-i18n');
-    const value = en[key];
-    if (value === undefined) { missing.push(key); return; }
-    if (key.endsWith('_html')) el.innerHTML = value;
-    else el.textContent = value;
-    translated++;
-});
-document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    const value = en[key];
-    if (value === undefined) { missing.push(key); return; }
-    el.setAttribute('placeholder', value);
-    translated++;
-});
-
+const { translated, missing } = translateDocumentToEnglish(document, en);
 if (missing.length) {
     console.warn('⚠️  Clés sans traduction EN (laissées en FR) :', [...new Set(missing)]);
 }
 
-// --- 4. Ajuster <html lang> + le flag de langue figée pour le JS runtime ---
-document.documentElement.setAttribute('lang', 'en');
-const langScript = document.querySelector('script:not([src])');
-if (langScript && langScript.textContent.includes('COCOONURSE_LANG')) {
-    langScript.textContent = "window.COCOONURSE_LANG = 'en';";
-} else {
-    throw new Error('Balise <script> COCOONURSE_LANG introuvable — vérifier index.html');
-}
-
-// --- 5. Head : title / meta / canonical / hreflang / OG / Twitter ---
+// --- 4. Head : title / meta / canonical / hreflang / OG / Twitter ---
 const head = document.head;
 const setMeta = (selector, attr, value) => {
     const el = head.querySelector(selector);
@@ -91,33 +68,10 @@ setMeta('meta[property="og:image:alt"]', 'content', 'Alicia Carli, Cocoonurse �
 
 // hreflang links déjà présents dans le HTML source (identiques sur les deux pages) — rien à changer.
 
-// --- 6bis. Racine des chemins relatifs (assets) : la page FR est servie depuis "/",
-// la page EN depuis "/en/" — sans ce correctif, "images/x.webp" pointerait vers
-// "/en/images/x.webp" (404). On préfixe donc tout chemin relatif (pas déjà
-// absolu, pas une ancre, pas un protocole externe) par "/".
-const RELATIVE_OK = /^(https?:|\/|#|mailto:|tel:|data:|javascript:)/i;
-document.querySelectorAll('[src], [href]').forEach((el) => {
-    ['src', 'href'].forEach((attr) => {
-        const value = el.getAttribute(attr);
-        if (value && !RELATIVE_OK.test(value)) {
-            el.setAttribute(attr, '/' + value);
-        }
-    });
-});
-// Idem pour les background-image en style inline : url('images/...') -> url('/images/...')
-// (querySelectorAll avec un sélecteur contenant "(" trébuche sur le moteur CSS de jsdom,
-// on filtre donc à la main plutôt qu'avec [style*="url("])
-Array.from(document.querySelectorAll('[style]'))
-    .filter((el) => el.getAttribute('style').includes('url('))
-    .forEach((el) => {
-        const style = el.getAttribute('style');
-        const fixed = style.replace(/url\((['"]?)(?!https?:|\/|data:)([^'")]+)\1\)/g, "url('/$2')");
-        el.setAttribute('style', fixed);
-    });
+// --- 5. Chemins relatifs -> absolus depuis "/" (la page est servie depuis /en/) ---
+rootifyRelativePaths(document);
 
-// --- 6. Corriger les liens ancre internes (#about etc. restent valides, structure identique) ---
-// Les boutons FR/EN pointent déjà vers "/" et "/en/" dans le HTML source : rien à faire ici,
-// mais on force l'état "actif" visuel sur EN au lieu de FR.
+// --- 6. État visuel actif du sélecteur de langue ---
 document.querySelectorAll('a.lang-btn').forEach((a) => {
     if (a.getAttribute('data-lang') === 'en') a.setAttribute('aria-current', 'true');
     else a.removeAttribute('aria-current');

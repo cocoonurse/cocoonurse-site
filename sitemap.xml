@@ -19,4 +19,58 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/"/>
   </url>
+  <url>
+    <loc>https://cocoonurse.ch/garde-de-nuit-bebe-geneve/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/garde-de-nuit-bebe-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/garde-de-nuit-bebe-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/garde-de-nuit-bebe-geneve/"/>
+  </url>
+  <url>
+    <loc>https://cocoonurse.ch/en/garde-de-nuit-bebe-geneve/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/garde-de-nuit-bebe-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/garde-de-nuit-bebe-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/garde-de-nuit-bebe-geneve/"/>
+  </url>
+  <url>
+    <loc>https://cocoonurse.ch/puericultrice-domicile-geneve/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/puericultrice-domicile-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/puericultrice-domicile-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/puericultrice-domicile-geneve/"/>
+  </url>
+  <url>
+    <loc>https://cocoonurse.ch/en/puericultrice-domicile-geneve/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/puericultrice-domicile-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/puericultrice-domicile-geneve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/puericultrice-domicile-geneve/"/>
+  </url>
+  <url>
+    <loc>https://cocoonurse.ch/tarifs/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/tarifs/"/>
+  </url>
+  <url>
+    <loc>https://cocoonurse.ch/en/tarifs/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/tarifs/"/>
+  </url>
 </urlset>
