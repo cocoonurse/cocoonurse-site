@@ -123,14 +123,19 @@ git push
 - Langues disponibles : `fr` et `en`. Fichier : `translations.js`. Générateur : `scripts/generate-en.js`
   (dépendance dev `jsdom`, utilisée uniquement en local — jamais au runtime/déploiement).
 
-## 5bis. Pages dédiées par service (08/09/2026)
+## 5bis. Pages dédiées par service (08/09/2026, complété le 08/09/2026)
 
 2e recommandation de l'audit SEO du 07/09 : une seule page à ancres a moins de surface de mots-clés
-que les concurrents multi-pages (topnanny.ch, bee-boo.ch, yoopies.ch...). 3 premières pages créées :
+que les concurrents multi-pages (topnanny.ch, bee-boo.ch, yoopies.ch...). 7 pages créées (toutes les
+prestations du site ont maintenant leur page dédiée) :
 
-- `/garde-de-nuit-bebe-geneve/` (+ `/en/garde-de-nuit-bebe-geneve/`)
-- `/puericultrice-domicile-geneve/` (+ `/en/puericultrice-domicile-geneve/`)
-- `/tarifs/` (+ `/en/tarifs/`)
+- `/garde-de-nuit-bebe-geneve/` (+ `/en/...`)
+- `/puericultrice-domicile-geneve/` (+ `/en/...`)
+- `/tarifs/` (+ `/en/...`)
+- `/bain-thalasso-bebe-geneve/` (+ `/en/...`)
+- `/massage-bebe-geneve/` (+ `/en/...`)
+- `/consultation-sommeil-bebe/` (+ `/en/...`)
+- `/retour-maternite-geneve/` (+ `/en/...`)
 
 Générées par **`scripts/build-service-pages.js`** — à relancer après toute modif de
 index.html/translations.js touchant les fragments réutilisés (cartes de service, cartes de
@@ -139,21 +144,32 @@ tarifs, questions FAQ, qualifications, zones) :
 node scripts/build-service-pages.js
 ```
 Principe : le script charge `index.html`, **réutilise par clonage** les fragments déjà existants
-(carte service 1/2, cartes tarifs pric1-3, questions FAQ, bloc qualifications, zone d'intervention,
-section tarifs complète) pour rester single-source-of-truth sur les prix/contenus, et n'ajoute que
-du contenu réellement nouveau (intro, titres de section, différenciateur puéricultrice/garde
-d'enfant/infirmière) via de nouvelles clés `translations.js` préfixées `pageNight*` / `pagePueri*` /
-`pageTarifs*`. Chaque page a son propre JSON-LD (`BreadcrumbList` + `FAQPage` limité aux questions
-affichées) en plus du `LocalBusiness` repris tel quel. La version EN est générée à partir du même
-DOM via `scripts/lib/translate-en.js` (logique partagée avec `generate-en.js`).
+(cartes de service 1-8, cartes tarifs pric1-11, questions FAQ existantes, bloc qualifications, zone
+d'intervention, section tarifs complète) pour rester single-source-of-truth sur les prix/contenus, et
+n'ajoute que du contenu réellement nouveau (intro par page, titres de section, différenciateur
+puéricultrice/garde d'enfant/infirmière, 9 nouvelles questions FAQ propres au bain/massage/sommeil)
+via de nouvelles clés `translations.js` préfixées `pageNight*` / `pagePueri*` / `pageTarifs*` /
+`pageBain*` / `pageMassage*` / `pageSommeil*` / `pageRetour*`. Les questions FAQ nouvelles
+(`faqBain1`, `faqMassage1`, etc.) n'existent que dans `translations.js`, pas dans `index.html` — les
+cartes FAQ sont donc **construites depuis les clés** (`buildFaqCard`), pas extraites du DOM source,
+contrairement aux autres fragments réutilisés.
 
-Liens internes : les 2 cartes de service et le titre de la section tarifs sur la home pointent vers
-ces pages (`.card-more-link`, retiré automatiquement quand le fragment est réutilisé sur sa propre
-page pour éviter un lien vers soi-même) ; le footer (partagé sur toutes les pages) les liste aussi.
+Chaque page a son propre JSON-LD : `BreadcrumbList` + `FAQPage` (limité aux questions affichées) +
+`LocalBusiness` repris tel quel + **`Service`** (nom du service, `provider` pointant vers le
+`LocalBusiness` via `@id`, `areaServed`, et les `Offer` correspondants piochés dans le
+`hasOfferCatalog` de la home par nom — absent uniquement sur `/tarifs/`, qui n'est pas un service en
+soi). La version EN est générée à partir du même DOM via `scripts/lib/translate-en.js` (logique
+partagée avec `generate-en.js`).
 
-**Reste à faire si on étend à d'autres services** (bain thalasso, massage bébé, consultation sommeil,
-retour de maternité) : ajouter une entrée dans le tableau `PAGES` du script + les clés
-`translations.js` correspondantes, puis mettre à jour `sitemap.xml`.
+Liens internes : chaque carte de service (1, 2, 5, 6, 7) + le titre de la section tarifs + la carte
+Pack Retour Maison sur la home pointent vers la page correspondante (`.card-more-link`, retiré
+automatiquement quand le fragment est réutilisé sur sa propre page pour éviter un lien vers
+soi-même) ; le footer (partagé sur toutes les pages) liste les 2 pages principales + tarifs.
+
+**Si on ajoute encore un service** (ex. Atelier Portage, seul servCard8 encore sans page dédiée) :
+ajouter une entrée dans le tableau `PAGES` du script + une fonction `buildXMain` + les clés
+`translations.js` correspondantes (intro, titres, FAQ propre si besoin), puis mettre à jour
+`sitemap.xml` (générateur inline, voir le dernier commit qui l'a mis à jour, pas de script dédié).
 
 **Clés des bullet points services (ajoutées cette session) :**
 - `servCard1Li1_html` à `servCard1Li5_html`

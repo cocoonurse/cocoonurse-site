@@ -373,7 +373,75 @@ const translations = {
         pageTarifsChoice_html: "<strong>Une nuit ponctuelle</strong> pour souffler ou récupérer après une naissance difficile → Nuit Découverte. <strong>Un retour de maternité en douceur</strong>, avec formation aux soins et suivi les jours suivants → Pack Retour Maison. <strong>Une semaine complète</strong> pour poser des routines de sommeil durables → Semaine Sérénité. <strong>Des besoins spécifiques</strong> — jumeaux, prématurés, plusieurs semaines d'accompagnement → un devis Sur-Mesure, sans engagement.",
         pageTarifsFaqTitle: "Questions fréquentes sur les tarifs",
         pageTarifsCtaTitle: "Une question sur les tarifs ?",
-        pageTarifsCtaText: "Devis gratuit et sans engagement, réponse sous 2h."
+        pageTarifsCtaText: "Devis gratuit et sans engagement, réponse sous 2h.",
+
+        // Liens "En savoir plus" — cartes homepage vers les 4 pages suivantes
+        ctaLearnMoreBain: "En savoir plus sur le bain thalasso →",
+        ctaLearnMoreMassage: "En savoir plus sur le massage bébé →",
+        ctaLearnMoreSommeil: "En savoir plus sur la consultation sommeil →",
+        ctaLearnMoreRetour: "En savoir plus sur le retour de maternité →",
+
+        // Page dédiée — Bain Thalasso Bébé Genève
+        pageBainBreadcrumb: "Bain Thalasso Bébé Genève",
+        pageBainKicker: "Réservé aux bébés de la naissance à 1 mois · Encadré par une professionnelle de santé",
+        pageBainH1: "Bain Thalasso Thérapeutique pour Bébé à Genève",
+        pageBainIntro_html: "Le bain thalasso est une expérience unique et apaisante, réservée aux tout premiers jours de vie. Plongé dans une eau chaude à la température idéale, bébé retrouve les sensations vécues in utero — un véritable moment de détente et de connexion, à vivre en famille. Je propose ce soin à domicile à Genève en tant que <strong>professionnelle de santé diplômée</strong>, avec une surveillance attentive à chaque instant.",
+        pageBainIncludedTitle: "Ce qui est inclus",
+        pageBainFormulaTitle: "Tarif du bain thalasso",
+        pageBainFaqTitle: "Questions fréquentes sur le bain thalasso",
+        pageBainCtaTitle: "Réservez le bain thalasso de votre bébé",
+        pageBainCtaText: "Séance unique ou pack 3 séances — réponse sous 2h.",
+        faqBain1Q: "Jusqu'à quel âge peut-on faire un bain thalasso ?",
+        faqBain1A: "Le bain thalasso est proposé de la naissance jusqu'à 1 mois — la fenêtre idéale où bébé conserve encore le réflexe de position fœtale, pour un effet maximal.",
+        faqBain2Q: "Le bain thalasso est-il sans risque pour mon bébé ?",
+        faqBain2A: "Oui, chaque bain est encadré à chaque instant par une professionnelle de santé diplômée, avec une eau à température contrôlée et une surveillance continue.",
+        faqBain3Q: "Puis-je assister au bain avec mon bébé ?",
+        faqBain3A: "Bien sûr, les parents sont invités à participer pour renforcer ce moment d'émotion et de connexion partagé en famille.",
+
+        // Page dédiée — Massage Bébé Genève
+        pageMassageBreadcrumb: "Massage Bébé Genève",
+        pageMassageKicker: "Atelier à domicile · Techniques traditionnelles adaptées",
+        pageMassageH1: "Atelier Massage Bébé à Genève",
+        pageMassageIntro_html: "Le massage bébé est une pratique ancestrale aux bienfaits multiples : il soulage les coliques, favorise un sommeil plus paisible et renforce le lien d'attachement. Lors d'un atelier à domicile à Genève, je vous guide pas à pas dans l'apprentissage de gestes simples, doux et adaptés à votre bébé — pour que vous puissiez ensuite les reproduire vous-même, en toute confiance, au quotidien.",
+        pageMassageIncludedTitle: "Ce que vous apprendrez",
+        pageMassageFormulaTitle: "Formules massage bébé",
+        pageMassageFaqTitle: "Questions fréquentes sur le massage bébé",
+        pageMassageCtaTitle: "Réservez votre atelier massage bébé",
+        pageMassageCtaText: "Séance découverte ou pack progressif — réponse sous 2h.",
+        faqMassage1Q: "À partir de quel âge peut-on masser bébé ?",
+        faqMassage1A: "Le massage bébé peut débuter dès les premières semaines de vie, une fois le cordon ombilical cicatrisé. Les gestes sont toujours adaptés à l'âge et à la sensibilité de votre bébé.",
+        faqMassage2Q: "Le massage peut-il vraiment soulager les coliques ?",
+        faqMassage2A: "Oui, des gestes ciblés permettent d'apaiser les tensions digestives et de soulager les coliques, en plus de stimuler la circulation sanguine et le système immunitaire.",
+        faqMassage3Q: "Combien de séances faut-il pour apprendre les gestes ?",
+        faqMassage3A: "Une séance découverte suffit pour démarrer, mais le pack de 4 ou 8 séances permet un suivi de progression et une adaptation aux différentes étapes du développement de bébé.",
+
+        // Page dédiée — Consultation Sommeil et Pleurs
+        pageSommeilBreadcrumb: "Consultation Sommeil Bébé",
+        pageSommeilKicker: "Consultation à distance · Message ou vidéo",
+        pageSommeilH1: "Consultation Sommeil et Pleurs de Bébé",
+        pageSommeilIntro_html: "Réveils fréquents, difficultés d'endormissement, pleurs inexpliqués : le sommeil de bébé est l'une des plus grandes sources de fatigue et d'inquiétude des jeunes parents. Je vous propose des <strong>consultations personnalisées à distance</strong>, par message ou en visioconférence, pour comprendre ce qui se joue et mettre en place des routines adaptées — depuis chez vous, à votre rythme, où que vous soyez à Genève ou ailleurs.",
+        pageSommeilIncludedTitle: "Ce qui est inclus",
+        pageSommeilFormulaTitle: "Tarif de la consultation",
+        pageSommeilFaqTitle: "Questions fréquentes sur le sommeil de bébé",
+        pageSommeilCtaTitle: "Réservez votre consultation sommeil",
+        pageSommeilCtaText: "Par message ou vidéo, réponse sous 2h.",
+        faqSommeil1Q: "Comment se déroule une consultation sommeil à distance ?",
+        faqSommeil1A: "Par message ou en visioconférence, où que vous soyez : nous faisons le point sur les habitudes de sommeil de votre bébé et établissons ensemble un plan d'action personnalisé.",
+        faqSommeil2Q: "À partir de quel âge peut-on consulter pour le sommeil de bébé ?",
+        faqSommeil2A: "Dès les premières semaines si vous avez des questions, et particulièrement utile entre 4 et 12 mois, lors des grandes étapes du sommeil (régressions, transition au lit, sevrage des tétées nocturnes).",
+        faqSommeil3Q: "Le suivi s'arrête-t-il après la consultation ?",
+        faqSommeil3A: "Non, quelques jours de suivi par message sont inclus pour ajuster ensemble les routines mises en place.",
+
+        // Page dédiée — Retour de Maternité
+        pageRetourBreadcrumb: "Retour de Maternité Genève",
+        pageRetourKicker: "Puéricultrice diplômée · Formation complète aux soins",
+        pageRetourH1: "Accompagnement au Retour de Maternité à Genève",
+        pageRetourIntro_html: "Rentrer à la maison avec son nouveau-né est un moment aussi merveilleux que déstabilisant : il faut apprivoiser les soins, gérer la fatigue et trouver ses repères, souvent sans expérience. Mon <strong>accompagnement au retour de maternité</strong> vous offre une présence rassurante dès les premiers jours à domicile — je prends en charge les soins de jour comme de nuit, je vous forme aux bons gestes, et je reste disponible par WhatsApp les semaines suivantes pour répondre à vos questions.",
+        pageRetourIncludedTitle: "Ce qui est inclus",
+        pageRetourFormulaTitle: "Formules retour de maternité",
+        pageRetourFaqTitle: "Questions fréquentes sur le retour de maternité",
+        pageRetourCtaTitle: "Préparez votre retour de maternité",
+        pageRetourCtaText: "Réservez dès la grossesse ou juste après la naissance — réponse sous 2h."
     },
     en: {
         // Navigation
@@ -743,7 +811,75 @@ const translations = {
         pageTarifsChoice_html: "<strong>A single night</strong> to catch your breath or recover after a difficult birth → Discovery Night. <strong>A gentle homecoming</strong>, with hands-on training and follow-up in the days after → Homecoming Package. <strong>A full week</strong> to build lasting sleep routines → Serenity Week. <strong>Specific needs</strong> — twins, premature babies, several weeks of support → a free custom quote, no commitment.",
         pageTarifsFaqTitle: "Frequently asked questions about pricing",
         pageTarifsCtaTitle: "Questions about pricing?",
-        pageTarifsCtaText: "Free, no-commitment quote, reply within 2 hours."
+        pageTarifsCtaText: "Free, no-commitment quote, reply within 2 hours.",
+
+        // "Learn more" links — homepage cards to the 4 pages below
+        ctaLearnMoreBain: "Learn more about the thalasso bath →",
+        ctaLearnMoreMassage: "Learn more about baby massage →",
+        ctaLearnMoreSommeil: "Learn more about sleep consultations →",
+        ctaLearnMoreRetour: "Learn more about postpartum homecoming →",
+
+        // Dedicated page — Baby Thalasso Bath Geneva
+        pageBainBreadcrumb: "Baby Thalasso Bath Geneva",
+        pageBainKicker: "For newborns up to 1 month · Supervised by a healthcare professional",
+        pageBainH1: "Therapeutic Baby Thalasso Bath in Geneva",
+        pageBainIntro_html: "The thalasso bath is a unique and soothing experience, reserved for a baby's very first days of life. Immersed in warm water at the ideal temperature, your baby rediscovers the sensations felt in the womb — a true moment of relaxation and connection, shared as a family. I offer this care at home in Geneva as a <strong>certified healthcare professional</strong>, with attentive supervision at every moment.",
+        pageBainIncludedTitle: "What's included",
+        pageBainFormulaTitle: "Thalasso bath pricing",
+        pageBainFaqTitle: "Frequently asked questions about the thalasso bath",
+        pageBainCtaTitle: "Book your baby's thalasso bath",
+        pageBainCtaText: "Single session or 3-session pack — reply within 2 hours.",
+        faqBain1Q: "Up to what age can a baby have a thalasso bath?",
+        faqBain1A: "The thalasso bath is offered from birth up to 1 month — the ideal window where babies still retain the fetal position reflex, for maximum effect.",
+        faqBain2Q: "Is the thalasso bath safe for my baby?",
+        faqBain2A: "Yes, every bath is supervised at all times by a certified healthcare professional, with water at a controlled temperature and continuous monitoring.",
+        faqBain3Q: "Can I be present for the bath with my baby?",
+        faqBain3A: "Of course — parents are invited to take part, making it a shared moment of emotion and connection for the whole family.",
+
+        // Dedicated page — Baby Massage Geneva
+        pageMassageBreadcrumb: "Baby Massage Geneva",
+        pageMassageKicker: "At-home workshop · Traditional techniques, adapted",
+        pageMassageH1: "Baby Massage Workshop in Geneva",
+        pageMassageIntro_html: "Baby massage is an ancestral practice with many benefits: it relieves colic, promotes more peaceful sleep and strengthens the bond of attachment. During an at-home workshop in Geneva, I guide you step by step through simple, gentle techniques adapted to your baby — so you can then repeat them yourself, with confidence, every day.",
+        pageMassageIncludedTitle: "What you'll learn",
+        pageMassageFormulaTitle: "Baby massage packages",
+        pageMassageFaqTitle: "Frequently asked questions about baby massage",
+        pageMassageCtaTitle: "Book your baby massage workshop",
+        pageMassageCtaText: "Discovery session or progressive pack — reply within 2 hours.",
+        faqMassage1Q: "From what age can a baby be massaged?",
+        faqMassage1A: "Baby massage can start from the first few weeks of life, once the umbilical cord has healed. The techniques are always adapted to your baby's age and sensitivity.",
+        faqMassage2Q: "Can massage really relieve colic?",
+        faqMassage2A: "Yes, targeted techniques help ease digestive tension and relieve colic, while also stimulating blood circulation and the immune system.",
+        faqMassage3Q: "How many sessions does it take to learn the techniques?",
+        faqMassage3A: "A single discovery session is enough to get started, but the 4- or 8-session pack allows for progress tracking and adapts to your baby's developmental stages.",
+
+        // Dedicated page — Baby Sleep and Crying Consultation
+        pageSommeilBreadcrumb: "Baby Sleep Consultation",
+        pageSommeilKicker: "Remote consultation · Message or video",
+        pageSommeilH1: "Baby Sleep and Crying Consultation",
+        pageSommeilIntro_html: "Frequent waking, trouble falling asleep, unexplained crying: a baby's sleep is one of the biggest sources of exhaustion and worry for new parents. I offer <strong>personalized remote consultations</strong>, by message or video call, to understand what's going on and set up routines that work — from home, at your own pace, wherever you are in Geneva or beyond.",
+        pageSommeilIncludedTitle: "What's included",
+        pageSommeilFormulaTitle: "Consultation pricing",
+        pageSommeilFaqTitle: "Frequently asked questions about baby sleep",
+        pageSommeilCtaTitle: "Book your sleep consultation",
+        pageSommeilCtaText: "By message or video, reply within 2 hours.",
+        faqSommeil1Q: "How does a remote sleep consultation work?",
+        faqSommeil1A: "By message or video call, wherever you are: we review your baby's sleep habits together and build a personalized action plan.",
+        faqSommeil2Q: "From what age can I get a consultation about my baby's sleep?",
+        faqSommeil2A: "From the very first weeks if you have questions, and especially useful between 4 and 12 months, during major sleep milestones (regressions, crib transition, night-weaning).",
+        faqSommeil3Q: "Does the support stop after the consultation?",
+        faqSommeil3A: "No, a few days of message follow-up are included so we can adjust the routines put in place together.",
+
+        // Dedicated page — Postpartum Homecoming Support
+        pageRetourBreadcrumb: "Postpartum Homecoming Geneva",
+        pageRetourKicker: "Certified newborn care specialist · Full hands-on training",
+        pageRetourH1: "Postpartum Homecoming Support in Geneva",
+        pageRetourIntro_html: "Coming home with a newborn is as wonderful as it is overwhelming: getting the hang of care routines, managing exhaustion, and finding your footing, often with no prior experience. My <strong>postpartum homecoming support</strong> gives you a reassuring presence from the very first days at home — I take care of both day and night care, train you in the right techniques, and stay available on WhatsApp in the following weeks to answer your questions.",
+        pageRetourIncludedTitle: "What's included",
+        pageRetourFormulaTitle: "Homecoming packages",
+        pageRetourFaqTitle: "Frequently asked questions about postpartum homecoming",
+        pageRetourCtaTitle: "Prepare your homecoming",
+        pageRetourCtaText: "Book during pregnancy or right after birth — reply within 2 hours."
     }
 };
 

@@ -106,15 +106,44 @@ function localBusinessJsonLd(doc) {
     return JSON.parse(match.textContent);
 }
 
-function faqPageJsonLd(numbers) {
+// `keys` : préfixes de clés FAQ, ex. ['faq3','faq4'] (existantes, reprises de la
+// home) ou ['faqBain1','faqBain2'] (nouvelles, propres à une page dédiée) —
+// chaque préfixe doit avoir une paire `<préfixe>Q` / `<préfixe>A` dans translations.js.
+function faqPageJsonLd(keys) {
     return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: numbers.map((n) => ({
+        mainEntity: keys.map((k) => ({
             '@type': 'Question',
-            name: fr[`faq${n}Q`],
-            acceptedAnswer: { '@type': 'Answer', text: fr[`faq${n}A`].replace(/ — voir la section Tarifs.*$/, '.') },
+            name: fr[`${k}Q`],
+            acceptedAnswer: { '@type': 'Answer', text: fr[`${k}A`].replace(/ — voir la section Tarifs.*$/, '.') },
         })),
+    };
+}
+
+// Schema Service : relie la page à l'offre correspondante du hasOfferCatalog du
+// LocalBusiness (par nom d'Offer). `serviceName` en français ; `nameOverride`
+// permet de passer le nom anglais lors de la génération de la page EN.
+function serviceJsonLd(business, page, url, nameOverride) {
+    if (!page.serviceName) return null;
+    const offers = (business.hasOfferCatalog?.itemListElement || [])
+        .filter((o) => (page.serviceOfferNames || []).includes(o.name));
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: nameOverride || page.serviceName,
+        serviceType: nameOverride || page.serviceName,
+        provider: { '@id': business['@id'] },
+        areaServed: business.areaServed,
+        url,
+        ...(offers.length ? {
+            offers: offers.map((o) => ({
+                '@type': 'Offer',
+                name: o.name,
+                ...(o.price ? { price: o.price, priceCurrency: o.priceCurrency || 'CHF' } : {}),
+                ...(o.priceSpecification ? { priceSpecification: o.priceSpecification } : {}),
+            })),
+        } : {}),
     };
 }
 
@@ -182,14 +211,26 @@ function sectionTitle(doc, text, key) {
     return el(doc, `<h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-10 text-champagne-700" data-i18n="${key}">${text}</h2>`)[0];
 }
 
-function faqSection(doc, { titleKey, titleFallback, numbers }) {
+// Construit chaque carte FAQ depuis translations.js (fr[key+'Q']/fr[key+'A']) plutôt
+// que par extraction : fonctionne aussi bien pour les questions déjà visibles sur la
+// home (ex. 'faq3') que pour des questions nouvelles propres à une page dédiée
+// (ex. 'faqBain1', absentes de index.html).
+function buildFaqCard(doc, key) {
+    return el(doc, `
+    <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="${key}Q">${fr[`${key}Q`]}</h3>
+        <p class="text-sm text-sand-600" data-i18n="${key}A">${fr[`${key}A`]}</p>
+    </div>`)[0];
+}
+
+function faqSection(doc, { titleKey, titleFallback, keys }) {
     const wrapper = el(doc, `
     <section class="container mx-auto max-w-3xl px-6 py-4">
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-10 text-champagne-700" data-i18n="${titleKey}">${titleFallback}</h2>
         <div class="space-y-4"></div>
     </section>`)[0];
     const container = wrapper.querySelector('.space-y-4');
-    numbers.forEach((n) => container.appendChild(extractCard(doc, `faq${n}Q`, '.rounded-2xl')));
+    keys.forEach((k) => container.appendChild(buildFaqCard(doc, k)));
     return wrapper;
 }
 
@@ -254,7 +295,7 @@ function buildNightMain(doc) {
 
     main.appendChild(zoneSection(doc));
     main.appendChild(testimonialSection(doc, 'testimonial3Text', fr.testimonial3Text, 'Camille D.'));
-    main.appendChild(faqSection(doc, { titleKey: 'pageNightFaqTitle', titleFallback: fr.pageNightFaqTitle, numbers: [3, 4, 6, 7, 8] }));
+    main.appendChild(faqSection(doc, { titleKey: 'pageNightFaqTitle', titleFallback: fr.pageNightFaqTitle, keys: ['faq3', 'faq4', 'faq6', 'faq7', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageNightCtaTitle', titleFallback: fr.pageNightCtaTitle,
         textKey: 'pageNightCtaText', textFallback: fr.pageNightCtaText,
@@ -315,7 +356,7 @@ function buildPueriMain(doc) {
 
     main.appendChild(zoneSection(doc));
     main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
-    main.appendChild(faqSection(doc, { titleKey: 'pagePueriFaqTitle', titleFallback: fr.pagePueriFaqTitle, numbers: [1, 2, 5, 7, 8] }));
+    main.appendChild(faqSection(doc, { titleKey: 'pagePueriFaqTitle', titleFallback: fr.pagePueriFaqTitle, keys: ['faq1', 'faq2', 'faq5', 'faq7', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pagePueriCtaTitle', titleFallback: fr.pagePueriCtaTitle,
         textKey: 'pagePueriCtaText', textFallback: fr.pagePueriCtaText,
@@ -348,10 +389,163 @@ function buildTarifsMain(doc) {
     main.appendChild(extractSection(doc, 'pricing'));
 
     main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
-    main.appendChild(faqSection(doc, { titleKey: 'pageTarifsFaqTitle', titleFallback: fr.pageTarifsFaqTitle, numbers: [5, 6, 8] }));
+    main.appendChild(faqSection(doc, { titleKey: 'pageTarifsFaqTitle', titleFallback: fr.pageTarifsFaqTitle, keys: ['faq5', 'faq6', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageTarifsCtaTitle', titleFallback: fr.pageTarifsCtaTitle,
         textKey: 'pageTarifsCtaText', textFallback: fr.pageTarifsCtaText,
+    }));
+    return main;
+}
+
+// Une carte de tarif seule, centrée (pour les pages à une seule formule : bain, sommeil).
+function singleFormulaSection(doc, { titleKey, titleFallback, cardKey }) {
+    const wrapper = el(doc, `
+    <section class="container mx-auto max-w-6xl px-6 py-10">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-10 text-champagne-700" data-i18n="${titleKey}">${titleFallback}</h2>
+        <div class="max-w-sm mx-auto"></div>
+    </section>`)[0];
+    wrapper.querySelector('.max-w-sm').appendChild(extractCard(doc, cardKey));
+    wrapper.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
+    return wrapper;
+}
+
+// ============================================================
+// PAGE 4 — Bain Thalasso Bébé Genève
+// ============================================================
+function buildBainMain(doc) {
+    const main = doc.createElement('main');
+    main.appendChild(breadcrumbBar(doc, 'pageBainBreadcrumb', fr.pageBainBreadcrumb));
+    main.appendChild(pageHeader(doc, {
+        kickerKey: 'pageBainKicker', kickerFallback: fr.pageBainKicker,
+        h1Key: 'pageBainH1', h1Fallback: fr.pageBainH1,
+        introKey: 'pageBainIntro_html', introFallback: fr.pageBainIntro_html,
+    }));
+
+    const includedSection = doc.createElement('section');
+    includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
+    includedSection.appendChild(sectionTitle(doc, fr.pageBainIncludedTitle, 'pageBainIncludedTitle'));
+    includedSection.appendChild(extractCard(doc, 'servCard5Title'));
+    main.appendChild(includedSection);
+
+    main.appendChild(singleFormulaSection(doc, { titleKey: 'pageBainFormulaTitle', titleFallback: fr.pageBainFormulaTitle, cardKey: 'pric8Title' }));
+    main.appendChild(zoneSection(doc));
+    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(faqSection(doc, { titleKey: 'pageBainFaqTitle', titleFallback: fr.pageBainFaqTitle, keys: ['faqBain1', 'faqBain2', 'faqBain3'] }));
+    main.appendChild(ctaBand(doc, {
+        titleKey: 'pageBainCtaTitle', titleFallback: fr.pageBainCtaTitle,
+        textKey: 'pageBainCtaText', textFallback: fr.pageBainCtaText,
+    }));
+    return main;
+}
+
+// ============================================================
+// PAGE 5 — Massage Bébé Genève
+// ============================================================
+function buildMassageMain(doc) {
+    const main = doc.createElement('main');
+    main.appendChild(breadcrumbBar(doc, 'pageMassageBreadcrumb', fr.pageMassageBreadcrumb));
+    main.appendChild(pageHeader(doc, {
+        kickerKey: 'pageMassageKicker', kickerFallback: fr.pageMassageKicker,
+        h1Key: 'pageMassageH1', h1Fallback: fr.pageMassageH1,
+        introKey: 'pageMassageIntro_html', introFallback: fr.pageMassageIntro_html,
+    }));
+
+    const includedSection = doc.createElement('section');
+    includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
+    includedSection.appendChild(sectionTitle(doc, fr.pageMassageIncludedTitle, 'pageMassageIncludedTitle'));
+    includedSection.appendChild(extractCard(doc, 'servCard6Title'));
+    main.appendChild(includedSection);
+
+    const formulasSection = doc.createElement('section');
+    formulasSection.className = 'container mx-auto max-w-6xl px-6 py-10';
+    formulasSection.appendChild(sectionTitle(doc, fr.pageMassageFormulaTitle, 'pageMassageFormulaTitle'));
+    const grid = doc.createElement('div');
+    grid.className = 'grid md:grid-cols-3 gap-6';
+    ['pric5Title', 'pric6Title', 'pric7Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
+    formulasSection.appendChild(grid);
+    formulasSection.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
+    main.appendChild(formulasSection);
+
+    main.appendChild(zoneSection(doc));
+    main.appendChild(testimonialSection(doc, 'testimonial2Text', fr.testimonial2Text, 'Thomas L.'));
+    main.appendChild(faqSection(doc, { titleKey: 'pageMassageFaqTitle', titleFallback: fr.pageMassageFaqTitle, keys: ['faqMassage1', 'faqMassage2', 'faqMassage3'] }));
+    main.appendChild(ctaBand(doc, {
+        titleKey: 'pageMassageCtaTitle', titleFallback: fr.pageMassageCtaTitle,
+        textKey: 'pageMassageCtaText', textFallback: fr.pageMassageCtaText,
+    }));
+    return main;
+}
+
+// ============================================================
+// PAGE 6 — Consultation Sommeil et Pleurs
+// ============================================================
+function buildSommeilMain(doc) {
+    const main = doc.createElement('main');
+    main.appendChild(breadcrumbBar(doc, 'pageSommeilBreadcrumb', fr.pageSommeilBreadcrumb));
+    main.appendChild(pageHeader(doc, {
+        kickerKey: 'pageSommeilKicker', kickerFallback: fr.pageSommeilKicker,
+        h1Key: 'pageSommeilH1', h1Fallback: fr.pageSommeilH1,
+        introKey: 'pageSommeilIntro_html', introFallback: fr.pageSommeilIntro_html,
+    }));
+
+    const includedSection = doc.createElement('section');
+    includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
+    includedSection.appendChild(sectionTitle(doc, fr.pageSommeilIncludedTitle, 'pageSommeilIncludedTitle'));
+    includedSection.appendChild(extractCard(doc, 'servCard7Title'));
+    main.appendChild(includedSection);
+
+    main.appendChild(singleFormulaSection(doc, { titleKey: 'pageSommeilFormulaTitle', titleFallback: fr.pageSommeilFormulaTitle, cardKey: 'pric10Title' }));
+    main.appendChild(zoneSection(doc));
+    main.appendChild(testimonialSection(doc, 'testimonial3Text', fr.testimonial3Text, 'Camille D.'));
+    main.appendChild(faqSection(doc, { titleKey: 'pageSommeilFaqTitle', titleFallback: fr.pageSommeilFaqTitle, keys: ['faqSommeil1', 'faqSommeil2', 'faqSommeil3'] }));
+    main.appendChild(ctaBand(doc, {
+        titleKey: 'pageSommeilCtaTitle', titleFallback: fr.pageSommeilCtaTitle,
+        textKey: 'pageSommeilCtaText', textFallback: fr.pageSommeilCtaText,
+    }));
+    return main;
+}
+
+// ============================================================
+// PAGE 7 — Retour de Maternité Genève
+// ============================================================
+function buildRetourMain(doc) {
+    const main = doc.createElement('main');
+    main.appendChild(breadcrumbBar(doc, 'pageRetourBreadcrumb', fr.pageRetourBreadcrumb));
+    main.appendChild(pageHeader(doc, {
+        kickerKey: 'pageRetourKicker', kickerFallback: fr.pageRetourKicker,
+        h1Key: 'pageRetourH1', h1Fallback: fr.pageRetourH1,
+        introKey: 'pageRetourIntro_html', introFallback: fr.pageRetourIntro_html,
+    }));
+
+    const includedSection = doc.createElement('section');
+    includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
+    includedSection.appendChild(sectionTitle(doc, fr.pageRetourIncludedTitle, 'pageRetourIncludedTitle'));
+    includedSection.appendChild(extractCard(doc, 'servCard1Title'));
+    main.appendChild(includedSection);
+
+    const formulasSection = doc.createElement('section');
+    formulasSection.className = 'container mx-auto max-w-4xl px-6 py-10';
+    formulasSection.appendChild(sectionTitle(doc, fr.pageRetourFormulaTitle, 'pageRetourFormulaTitle'));
+    const grid = doc.createElement('div');
+    grid.className = 'grid md:grid-cols-2 gap-6 max-w-2xl mx-auto';
+    ['pric2Title', 'pric3Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
+    formulasSection.appendChild(grid);
+    formulasSection.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
+    main.appendChild(formulasSection);
+
+    const whySection = doc.createElement('section');
+    whySection.className = 'container mx-auto max-w-5xl px-6 py-10';
+    whySection.appendChild(sectionTitle(doc, fr.sharedWhyTitle, 'sharedWhyTitle'));
+    const whyGrid = doc.querySelector('[data-i18n="whyVal1Title"]').closest('.grid');
+    whySection.appendChild(whyGrid.cloneNode(true));
+    main.appendChild(whySection);
+
+    main.appendChild(zoneSection(doc));
+    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(faqSection(doc, { titleKey: 'pageRetourFaqTitle', titleFallback: fr.pageRetourFaqTitle, keys: ['faq1', 'faq2', 'faq5', 'faq7'] }));
+    main.appendChild(ctaBand(doc, {
+        titleKey: 'pageRetourCtaTitle', titleFallback: fr.pageRetourCtaTitle,
+        textKey: 'pageRetourCtaText', textFallback: fr.pageRetourCtaText,
     }));
     return main;
 }
@@ -368,8 +562,9 @@ const PAGES = [
         descFr: "Garde de nuit bébé à domicile à Genève par une puéricultrice diplômée, 11 ans d'expérience en néonatologie. Nuit découverte dès 300 CHF. Réponse sous 2h.",
         titleEn: 'Overnight Baby Care in Geneva | Cocoonurse — Certified Newborn Specialist',
         descEn: 'At-home overnight baby care in Geneva by a certified newborn care specialist with 11 years of neonatal experience. Discovery night from CHF 300. Reply within 2 hours.',
-        faqNumbers: [3, 4, 6, 7, 8],
+        faqKeys: ['faq3', 'faq4', 'faq6', 'faq7', 'faq8'],
         serviceName: 'Garde de Nuit Bébé',
+        serviceNameEn: 'Overnight Baby Care',
         serviceOfferNames: ['Nuit Découverte', 'Pack Retour Maison', 'Semaine Sérénité'],
     },
     {
@@ -380,8 +575,9 @@ const PAGES = [
         descFr: "Puéricultrice diplômée à domicile à Genève : soins du nouveau-né, allaitement, surveillance médicale, jour et nuit. 11 ans d'expérience en néonatologie aux HUG.",
         titleEn: 'Home Newborn Care Specialist in Geneva | Cocoonurse',
         descEn: 'Certified newborn care specialist at home in Geneva: newborn care, breastfeeding support, medical monitoring, day and night. 11 years of neonatal experience at HUG.',
-        faqNumbers: [1, 2, 5, 7, 8],
+        faqKeys: ['faq1', 'faq2', 'faq5', 'faq7', 'faq8'],
         serviceName: 'Puéricultrice à Domicile',
+        serviceNameEn: 'Home Newborn Care',
         serviceOfferNames: ['Pack Retour Maison', 'Semaine Sérénité'],
     },
     {
@@ -392,8 +588,60 @@ const PAGES = [
         descFr: 'Tarifs transparents : garde de nuit dès 300 CHF, pack retour maison, semaine sérénité, massage bébé, bain thalasso. Devis gratuit, réponse sous 2h.',
         titleEn: 'Overnight Care & Newborn Specialist Pricing in Geneva | Cocoonurse',
         descEn: 'Transparent pricing: overnight care from CHF 300, homecoming package, serenity week, baby massage, thalasso bath. Free quote, reply within 2 hours.',
-        faqNumbers: [5, 6, 8],
+        faqKeys: ['faq5', 'faq6', 'faq8'],
         serviceName: null, // page tarifs : pas de Service schema dédié, la home + les 2 autres pages suffisent
+    },
+    {
+        slug: 'bain-thalasso-bebe-geneve',
+        buildMain: buildBainMain,
+        breadcrumbName: fr.pageBainBreadcrumb,
+        titleFr: 'Bain Thalasso Bébé à Genève | Cocoonurse',
+        descFr: 'Bain thalasso thérapeutique à domicile à Genève pour bébés de la naissance à 1 mois, encadré par une professionnelle de santé diplômée. Dès 140 CHF.',
+        titleEn: 'Baby Thalasso Bath in Geneva | Cocoonurse',
+        descEn: 'At-home therapeutic thalasso bath in Geneva for newborns up to 1 month, supervised by a certified healthcare professional. From CHF 140.',
+        faqKeys: ['faqBain1', 'faqBain2', 'faqBain3'],
+        serviceName: 'Bain Thalasso Thérapeutique',
+        serviceNameEn: 'Therapeutic Thalasso Bath',
+        serviceOfferNames: ['Bain Thalasso Thérapeutique', 'Bain Thalasso Thérapeutique - Pack 3 Séances'],
+    },
+    {
+        slug: 'massage-bebe-geneve',
+        buildMain: buildMassageMain,
+        breadcrumbName: fr.pageMassageBreadcrumb,
+        titleFr: 'Atelier Massage Bébé à Genève | Cocoonurse',
+        descFr: 'Atelier massage bébé à domicile à Genève : soulagement des coliques, sommeil plus paisible, éveil sensoriel. Séance découverte dès 90 CHF.',
+        titleEn: 'Baby Massage Workshop in Geneva | Cocoonurse',
+        descEn: 'At-home baby massage workshop in Geneva: colic relief, more peaceful sleep, sensory development. Discovery session from CHF 90.',
+        faqKeys: ['faqMassage1', 'faqMassage2', 'faqMassage3'],
+        serviceName: 'Massage Bébé',
+        serviceNameEn: 'Baby Massage',
+        serviceOfferNames: ['Massage Bébé - Séance Découverte', 'Massage Bébé - Pack 4 Séances', 'Massage Bébé - Pack 8 Séances'],
+    },
+    {
+        slug: 'consultation-sommeil-bebe',
+        buildMain: buildSommeilMain,
+        breadcrumbName: fr.pageSommeilBreadcrumb,
+        titleFr: 'Consultation Sommeil Bébé à Genève | Cocoonurse',
+        descFr: 'Consultation personnalisée à distance sur le sommeil et les pleurs de bébé, par message ou vidéo. Routines sur-mesure, réponse sous 2h. 90 CHF.',
+        titleEn: 'Baby Sleep Consultation in Geneva | Cocoonurse',
+        descEn: 'Personalized remote consultation on baby sleep and crying, by message or video. Custom routines, reply within 2 hours. CHF 90.',
+        faqKeys: ['faqSommeil1', 'faqSommeil2', 'faqSommeil3'],
+        serviceName: 'Consultation Sommeil et Pleurs',
+        serviceNameEn: 'Sleep and Crying Consultation',
+        serviceOfferNames: ['Consultation Sommeil et Pleurs'],
+    },
+    {
+        slug: 'retour-maternite-geneve',
+        buildMain: buildRetourMain,
+        breadcrumbName: fr.pageRetourBreadcrumb,
+        titleFr: 'Accompagnement Retour de Maternité à Genève | Cocoonurse',
+        descFr: 'Accompagnement au retour de maternité à Genève par une puéricultrice diplômée : soins jour et nuit, formation complète, suivi WhatsApp. Dès 1600 CHF.',
+        titleEn: 'Postpartum Homecoming Support in Geneva | Cocoonurse',
+        descEn: 'Postpartum homecoming support in Geneva by a certified newborn care specialist: day and night care, full training, WhatsApp follow-up. From CHF 1600.',
+        faqKeys: ['faq1', 'faq2', 'faq5', 'faq7'],
+        serviceName: 'Retour de Maternité',
+        serviceNameEn: 'Postpartum Homecoming Support',
+        serviceOfferNames: ['Pack Retour Maison', 'Semaine Sérénité'],
     },
 ];
 
@@ -440,9 +688,12 @@ function buildPage(page) {
     doc.head.replaceWith(head);
 
     // JSON-LD : LocalBusiness (identique à la home) + Breadcrumb + FAQ (sous-ensemble de la page)
-    addJsonLd(doc, localBusinessJsonLd(loadSourceDocument()));
+    const business = localBusinessJsonLd(loadSourceDocument());
+    addJsonLd(doc, business);
     addJsonLd(doc, breadcrumbJsonLd(page.breadcrumbName, url));
-    addJsonLd(doc, faqPageJsonLd(page.faqNumbers));
+    addJsonLd(doc, faqPageJsonLd(page.faqKeys));
+    const service = serviceJsonLd(business, page, url);
+    if (service) addJsonLd(doc, service);
 
     // <body>
     const nav = buildNav(doc, `/${page.slug}/`, `/en/${page.slug}/`);
@@ -494,11 +745,17 @@ function buildPage(page) {
                 obj.itemListElement[0].item = `${SITE}/en/`;
                 s.textContent = '\n' + JSON.stringify(obj, null, 2) + '\n';
             } else if (obj['@type'] === 'FAQPage') {
-                obj.mainEntity = page.faqNumbers.map((n) => ({
+                obj.mainEntity = page.faqKeys.map((k) => ({
                     '@type': 'Question',
-                    name: en[`faq${n}Q`],
-                    acceptedAnswer: { '@type': 'Answer', text: en[`faq${n}A`].replace(/ — see the Pricing section.*$/i, '.').replace(/ — voir la section Tarifs.*$/, '.') },
+                    name: en[`${k}Q`],
+                    acceptedAnswer: { '@type': 'Answer', text: en[`${k}A`].replace(/ — see the Pricing section.*$/i, '.').replace(/ — voir la section Tarifs.*$/, '.') },
                 }));
+                s.textContent = '\n' + JSON.stringify(obj, null, 2) + '\n';
+            } else if (obj['@type'] === 'Service') {
+                const name = page.serviceNameEn || page.serviceName;
+                obj.name = name;
+                obj.serviceType = name;
+                obj.url = urlEn;
                 s.textContent = '\n' + JSON.stringify(obj, null, 2) + '\n';
             }
         } catch (e) { /* ignore */ }
