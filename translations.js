@@ -5,10 +5,16 @@ const translations = {
     fr: {
         // Navigation
         navAbout: "À Propos",
-        navServices: "Services", 
+        navServices: "Services",
         navPricing: "Tarifs",
         navContact: "Contact",
-        
+
+        // Accessibilité (aria-label)
+        ariaBackToTop: "Retour en haut de page",
+        ariaContactSection: "Aller à la section contact",
+        ariaPrevTestimonial: "Témoignage précédent",
+        ariaNextTestimonial: "Témoignage suivant",
+
         // Hero
         heroSubtitle: "Maternity Nurse & Garde de Nuit Bébé | Genève",
         heroTagline: "Reposez-vous. Je m'occupe de tout.",
@@ -124,6 +130,7 @@ const translations = {
         
         // Contact
         contactTitle: "Contact",
+        copy: "Copier",
         contactName: "Nom",
         contactEmail: "Email",
         contactPhone: "Téléphone",
@@ -329,7 +336,13 @@ const translations = {
         navServices: "Services",
         navPricing: "Pricing",
         navContact: "Contact",
-        
+
+        // Accessibility (aria-label)
+        ariaBackToTop: "Back to top",
+        ariaContactSection: "Go to contact section",
+        ariaPrevTestimonial: "Previous testimonial",
+        ariaNextTestimonial: "Next testimonial",
+
         // Hero
         heroSubtitle: "Maternity Nurse & Night Nanny | Geneva",
         heroTagline: "Rest. I'll take care of everything.",
@@ -440,6 +453,7 @@ const translations = {
         
         // Contact
         contactTitle: "Contact",
+        copy: "Copy",
         contactName: "Name",
         contactEmail: "Email",
         contactPhone: "Phone",
@@ -643,8 +657,11 @@ const translations = {
     }
 };
 
-// Langue actuelle
-let currentLang = localStorage.getItem('cocoonurse-lang') || 'fr';
+// Langue actuelle : figée par page (window.COCOONURSE_LANG, défini dans le <head>)
+// pour que le contenu injecté en JS (témoignages, formulaire...) corresponde
+// toujours à la langue statique de la page, indépendamment de tout ancien
+// choix stocké en localStorage sur l'autre page.
+let currentLang = (typeof window !== 'undefined' && window.COCOONURSE_LANG) || localStorage.getItem('cocoonurse-lang') || 'fr';
 
 // Fonction pour changer la langue
 function setLanguage(lang) {

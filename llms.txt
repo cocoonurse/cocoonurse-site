@@ -27,4 +27,5 @@ Canton de Genève (Genève-ville, Carouge, Lancy, Meyrin, Vernier, Onex, Thônex
 
 ## Pages
 
-- [Site principal](https://cocoonurse.ch/): présentation, services, tarifs, FAQ, contact.
+- [Site principal (français)](https://cocoonurse.ch/): présentation, services, tarifs, FAQ, contact.
+- [English version](https://cocoonurse.ch/en/): same content in English.

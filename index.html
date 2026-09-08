@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>window.COCOONURSE_LANG = 'fr';</script>
     <title>Cocoonurse – Puéricultrice & Garde de Nuit Bébé à Genève</title>
     <meta name="description" content="Puéricultrice diplômée à Genève : garde de nuit bébé, soins du nouveau-né, allaitement, bains thérapeutiques. À domicile à Genève, Vaud et France voisine.">
     <link rel="canonical" href="https://cocoonurse.ch/">
+    <link rel="alternate" hreflang="fr" href="https://cocoonurse.ch/">
+    <link rel="alternate" hreflang="en" href="https://cocoonurse.ch/en/">
+    <link rel="alternate" hreflang="x-default" href="https://cocoonurse.ch/">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW32JDH6J6"></script>
     <script>
@@ -306,16 +310,16 @@
 <a href="#contact" class="text-white px-4 py-2 rounded-full transition" style="background: linear-gradient(135deg, #E6A8B8 0%, #D4899D 100%); box-shadow: 0 4px 14px rgba(230,168,184,0.35);" onmouseover="this.style.boxShadow='0 6px 20px rgba(230,168,184,0.5)'" onmouseout="this.style.boxShadow='0 4px 14px rgba(230,168,184,0.35)'" data-i18n="navContact">Contact</a>
                 <!-- Bouton FR/EN -->
                 <div class="flex items-center gap-2 ml-4 border-l pl-4 border-gray-300">
-                    <button onclick="setLanguage('fr')" class="lang-btn text-sm px-2 py-1 transition" data-lang="fr">FR</button>
+                    <a href="/" class="lang-btn text-sm px-2 py-1 transition" data-lang="fr" aria-current="true">FR</a>
                     <span class="text-gray-300">|</span>
-                    <button onclick="setLanguage('en')" class="lang-btn text-sm px-2 py-1 transition" data-lang="en">EN</button>
+                    <a href="/en/" class="lang-btn text-sm px-2 py-1 transition" data-lang="en">EN</a>
                 </div>
 </div>
 <!-- Boutons FR/EN + Menu burger sur mobile -->
 <div class="lg:hidden flex items-center gap-3">
-    <button onclick="setLanguage('fr')" class="lang-btn text-xs px-2 py-1 transition" data-lang="fr">FR</button>
+    <a href="/" class="lang-btn text-xs px-2 py-1 transition" data-lang="fr" aria-current="true">FR</a>
     <span class="text-gray-400">|</span>
-    <button onclick="setLanguage('en')" class="lang-btn text-xs px-2 py-1 transition" data-lang="en">EN</button>
+    <a href="/en/" class="lang-btn text-xs px-2 py-1 transition" data-lang="en">EN</a>
     <button class="focus:outline-none p-2 -mr-2 touch-manipulation" id="menu-btn" aria-label="Ouvrir le menu" style="min-width:44px; min-height:44px; display:flex; align-items:center; justify-content:center;">
         <i data-feather="menu"></i>
     </button>

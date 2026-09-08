@@ -196,12 +196,10 @@ document.addEventListener('click', function(e) {
         setTimeout(() => ripple.remove(), 800);
     }
 });
-    // Contenu en français uniquement
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialisation de la langue en français
     updatePageLanguage();
 function updatePageLanguage() {
-    const lang = translations.fr;
+    const lang = (typeof translations !== 'undefined' && typeof currentLang !== 'undefined' && translations[currentLang]) || translations.fr;
     // Mise à jour du contenu de la modal
     const modal = document.querySelector('contact-modal');
     if (modal) {
@@ -255,7 +253,7 @@ function updatePageLanguage() {
     // Bouton retour en haut
     const backToTopButton = document.createElement('button');
     backToTopButton.id = 'back-to-top';
-    backToTopButton.setAttribute('aria-label', 'Retour en haut de page');
+    backToTopButton.setAttribute('aria-label', (typeof translations !== 'undefined' && typeof currentLang !== 'undefined' && translations[currentLang] && translations[currentLang].ariaBackToTop) || 'Retour en haut de page');
     backToTopButton.innerHTML = '<i data-feather="arrow-up" class="w-6 h-6"></i>';
     document.body.appendChild(backToTopButton);
     
@@ -354,7 +352,7 @@ const progressBar = document.createElement('div');
 const contactBtn = document.createElement('a');
     contactBtn.href = '#contact';
     contactBtn.id = 'floating-contact-btn';
-    contactBtn.setAttribute('aria-label', 'Aller à la section contact');
+    contactBtn.setAttribute('aria-label', (typeof translations !== 'undefined' && typeof currentLang !== 'undefined' && translations[currentLang] && translations[currentLang].ariaContactSection) || 'Aller à la section contact');
     contactBtn.className = 'fixed bottom-28 right-6 bg-champagne-500 text-white p-4 rounded-full shadow-lg z-40 hover:bg-champagne-600 transition-all opacity-0 invisible pointer-events-none';
     contactBtn.innerHTML = '<i data-feather="mail" class="w-6 h-6"></i>';
     document.body.appendChild(contactBtn);
@@ -442,16 +440,20 @@ const testimonials = [
         }
     ];
 
+    const tCarousel = (typeof translations !== 'undefined' && typeof currentLang !== 'undefined') ? translations[currentLang] : null;
+    const ariaPrev = (tCarousel && tCarousel.ariaPrevTestimonial) || 'Témoignage précédent';
+    const ariaNext = (tCarousel && tCarousel.ariaNextTestimonial) || 'Témoignage suivant';
+
     const testimonialContainer = document.createElement('div');
     testimonialContainer.className = 'testimonial-carousel container mx-auto py-12 px-6';
     testimonialContainer.innerHTML = `
         <h2 class="text-3xl font-serif font-bold mb-12 text-center text-champagne-700" data-i18n="testimonialsTitle">Témoignages</h2>
         <div class="relative max-w-3xl mx-auto">
             <div class="testimonial-slides"></div>
-            <button class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="prev-testimonial" aria-label="Témoignage précédent">
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="prev-testimonial" aria-label="${ariaPrev}">
                 <i data-feather="chevron-left" class="w-8 h-8"></i>
             </button>
-            <button class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="next-testimonial" aria-label="Témoignage suivant">
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-champagne-500 hover:text-champagne-700" id="next-testimonial" aria-label="${ariaNext}">
                 <i data-feather="chevron-right" class="w-8 h-8"></i>
             </button>
         </div>

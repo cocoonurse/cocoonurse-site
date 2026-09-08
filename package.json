@@ -1,11 +1,12 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.58.2",
+    "jsdom": "^29.1.1",
     "sharp": "^0.34.5"
   },
   "dependencies": {
-    "@vercel/edge": "^1.2.2",
     "@tailwindcss/cli": "^4.2.1",
+    "@vercel/edge": "^1.2.2",
     "clean-css-cli": "^5.6.3",
     "tailwindcss": "^4.2.1",
     "terser": "^5.46.0"

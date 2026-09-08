@@ -104,12 +104,24 @@ git push
 
 ---
 
-## 5. Système de traduction i18n
+## 5. Système de traduction i18n — 2 pages statiques (08/09/2026)
 
-- Attribut `data-i18n="clé"` → remplace `textContent`
-- Attribut `data-i18n="clé_html"` → remplace `innerHTML` (pour éléments avec `<strong>` etc.)
-- Langues disponibles : `fr` et `en`
-- Fichier : `translations.js`
+- **`/` (FR)** et **`/en/` (EN)** sont deux pages HTML statiques distinctes, chacune dans sa langue,
+  avec `hreflang` réciproques + `x-default` sur FR. Avant, un simple toggle JS changeait le texte
+  sur une seule URL — Google n'indexait alors que le FR. Ce n'est plus le cas.
+- `index.html` (FR) reste la **source de vérité** : toute modif de structure/texte FR doit être
+  refaite manuellement, PUIS régénérer l'anglais avec `node scripts/generate-en.js`
+  (relit `index.html` + `translations.js`, réécrit `en/index.html` en remplaçant chaque
+  `[data-i18n]`/`[data-i18n-placeholder]` par sa traduction EN, et rend tous les chemins
+  relatifs — images/CSS/JS — absolus depuis `/`, indispensable car `/en/` n'est pas à la racine).
+- Attribut `data-i18n="clé"` → remplace `textContent` ; `data-i18n="clé_html"` → remplace `innerHTML`.
+- Le contenu injecté en JS au runtime (témoignages, bouton copier de la modale contact, boutons
+  "lire plus", aria-labels) lit `translations[currentLang]`, où `currentLang` est figé par page via
+  `window.COCOONURSE_LANG` défini en tête du `<head>` (`'fr'` ou `'en'`) — plus de dépendance au
+  `localStorage` pour le rendu initial, ce qui évite un flash de mauvaise langue et garantit que
+  Googlebot voit toujours la bonne langue sans exécuter de JS.
+- Langues disponibles : `fr` et `en`. Fichier : `translations.js`. Générateur : `scripts/generate-en.js`
+  (dépendance dev `jsdom`, utilisée uniquement en local — jamais au runtime/déploiement).
 
 **Clés des bullet points services (ajoutées cette session) :**
 - `servCard1Li1_html` à `servCard1Li5_html`
@@ -162,7 +174,7 @@ git push
 ## 8. Notes techniques
 
 - **Tailwind CSS** : via CDN v3 (pas de build — remplacement CLI v4 a cassé le layout)
-- **Feather Icons** : via CDN, script en bas de `<body>` (pas de `defer`)
+- **Feather Icons** : via CDN, script en bas de `<body>`, tous les scripts (`feather`, `script.js`, `translations.js`, `contact-modal.js`) en `defer`
 - **Fonts** : Google Fonts — Cormorant Garamond, Great Vibes
 - **Couleur fond contact** : `#FAE8EF`
 - **Couleur principale** : `#D4899D` (champagne/rose)
