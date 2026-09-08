@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocoonurse – Puéricultrice & Garde de Nuit Bébé à Genève</title>
-    <meta name="description" content="Puéricultrice diplômée à Genève : garde de nuit bébé, soins du nouveau-né, allaitement, bains thérapeutiques. À domicile à Genève, Vaud et France voisine, 24h/24 7j/7.">
-    <meta name="keywords" content="puéricultrice Genève, puéricultrice à domicile Genève, garde de nuit bébé Genève, night nanny Geneva, maternity nurse Genève, maternity nurse Geneva, infirmière à domicile Genève, infirmière de nuit nouveau-né Genève, garde d'enfant à domicile Genève, garde d'enfant Genève, aide maternelle Genève, auxiliaire de puériculture Genève, soins nouveau-né Genève, soins infirmiers nouveau-né domicile, conseillère allaitement Genève, bains thérapeutiques bébé Genève, garde bébé Vaud, garde bébé Nyon, garde bébé Annemasse, garde bébé Saint-Julien-en-Genevois, retour de maternité Genève, aide post-partum Genève">
+    <meta name="description" content="Puéricultrice diplômée à Genève : garde de nuit bébé, soins du nouveau-né, allaitement, bains thérapeutiques. À domicile à Genève, Vaud et France voisine.">
     <link rel="canonical" href="https://cocoonurse.ch/">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW32JDH6J6"></script>
@@ -30,7 +29,8 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://cocoonurse.ch/#business",
       "name": "Cocoonurse",
       "description": "Puéricultrice diplômée à Genève — soins du nouveau-né, garde de nuit bébé, allaitement, bains thérapeutiques, à domicile à Genève, dans le canton de Vaud et en France voisine. Disponible 24h/24, 7j/7.",
       "url": "https://cocoonurse.ch",
@@ -48,7 +48,13 @@
         "latitude": 46.2044,
         "longitude": 6.1432
       },
-      "priceRange": "CHF 300 – CHF 5000",
+      "priceRange": "CHF 90–CHF 1900",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
       "knowsAbout": ["Garde d'enfant à domicile", "Soins infirmiers du nouveau-né", "Garde de nuit bébé", "Maternity nurse", "Allaitement maternel", "Néonatologie", "Retour de maternité", "Bains thérapeutiques bébé"],
       "areaServed": [
         { "@type": "City", "name": "Genève" },
@@ -73,39 +79,19 @@
       ],
       "founder": {
         "@type": "Person",
+        "@id": "https://cocoonurse.ch/#alicia-carli",
         "name": "Alicia Carli",
         "jobTitle": "Puéricultrice diplômée",
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Hôpitaux Universitaires de Genève (HUG)"
+        },
         "hasCredential": [
-          "Puéricultrice diplômée",
-          "Auxiliaire de Puériculture CRS",
-          "Conseillère en allaitement certifiée"
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Puéricultrice diplômée" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Auxiliaire de Puériculture CRS" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Conseillère en allaitement certifiée" }
         ]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "3"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Sophie M." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Alicia a été d'une aide précieuse lors des premières semaines avec notre jumeaux. Professionnelle et bienveillante."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Thomas L." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-          "reviewBody": "Son expérience en néonatalogie nous a rassurés. Notre bébé prématuré était entre de bonnes mains."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Camille D." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Les nuits étaient un cauchemar avant qu'Alicia n'intervienne. Elle a établi une routine qui a changé notre vie."
-        }
-      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Formules Cocoonurse",
@@ -179,6 +165,16 @@
             "price": "90",
             "priceCurrency": "CHF",
             "description": "Atelier de portage bébé à domicile, 1h : choix et apprentissage sécurisé de l'écharpe, du sling ou du porte-bébé."
+          },
+          {
+            "@type": "Offer",
+            "name": "Sur-Mesure",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "2000",
+              "priceCurrency": "CHF"
+            },
+            "description": "Accompagnement complet de 2 à 4 semaines, jours et nuits — jumeaux, prématurés ou grande disponibilité, sur devis."
           }
         ]
       }
@@ -270,6 +266,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -300,7 +297,7 @@
                 <span class="text-2xl font-serif font-light tracking-wider text-[#d9a969]">Cocoonurse</span>
                 <img src="images/cocoonurse-icon.png" alt="Logo Cocoonurse" style="width:58px; height:58px; border-radius:50%; box-shadow: 0 0 0 3px rgba(230,168,184,0.3), 0 6px 18px rgba(212,137,157,0.22);">
             </a>
-<div class="hidden md:flex space-x-8 items-center">
+<div class="hidden lg:flex space-x-8 items-center">
                 <a href="#about" class="hover:text-champagne-600 transition" data-i18n="navAbout">À Propos</a>
                 <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
                 <a href="#how-it-works" class="hover:text-champagne-600 transition" data-i18n="navHow">Comment ça marche</a>
@@ -315,7 +312,7 @@
                 </div>
 </div>
 <!-- Boutons FR/EN + Menu burger sur mobile -->
-<div class="md:hidden flex items-center gap-3">
+<div class="lg:hidden flex items-center gap-3">
     <button onclick="setLanguage('fr')" class="lang-btn text-xs px-2 py-1 transition" data-lang="fr">FR</button>
     <span class="text-gray-400">|</span>
     <button onclick="setLanguage('en')" class="lang-btn text-xs px-2 py-1 transition" data-lang="en">EN</button>
@@ -325,7 +322,7 @@
 </div>
         </div>
         <!-- Mobile Menu -->
-            <div class="md:hidden hidden bg-champagne-100 px-6 py-4" id="mobile-menu">
+            <div class="lg:hidden hidden bg-champagne-100 px-6 py-4" id="mobile-menu">
             <div class="flex flex-col space-y-4">
                 <a href="#about" class="hover:text-champagne-600 transition" data-i18n="navAbout">À Propos</a>
                 <a href="#services" class="hover:text-champagne-600 transition" data-i18n="navServices">Services</a>
@@ -1125,19 +1122,19 @@
                     <img src="images/ventre.webp" alt="Maternité" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="323" height="156" loading="lazy">
                 </div>
                 <div class="masonry-item">
-                    <img src="images/Bebe_Massage.webp" alt="Massage bébé traditionnel, puéricultrice Genève" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                    <img src="images/Bebe_Massage.webp" alt="Massage bébé traditionnel, puéricultrice Genève" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1000" height="754" loading="lazy">
                 </div>
                 <div class="masonry-item">
                     <img src="images/bebe-se-couvre-visage-en-dormant.webp" alt="Bébé dormant" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1017" height="679" loading="lazy">
                 </div>
                 <div class="masonry-item">
-                    <img src="images/difrax-lovi-mammafeel-biberon-bebe-opt.webp" alt="Soins de bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                    <img src="images/difrax-lovi-mammafeel-biberon-bebe-opt.webp" alt="Soins de bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="880" height="470" loading="lazy">
                 </div>
                 <div class="masonry-item">
-                    <img src="images/359-mouvements-foetus.webp" alt="Développement du bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                    <img src="images/359-mouvements-foetus.webp" alt="Développement du bébé" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1800" height="1013" loading="lazy">
                 </div>
                 <div class="masonry-item">
-                    <img src="images/dents-de-bebe-poussee-dentaire-scaled.webp" alt="Bébé et poussée dentaire" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)">
+                    <img src="images/dents-de-bebe-poussee-dentaire-scaled.webp" alt="Bébé et poussée dentaire" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="2048" height="1591" loading="lazy">
                 </div>
                 <div class="masonry-item">
                     <img src="images/bebe-joue-voiture-bois.webp" alt="Bébé qui joue" class="rounded-lg shadow-sm hover:shadow-md transition cursor-zoom-in" onclick="openLightbox(this)" width="1024" height="1024" loading="lazy">
@@ -1301,14 +1298,14 @@
         <button class="absolute top-4 right-4 text-white text-4xl" onclick="closeLightbox()">&times;</button>
         <img id="lightbox-img" class="max-h-full max-w-full" src="" alt="">
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="components/contact-modal.js"></script>
-    <script src="script.js"></script>
-    <script src="translations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+    <script src="components/contact-modal.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="translations.js" defer></script>
     <contact-modal></contact-modal>
 <script>
-feather.replace();
-        
+document.addEventListener('DOMContentLoaded', function() { feather.replace(); });
+
         // Lightbox functions
         function openLightbox(element) {
             const lightbox = document.getElementById('lightbox');
@@ -1342,7 +1339,7 @@ feather.replace();
         <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsDataText">Conformément à la Loi fédérale suisse sur la protection des données (LPD), les informations transmises via le formulaire de contact (nom, email, téléphone, message) sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni transmises à des tiers.</p>
 
         <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsCookies">Cookies</h3>
-        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsCookiesText">Ce site n'utilise aucun cookie de suivi ni outil d'analyse. La préférence de langue est enregistrée localement dans votre navigateur (localStorage).</p>
+        <p class="text-sm text-sand-600 mb-4" data-i18n="mentionsCookiesText">Ce site utilise Google Analytics (statistiques de fréquentation anonymisées) afin d'améliorer l'expérience utilisateur. La préférence de langue est enregistrée localement dans votre navigateur (localStorage). Vous pouvez refuser le suivi via les paramètres de votre navigateur (Do Not Track) ou une extension de blocage.</p>
 
         <h3 class="font-semibold text-sand-800 mb-1" data-i18n="mentionsRights">Droits</h3>
         <p class="text-sm text-sand-600" data-i18n="mentionsRights_html">Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <a href="mailto:contact@cocoonurse.ch" class="underline" style="color:#D4899D;">contact@cocoonurse.ch</a></p>

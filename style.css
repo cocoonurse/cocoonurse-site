@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&display=swap');
 .font-great-vibes {
     font-family: 'Great Vibes', cursive;
 }
@@ -884,6 +883,26 @@ contact-modal .close-btn:hover {
     .hero-image {
         border-radius: 20px;
         max-width: 320px;
+    }
+    /* Boutons flottants réduits sur mobile pour ne plus chevaucher le texte */
+    #back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 16px;
+        right: 16px;
+    }
+    #back-to-top i {
+        width: 20px;
+        height: 20px;
+    }
+    #floating-contact-btn {
+        padding: 0.65rem !important;
+        bottom: 68px !important;
+        right: 16px !important;
+    }
+    #floating-contact-btn svg {
+        width: 20px !important;
+        height: 20px !important;
     }
 }
 
