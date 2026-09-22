@@ -106,6 +106,9 @@ const translations = {
         stat3: "Jours sur 7",
 
         // Why Me
+        testiMainTitle: "Ce Qu'en Disent les Familles",
+        testiSubtitle: "Uniquement de vrais avis, vérifiés sur Google",
+        testiGoogleVerified: "Avis Google vérifié",
         whyMainTitle: "Un Accompagnement Sur-Mesure Pour Votre Bébé et Vous",
         whyAllaitTitle: "Conseillère en Allaitement Certifiée",
         whyAllaitP1: "L'allaitement, c'est naturel... mais pas toujours évident. En tant que conseillère en allaitement formée et certifiée, je connais intimement les défis que vous pouvez rencontrer : la fatigue écrasante des premières semaines, les douleurs qui peuvent décourager, les questionnements incessants sur la quantité de lait, la bonne position, la fréquence des tétées.",
@@ -542,6 +545,9 @@ const translations = {
         // Pricing
 
         // Why Me
+        testiMainTitle: "What Families Say",
+        testiSubtitle: "Only real, Google-verified reviews",
+        testiGoogleVerified: "Verified Google review",
         whyMainTitle: "Personalised Support For Your Baby and You",
         whyAllaitTitle: "Certified Breastfeeding Consultant",
         whyAllaitP1: "Breastfeeding is natural... but not always easy. As a trained and certified breastfeeding consultant, I intimately know the challenges you may face: the crushing fatigue of the first weeks, pain that can be discouraging, constant questions about milk supply, positioning, and feed frequency.",
