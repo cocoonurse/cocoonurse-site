@@ -167,11 +167,11 @@ const translations = {
         faq5Q: "Proposez-vous des forfaits ?",
         faq5A: "Oui, des forfaits hebdomadaires comprenant jour et nuit sont disponibles avec des tarifs avantageux.",
         faq6Q: "Combien coûte une garde de nuit à Genève ?",
-        faq6A: "La Nuit Découverte (10h, 21h–7h, horaires flexibles) est à 300 CHF. Des forfaits dégressifs existent pour plusieurs nuits ou une semaine complète — voir la section Tarifs ci-dessus.",
+        faq6A: "La Nuit Découverte (10h, 21h–7h, horaires flexibles) est à 400 CHF, ou 450 CHF pour une nuit longue de 12h. Des forfaits dégressifs existent pour plusieurs nuits ou une semaine complète — voir la section Tarifs ci-dessus.",
         faq7Q: "Que se passe-t-il en cas d'imprévu ou d'indisponibilité ?",
         faq7A: "En tant qu'indépendante, je vous préviens immédiatement en cas d'imprévu afin de trouver ensemble la meilleure solution pour votre famille.",
         faq8Q: "Dans quelles villes intervenez-vous autour de Genève ?",
-        faq8A: "Je me déplace dans tout le canton de Genève (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), dans le canton de Vaud proche (Nyon, Coppet) ainsi qu'en France voisine (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+        faq8A: "Je me déplace dans tout le canton de Genève (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...) ainsi que dans le canton de Vaud proche (Nyon, Coppet).",
         faq9Q: "Quelle différence entre garde d'enfant, infirmière à domicile et puéricultrice ?",
         faq9A: "Une garde d'enfant classique surveille l'enfant sans formation médicale, une infirmière à domicile intervient pour des soins ponctuels. Cocoonurse combine les deux : je suis puéricultrice diplômée et auxiliaire de puériculture CRS, avec 11 ans d'expérience en néonatologie — je réunis la surveillance, les soins et l'accompagnement parental en une seule prestation, jour et nuit.",
 
@@ -186,7 +186,7 @@ const translations = {
         heroDiscover: "Découvrir",
 
         // About – nouvelle mise en page
-        aboutBioP1_html: "Professionnelle de la <strong>périnatalité</strong> et <strong>Maternity Nurse</strong> depuis <strong>11 ans</strong>, j'ai appris mon métier là où l'exigence compte le plus : à l'<strong>Hôpital des Enfants des Hôpitaux Universitaires de Genève (HUG)</strong>, en soins intensifs mais aussi en néonatologie, oncologie et chirurgie pédiatrique, puis dans plusieurs cliniques privées genevoises. Aujourd'hui, je mets cette rigueur clinique au service des familles, de jour comme de nuit, pour que vous retrouviez sommeil, confiance et sérénité.",
+        aboutBioP1_html: "Je m'appelle Alicia. Professionnelle de la <strong>périnatalité</strong> et <strong>Maternity Nurse</strong> depuis <strong>11 ans</strong>, j'ai appris mon métier là où l'exigence compte le plus : à l'<strong>Hôpital des Enfants des Hôpitaux Universitaires de Genève (HUG)</strong>, en soins intensifs mais aussi en néonatologie, oncologie et chirurgie pédiatrique, puis dans plusieurs cliniques privées genevoises. Aujourd'hui, je mets cette rigueur clinique au service des familles, de jour comme de nuit, pour que vous retrouviez sommeil, confiance et sérénité.",
         aboutBioP2_html: "Formée en <strong>France</strong> et à <strong>Genève</strong>, j'aime profondément ce métier qui allie rigueur médicale et tendresse humaine. Je viens chez vous, à toute heure du jour ou de la nuit, avec une seule idée en tête : vous écouter, vous rassurer, et avancer à votre rythme, selon vos choix, jamais en vous imposant une méthode.",
         aboutBioP3_html: "Devenir parent est un bouleversement, même quand tout se passe bien. J'ai à cœur d'être cette présence stable et rassurante qui vous permet de souffler, de reprendre confiance et de savourer pleinement ces premiers instants avec votre bébé. C'est ma vocation, et je la vis avec la même passion à chaque famille que j'accompagne.",
         aboutParcoursTitle: "Mon Parcours",
@@ -201,7 +201,6 @@ const translations = {
         aboutZone1: "Canton de Genève",
         aboutZone1inc: "Inclus",
         aboutZone2: "Vaud (proche GE)",
-        aboutZone3: "France voisine",
 
         // Comment ça marche
         howTitle: "Comment Ça Marche ?",
@@ -222,6 +221,7 @@ const translations = {
         pricBadge: "⭐ LE + DEMANDÉ",
         pric1Title: "Nuit Découverte",
         pric1Desc: "Une nuit (21h – 7h)",
+        pric1Option12h: "Option nuit longue 12h : 450 CHF",
         pric1li1: "10h de surveillance (horaires flexibles)",
         pric1li2: "Tous soins bébé",
         pric1li3: "Parents dorment",
@@ -229,7 +229,7 @@ const translations = {
         pric1Context: "Idéal après la maternité ou pour une nuit de récupération ponctuelle.",
         pricBook: "Réserver",
         pric2Title: "Pack Retour Maison",
-        pric2Save: "Économie 200 CHF",
+        pric2Save: "Économie 250 CHF",
         pric2Context: "La formule préférée des familles pour une transition sereine à domicile.",
         pric2li1: "3 jours (10h – 20h)",
         pric2li2: "3 nuits (20h – 8h)",
@@ -290,7 +290,7 @@ const translations = {
         pric11li3: "Conseils pour le quotidien",
         pricPaymentBank: "Virement bancaire",
         pricPaymentCash: "Espèces",
-        pricZones_html: "📍 <strong>Genève inclus</strong> &nbsp;|&nbsp; Vaud (proche) +50 CHF &nbsp;|&nbsp; France voisine +80 CHF",
+        pricZones_html: "📍 <strong>Genève inclus</strong> &nbsp;|&nbsp; Vaud (proche) +50 CHF",
 
         // Stats
         stat1: "Familles accompagnées",
@@ -344,7 +344,7 @@ const translations = {
         pageNightBreadcrumb: "Garde de Nuit Bébé Genève",
         pageNightKicker: "Puéricultrice diplômée · Disponible 24h/24, 7j/7",
         pageNightH1: "Garde de Nuit Bébé à Genève",
-        pageNightIntro_html: "Les premières semaines avec un nouveau-né sont épuisantes : réveils toutes les deux heures, nuits hachées, corps qui ne récupère jamais vraiment. Une <strong>garde de nuit bébé à domicile</strong> change tout — je m'occupe des biberons, des changes, de l'apaisement et de la surveillance de votre bébé pendant toute la nuit, pendant que vous dormez enfin d'une traite. Puéricultrice diplômée avec <strong>11 ans d'expérience en néonatologie</strong> aux Hôpitaux Universitaires de Genève (HUG), j'interviens à votre domicile partout dans le canton de Genève, le canton de Vaud et la France voisine, 7 nuits sur 7.",
+        pageNightIntro_html: "Les premières semaines avec un nouveau-né sont épuisantes : réveils toutes les deux heures, nuits hachées, corps qui ne récupère jamais vraiment. Une <strong>garde de nuit bébé à domicile</strong> change tout — je m'occupe des biberons, des changes, de l'apaisement et de la surveillance de votre bébé pendant toute la nuit, pendant que vous dormez enfin d'une traite. Puéricultrice diplômée avec <strong>11 ans d'expérience en néonatologie</strong> aux Hôpitaux Universitaires de Genève (HUG), j'interviens à votre domicile partout dans le canton de Genève et le canton de Vaud, 7 nuits sur 7.",
         pageNightIncludedTitle: "Ce qui est inclus dans une garde de nuit",
         pageNightFormulasTitle: "Formules de garde de nuit",
         pageNightFormulasSubtitle: "De la nuit ponctuelle à l'accompagnement complet",
@@ -368,7 +368,7 @@ const translations = {
         pageTarifsBreadcrumb: "Tarifs",
         pageTarifsKicker: "Transparence totale · Aucun frais caché",
         pageTarifsH1: "Tarifs — Garde de Nuit, Puéricultrice & Soins Bébé à Genève",
-        pageTarifsIntro_html: "Chaque famille est différente : certaines ont besoin d'une seule nuit de répit, d'autres d'un accompagnement complet sur plusieurs semaines. Voici l'ensemble de mes tarifs, sans surprise ni frais caché — garde de nuit, accompagnement au retour de maternité, massage bébé, bain thalasso thérapeutique et consultations sommeil. Les prix incluent le déplacement dans le canton de Genève ; un supplément s'applique pour le canton de Vaud et la France voisine (voir détail plus bas).",
+        pageTarifsIntro_html: "Chaque famille est différente : certaines ont besoin d'une seule nuit de répit, d'autres d'un accompagnement complet sur plusieurs semaines. Voici l'ensemble de mes tarifs, sans surprise ni frais caché — garde de nuit, accompagnement au retour de maternité, massage bébé, bain thalasso thérapeutique et consultations sommeil. Les prix incluent le déplacement dans le canton de Genève ; un supplément s'applique pour le canton de Vaud (voir détail plus bas).",
         pageTarifsChoiceTitle: "Comment choisir sa formule ?",
         pageTarifsChoice_html: "<strong>Une nuit ponctuelle</strong> pour souffler ou récupérer après une naissance difficile → Nuit Découverte. <strong>Un retour de maternité en douceur</strong>, avec formation aux soins et suivi les jours suivants → Pack Retour Maison. <strong>Une semaine complète</strong> pour poser des routines de sommeil durables → Semaine Sérénité. <strong>Des besoins spécifiques</strong> — jumeaux, prématurés, plusieurs semaines d'accompagnement → un devis Sur-Mesure, sans engagement.",
         pageTarifsFaqTitle: "Questions fréquentes sur les tarifs",
@@ -603,11 +603,11 @@ const translations = {
         faq5Q: "Do you offer packages?",
         faq5A: "Yes, weekly packages including day and night are available with advantageous rates.",
         faq6Q: "How much does a night nurse cost in Geneva?",
-        faq6A: "The Discovery Night (10h, 9pm-7am, flexible timing) is 300 CHF. Discounted packages are available for multiple nights or a full week — see the Pricing section above.",
+        faq6A: "The Discovery Night (10h, 9pm-7am, flexible timing) is 400 CHF, or 450 CHF for a longer 12h night. Discounted packages are available for multiple nights or a full week — see the Pricing section above.",
         faq7Q: "What happens if you're unavailable or sick?",
         faq7A: "As an independent practitioner, I let you know immediately if anything comes up so we can find the best solution together for your family.",
         faq8Q: "Which cities around Geneva do you cover?",
-        faq8A: "I travel throughout the canton of Geneva (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...), the nearby canton of Vaud (Nyon, Coppet), and neighbouring France (Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Gaillard).",
+        faq8A: "I travel throughout the canton of Geneva (Carouge, Lancy, Meyrin, Vernier, Onex, Thônex, Chêne-Bougeries, Cologny...) as well as the nearby canton of Vaud (Nyon, Coppet).",
         faq9Q: "What's the difference between childcare, a home nurse, and a maternity nurse?",
         faq9A: "Standard childcare watches the child without medical training, and a home nurse handles one-off medical care. Cocoonurse combines both: I'm a qualified pediatric nurse (puéricultrice) and Swiss Red Cross childcare assistant with 11 years of neonatal experience — bringing together supervision, care, and parental support in a single service, day and night.",
 
@@ -622,7 +622,7 @@ const translations = {
         heroDiscover: "Discover",
 
         // About – new layout
-        aboutBioP1_html: "A <strong>perinatal care professional</strong> and <strong>Maternity Nurse</strong> for <strong>11 years</strong>, I learned my craft where standards matter most: at the <strong>Geneva University Hospitals' Children's Hospital (HUG)</strong>, in paediatric intensive care as well as neonatology, oncology and paediatric surgery, then in several private clinics in Geneva. Today, I bring that clinical rigour to families, day and night, so you can find sleep, confidence and peace of mind again.",
+        aboutBioP1_html: "My name is Alicia. A <strong>perinatal care professional</strong> and <strong>Maternity Nurse</strong> for <strong>11 years</strong>, I learned my craft where standards matter most: at the <strong>Geneva University Hospitals' Children's Hospital (HUG)</strong>, in paediatric intensive care as well as neonatology, oncology and paediatric surgery, then in several private clinics in Geneva. Today, I bring that clinical rigour to families, day and night, so you can find sleep, confidence and peace of mind again.",
         aboutBioP2_html: "Trained in <strong>France</strong> and <strong>Geneva</strong>, I deeply love a profession that combines medical rigour with human warmth. I come to you, at any hour of the day or night, with one goal in mind: to listen to you, reassure you, and move at your pace, on your terms — never imposing a method.",
         aboutBioP3_html: "Becoming a parent is a life-changing shift, even when everything goes smoothly. I'm committed to being that steady, reassuring presence that lets you breathe, regain confidence, and fully savour these first moments with your baby. It's my calling, and I bring the same passion to every family I support.",
         aboutParcoursTitle: "My Background",
@@ -637,7 +637,6 @@ const translations = {
         aboutZone1: "Canton of Geneva",
         aboutZone1inc: "Included",
         aboutZone2: "Vaud (near Geneva)",
-        aboutZone3: "Neighbouring France",
 
         // How it works
         howTitle: "How Does It Work?",
@@ -658,6 +657,7 @@ const translations = {
         pricBadge: "⭐ MOST POPULAR",
         pric1Title: "Discovery Night",
         pric1Desc: "One night (9pm – 7am)",
+        pric1Option12h: "Longer 12h night option: CHF 450",
         pric1li1: "10h monitoring (flexible timing)",
         pric1li2: "All baby care",
         pric1li3: "Parents sleep",
@@ -665,7 +665,7 @@ const translations = {
         pric1Context: "Ideal after leaving hospital or for a one-off recovery night.",
         pricBook: "Book",
         pric2Title: "Coming Home Pack",
-        pric2Save: "Save CHF 200",
+        pric2Save: "Save CHF 250",
         pric2Context: "The most popular choice for a smooth transition home.",
         pric2li1: "3 days (10am – 8pm)",
         pric2li2: "3 nights (8pm – 8am)",
@@ -726,7 +726,7 @@ const translations = {
         pric11li3: "Practical everyday advice",
         pricPaymentBank: "Bank transfer",
         pricPaymentCash: "Cash",
-        pricZones_html: "📍 <strong>Geneva included</strong> &nbsp;|&nbsp; Vaud (nearby) +CHF 50 &nbsp;|&nbsp; Neighbouring France +CHF 80",
+        pricZones_html: "📍 <strong>Geneva included</strong> &nbsp;|&nbsp; Vaud (nearby) +CHF 50",
 
         // Stats
         stat1: "Families supported",
@@ -782,7 +782,7 @@ const translations = {
         pageNightBreadcrumb: "Overnight Baby Care Geneva",
         pageNightKicker: "Certified newborn care specialist · Available 24/7",
         pageNightH1: "Overnight Baby Care in Geneva",
-        pageNightIntro_html: "The first weeks with a newborn are exhausting: waking up every two hours, broken nights, a body that never truly recovers. <strong>Overnight baby care at home</strong> changes everything — I take care of feeds, diaper changes, soothing and monitoring your baby all night long, while you finally get a full night's sleep. A certified newborn care specialist with <strong>11 years of neonatal experience</strong> at Geneva University Hospitals (HUG), I come to your home anywhere in the canton of Geneva, the canton of Vaud and neighboring France, 7 nights a week.",
+        pageNightIntro_html: "The first weeks with a newborn are exhausting: waking up every two hours, broken nights, a body that never truly recovers. <strong>Overnight baby care at home</strong> changes everything — I take care of feeds, diaper changes, soothing and monitoring your baby all night long, while you finally get a full night's sleep. A certified newborn care specialist with <strong>11 years of neonatal experience</strong> at Geneva University Hospitals (HUG), I come to your home anywhere in the canton of Geneva and the canton of Vaud, 7 nights a week.",
         pageNightIncludedTitle: "What's included in an overnight care session",
         pageNightFormulasTitle: "Overnight care packages",
         pageNightFormulasSubtitle: "From a single night to full support",
@@ -806,7 +806,7 @@ const translations = {
         pageTarifsBreadcrumb: "Pricing",
         pageTarifsKicker: "Full transparency · No hidden fees",
         pageTarifsH1: "Pricing — Overnight Care, Newborn Care & Baby Wellness in Geneva",
-        pageTarifsIntro_html: "Every family is different: some need a single night of relief, others full support over several weeks. Here is my complete pricing — overnight care, postpartum support, baby massage, therapeutic thalasso bath and sleep consultations — no surprises, no hidden fees. Prices include travel within the canton of Geneva; a surcharge applies for the canton of Vaud and neighboring France (details below).",
+        pageTarifsIntro_html: "Every family is different: some need a single night of relief, others full support over several weeks. Here is my complete pricing — overnight care, postpartum support, baby massage, therapeutic thalasso bath and sleep consultations — no surprises, no hidden fees. Prices include travel within the canton of Geneva; a surcharge applies for the canton of Vaud (details below).",
         pageTarifsChoiceTitle: "How to choose your package",
         pageTarifsChoice_html: "<strong>A single night</strong> to catch your breath or recover after a difficult birth → Discovery Night. <strong>A gentle homecoming</strong>, with hands-on training and follow-up in the days after → Homecoming Package. <strong>A full week</strong> to build lasting sleep routines → Serenity Week. <strong>Specific needs</strong> — twins, premature babies, several weeks of support → a free custom quote, no commitment.",
         pageTarifsFaqTitle: "Frequently asked questions about pricing",

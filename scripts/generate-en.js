@@ -54,16 +54,16 @@ const setMeta = (selector, attr, value) => {
 
 document.title = 'Cocoonurse – Newborn Care Specialist & Night Nanny in Geneva';
 setMeta('meta[name="description"]', 'content',
-    'Certified newborn care specialist in Geneva: overnight baby care, newborn care, breastfeeding support, therapeutic baths. At-home care in Geneva, Vaud and neighboring France.');
+    'Certified newborn care specialist in Geneva: overnight baby care, newborn care, breastfeeding support, therapeutic baths. At-home care in Geneva and Vaud.');
 setMeta('link[rel="canonical"]', 'href', 'https://cocoonurse.ch/en/');
 setMeta('meta[property="og:title"]', 'content', 'Cocoonurse — Newborn Care Specialist & Night Nanny in Geneva');
 setMeta('meta[property="og:description"]', 'content',
-    'Newborn care, overnight baby care, breastfeeding support, therapeutic baths at home — Geneva, Vaud, neighboring France.');
+    'Newborn care, overnight baby care, breastfeeding support, therapeutic baths at home — Geneva, Vaud.');
 setMeta('meta[property="og:url"]', 'content', 'https://cocoonurse.ch/en/');
 setMeta('meta[property="og:locale"]', 'content', 'en_US');
 setMeta('meta[name="twitter:title"]', 'content', 'Cocoonurse — Newborn Care Specialist & Night Nanny in Geneva');
 setMeta('meta[name="twitter:description"]', 'content',
-    'Newborn care, overnight baby care, breastfeeding support, therapeutic baths at home — Geneva, Vaud, neighboring France.');
+    'Newborn care, overnight baby care, breastfeeding support, therapeutic baths at home — Geneva, Vaud.');
 setMeta('meta[property="og:image:alt"]', 'content', 'Alicia Carli, Cocoonurse — Newborn Care Specialist in Geneva');
 
 // hreflang links déjà présents dans le HTML source (identiques sur les deux pages) — rien à changer.
