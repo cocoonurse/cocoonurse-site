@@ -105,6 +105,8 @@ const translations = {
 
         // Why Me
         testiMainTitle: "Ce Qu'en Disent les Familles",
+        testiReview1: "\"Alicia s'est occupée de mon fils plusieurs semaines, la nuit. Elle a été d'une grande aide, avec un professionnalisme discret et sérieux, tout en étant douce et attentionnée avec lui. Je la recommande sans hésiter pour accompagner les tout-petits et régler leur sommeil.\"",
+        testiReview2: "\"J'ai fait confiance à Alicia pour veiller sur mes jumelles pendant plusieurs nuits. Son approche patiente et rassurante, alliée à un vrai sérieux professionnel, a permis d'instaurer des nuits plus calmes et sereines pour les filles. Une personne de confiance, que je recommande sans réserve pour accompagner les nourrissons vers un sommeil apaisé.\"",
         testiGoogleVerified: "Avis Google vérifié",
         whyMainTitle: "Un Accompagnement Sur-Mesure Pour Votre Bébé et Vous",
         whyAllaitTitle: "Conseillère en Allaitement Certifiée",
@@ -537,6 +539,8 @@ const translations = {
 
         // Why Me
         testiMainTitle: "What Families Say",
+        testiReview1: "\"Alicia looked after my son for several weeks, overnight. She was a great help, with discreet and serious professionalism, while being gentle and attentive with him. I recommend her without hesitation to care for little ones and settle their sleep.\"",
+        testiReview2: "\"I trusted Alicia to watch over my twin girls for several nights. Her patient, reassuring approach, combined with genuine professional seriousness, helped bring about calmer, more peaceful nights for the girls. A trustworthy person, whom I recommend without reservation to help infants toward peaceful sleep.\"",
         testiGoogleVerified: "Verified Google review",
         whyMainTitle: "Personalised Support For Your Baby and You",
         whyAllaitTitle: "Certified Breastfeeding Consultant",
