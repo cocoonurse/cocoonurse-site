@@ -234,16 +234,15 @@ function faqSection(doc, { titleKey, titleFallback, keys }) {
     return wrapper;
 }
 
-function testimonialSection(doc, textKey, textFallback, name) {
-    return el(doc, `
+// Reprend un des 2 vrais avis Google (section #testimonials de la home) — jamais de témoignage inventé.
+function testimonialSection(doc, index) {
+    const wrapper = el(doc, `
     <section class="container mx-auto max-w-2xl px-6 py-14 text-center">
         <h2 class="text-2xl font-serif font-bold mb-8 text-champagne-700" data-i18n="sharedTestimonialTitle">Ils m'ont fait confiance</h2>
-        <div class="bg-white p-8 rounded-lg shadow-md">
-            <div class="text-champagne-500 text-xl mb-3">★★★★★</div>
-            <p class="text-lg italic mb-4" data-i18n="${textKey}">${textFallback}</p>
-            <p class="font-semibold">${name}</p>
-        </div>
     </section>`)[0];
+    const card = doc.querySelectorAll('#testimonials .grid > div')[index];
+    wrapper.appendChild(stripSelfLinks(card.cloneNode(true)));
+    return wrapper;
 }
 
 function zoneSection(doc) {
@@ -294,7 +293,7 @@ function buildNightMain(doc) {
     main.appendChild(whySection);
 
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial3Text', fr.testimonial3Text, 'Camille D.'));
+    main.appendChild(testimonialSection(doc, 0));
     main.appendChild(faqSection(doc, { titleKey: 'pageNightFaqTitle', titleFallback: fr.pageNightFaqTitle, keys: ['faq3', 'faq4', 'faq6', 'faq7', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageNightCtaTitle', titleFallback: fr.pageNightCtaTitle,
@@ -355,7 +354,7 @@ function buildPueriMain(doc) {
     main.appendChild(whySection);
 
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(testimonialSection(doc, 1));
     main.appendChild(faqSection(doc, { titleKey: 'pagePueriFaqTitle', titleFallback: fr.pagePueriFaqTitle, keys: ['faq1', 'faq2', 'faq5', 'faq7', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pagePueriCtaTitle', titleFallback: fr.pagePueriCtaTitle,
@@ -388,7 +387,7 @@ function buildTarifsMain(doc) {
     // Section tarifs complète réutilisée telle quelle (titre pricMainTitle inclus)
     main.appendChild(extractSection(doc, 'pricing'));
 
-    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(testimonialSection(doc, 0));
     main.appendChild(faqSection(doc, { titleKey: 'pageTarifsFaqTitle', titleFallback: fr.pageTarifsFaqTitle, keys: ['faq5', 'faq6', 'faq8'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageTarifsCtaTitle', titleFallback: fr.pageTarifsCtaTitle,
@@ -429,7 +428,7 @@ function buildBainMain(doc) {
 
     main.appendChild(singleFormulaSection(doc, { titleKey: 'pageBainFormulaTitle', titleFallback: fr.pageBainFormulaTitle, cardKey: 'pric8Title' }));
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(testimonialSection(doc, 1));
     main.appendChild(faqSection(doc, { titleKey: 'pageBainFaqTitle', titleFallback: fr.pageBainFaqTitle, keys: ['faqBain1', 'faqBain2', 'faqBain3'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageBainCtaTitle', titleFallback: fr.pageBainCtaTitle,
@@ -467,7 +466,7 @@ function buildMassageMain(doc) {
     main.appendChild(formulasSection);
 
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial2Text', fr.testimonial2Text, 'Thomas L.'));
+    main.appendChild(testimonialSection(doc, 0));
     main.appendChild(faqSection(doc, { titleKey: 'pageMassageFaqTitle', titleFallback: fr.pageMassageFaqTitle, keys: ['faqMassage1', 'faqMassage2', 'faqMassage3'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageMassageCtaTitle', titleFallback: fr.pageMassageCtaTitle,
@@ -496,7 +495,7 @@ function buildSommeilMain(doc) {
 
     main.appendChild(singleFormulaSection(doc, { titleKey: 'pageSommeilFormulaTitle', titleFallback: fr.pageSommeilFormulaTitle, cardKey: 'pric10Title' }));
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial3Text', fr.testimonial3Text, 'Camille D.'));
+    main.appendChild(testimonialSection(doc, 1));
     main.appendChild(faqSection(doc, { titleKey: 'pageSommeilFaqTitle', titleFallback: fr.pageSommeilFaqTitle, keys: ['faqSommeil1', 'faqSommeil2', 'faqSommeil3'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageSommeilCtaTitle', titleFallback: fr.pageSommeilCtaTitle,
@@ -541,7 +540,7 @@ function buildRetourMain(doc) {
     main.appendChild(whySection);
 
     main.appendChild(zoneSection(doc));
-    main.appendChild(testimonialSection(doc, 'testimonial1Text', fr.testimonial1Text, 'Sophie M.'));
+    main.appendChild(testimonialSection(doc, 0));
     main.appendChild(faqSection(doc, { titleKey: 'pageRetourFaqTitle', titleFallback: fr.pageRetourFaqTitle, keys: ['faq1', 'faq2', 'faq5', 'faq7'] }));
     main.appendChild(ctaBand(doc, {
         titleKey: 'pageRetourCtaTitle', titleFallback: fr.pageRetourCtaTitle,

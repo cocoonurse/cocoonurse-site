@@ -12,8 +12,6 @@ const translations = {
         // Accessibilité (aria-label)
         ariaBackToTop: "Retour en haut de page",
         ariaContactSection: "Aller à la section contact",
-        ariaPrevTestimonial: "Témoignage précédent",
-        ariaNextTestimonial: "Témoignage suivant",
 
         // Hero
         heroSubtitle: "Maternity Nurse & Garde de Nuit Bébé | Genève",
@@ -179,10 +177,6 @@ const translations = {
         faq9A: "Une garde d'enfant classique surveille l'enfant sans formation médicale, une infirmière à domicile intervient pour des soins ponctuels. Cocoonurse combine les deux : je suis puéricultrice diplômée et auxiliaire de puériculture CRS, avec 11 ans d'expérience en néonatologie — je réunis la surveillance, les soins et l'accompagnement parental en une seule prestation, jour et nuit.",
 
         // Testimonials
-        testimonialsTitle: "Témoignages",
-        testimonial1Text: "\"Alicia a été d'une aide précieuse lors des premières semaines avec notre jumeaux. Professionnelle et bienveillante.\"",
-        testimonial2Text: "\"Son expérience en néonatalogie nous a rassurés. Notre bébé prématuré était entre de bonnes mains.\"",
-        testimonial3Text: "\"Les nuits étaient un cauchemar avant qu'Alicia n'intervienne. Elle a établi une routine qui a changé notre vie.\"",
 
         // Navbar
         navHow: "Comment ça marche",
@@ -456,8 +450,6 @@ const translations = {
         // Accessibility (aria-label)
         ariaBackToTop: "Back to top",
         ariaContactSection: "Go to contact section",
-        ariaPrevTestimonial: "Previous testimonial",
-        ariaNextTestimonial: "Next testimonial",
 
         // Hero
         heroSubtitle: "Maternity Nurse & Night Nanny | Geneva",
@@ -618,10 +610,6 @@ const translations = {
         faq9A: "Standard childcare watches the child without medical training, and a home nurse handles one-off medical care. Cocoonurse combines both: I'm a qualified pediatric nurse (puéricultrice) and Swiss Red Cross childcare assistant with 11 years of neonatal experience — bringing together supervision, care, and parental support in a single service, day and night.",
 
         // Testimonials
-        testimonialsTitle: "Testimonials",
-        testimonial1Text: "\"Alicia was a precious help during the first weeks with our twins. Professional and caring.\"",
-        testimonial2Text: "\"Her experience in neonatology reassured us. Our premature baby was in good hands.\"",
-        testimonial3Text: "\"Nights were a nightmare before Alicia intervened. She established a routine that changed our lives.\"",
 
         // Navbar
         navHow: "How it works",
