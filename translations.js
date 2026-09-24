@@ -105,7 +105,6 @@ const translations = {
 
         // Why Me
         testiMainTitle: "Ce Qu'en Disent les Familles",
-        testiSubtitle: "Avis vérifiés sur Google",
         testiGoogleVerified: "Avis Google vérifié",
         whyMainTitle: "Un Accompagnement Sur-Mesure Pour Votre Bébé et Vous",
         whyAllaitTitle: "Conseillère en Allaitement Certifiée",
@@ -538,7 +537,6 @@ const translations = {
 
         // Why Me
         testiMainTitle: "What Families Say",
-        testiSubtitle: "Google-verified reviews",
         testiGoogleVerified: "Verified Google review",
         whyMainTitle: "Personalised Support For Your Baby and You",
         whyAllaitTitle: "Certified Breastfeeding Consultant",
