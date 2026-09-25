@@ -16,6 +16,8 @@ const path = require('path');
 const vm = require('vm');
 const { JSDOM } = require('jsdom');
 const { translateDocumentToEnglish, rootifyRelativePaths } = require('./lib/translate-en');
+const { translateAltAndAria } = require('./lib/alt-text-en');
+const { buildFaqPageEn, translateLocalBusiness } = require('./lib/jsonld-en');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -44,6 +46,20 @@ const { translated, missing } = translateDocumentToEnglish(document, en);
 if (missing.length) {
     console.warn('⚠️  Clés sans traduction EN (laissées en FR) :', [...new Set(missing)]);
 }
+
+// --- 3b. Attributs alt="" / aria-label="" (non couverts par data-i18n) ---
+translateAltAndAria(document);
+
+// --- 3c. JSON-LD (LocalBusiness + FAQPage) : texte structuré, pas du DOM,
+// donc invisible au mécanisme data-i18n — traduit séparément ici. ---
+document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    const data = JSON.parse(script.textContent);
+    if (data['@type'] === 'FAQPage') {
+        script.textContent = '\n' + JSON.stringify(buildFaqPageEn(en), null, 2) + '\n';
+    } else if (Array.isArray(data['@type']) && data['@type'].includes('LocalBusiness')) {
+        script.textContent = '\n' + JSON.stringify(translateLocalBusiness(data), null, 2) + '\n';
+    }
+});
 
 // --- 4. Head : title / meta / canonical / hreflang / OG / Twitter ---
 const head = document.head;

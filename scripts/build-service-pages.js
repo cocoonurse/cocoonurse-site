@@ -14,6 +14,8 @@ const path = require('path');
 const vm = require('vm');
 const { JSDOM } = require('jsdom');
 const { translateDocumentToEnglish, rootifyRelativePaths } = require('./lib/translate-en');
+const { translateAltAndAria } = require('./lib/alt-text-en');
+const { translateLocalBusiness, OFFER_TRANSLATIONS } = require('./lib/jsonld-en');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://cocoonurse.ch';
@@ -716,6 +718,7 @@ function buildPage(page) {
     const enDoc = new JSDOM(outFr).window.document;
     const { missing } = translateDocumentToEnglish(enDoc, en);
     if (missing.length) console.warn(`⚠️  [${page.slug}] clés EN manquantes :`, [...new Set(missing)]);
+    translateAltAndAria(enDoc);
 
     enDoc.title = page.titleEn;
     const setMeta = (selector, attr, value) => {
@@ -726,6 +729,7 @@ function buildPage(page) {
     setMeta('meta[property="og:title"]', 'content', page.titleEn);
     setMeta('meta[property="og:description"]', 'content', page.descEn);
     setMeta('meta[property="og:url"]', 'content', urlEn);
+    setMeta('meta[property="og:image:alt"]', 'content', 'Alicia Carli, Cocoonurse — Maternity Nurse in Geneva');
     setMeta('meta[property="og:locale"]', 'content', 'en_US');
     setMeta('meta[name="twitter:title"]', 'content', page.titleEn);
     setMeta('meta[name="twitter:description"]', 'content', page.descEn);
@@ -755,7 +759,15 @@ function buildPage(page) {
                 obj.name = name;
                 obj.serviceType = name;
                 obj.url = urlEn;
+                if (Array.isArray(obj.offers)) {
+                    obj.offers.forEach((o) => {
+                        const tr = OFFER_TRANSLATIONS[o.name];
+                        if (tr) o.name = tr.name;
+                    });
+                }
                 s.textContent = '\n' + JSON.stringify(obj, null, 2) + '\n';
+            } else if (Array.isArray(obj['@type']) && obj['@type'].includes('LocalBusiness')) {
+                s.textContent = '\n' + JSON.stringify(translateLocalBusiness(obj), null, 2) + '\n';
             }
         } catch (e) { /* ignore */ }
     });
