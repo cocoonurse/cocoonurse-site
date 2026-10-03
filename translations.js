@@ -105,8 +105,8 @@ const translations = {
 
         // Why Me
         testiMainTitle: "Ce Qu'en Disent les Familles",
-        testiReview1: "\"Alicia s'est occupée de mon fils plusieurs semaines, la nuit. Elle a été d'une grande aide, avec un professionnalisme discret et sérieux, tout en étant douce et attentionnée avec lui. Je la recommande sans hésiter pour accompagner les tout-petits et régler leur sommeil.\"",
-        testiReview2: "\"J'ai fait confiance à Alicia pour veiller sur mes jumelles pendant plusieurs nuits. Son approche patiente et rassurante, alliée à un vrai sérieux professionnel, a permis d'instaurer des nuits plus calmes et sereines pour les filles. Une personne de confiance, que je recommande sans réserve pour accompagner les nourrissons vers un sommeil apaisé.\"",
+        testiReview1: "« Alicia s'est occupée de mon fils plusieurs semaines, la nuit. Elle a été d'une grande aide, avec un professionnalisme discret et sérieux, tout en étant douce et attentionnée avec lui. Je la recommande sans hésiter pour accompagner les tout-petits et régler leur sommeil. »",
+        testiReview2: "« J'ai fait confiance à Alicia pour veiller sur mes jumelles pendant plusieurs nuits. Son approche patiente et rassurante, alliée à un vrai sérieux professionnel, a permis d'instaurer des nuits plus calmes et sereines pour les filles. Une personne de confiance, que je recommande sans réserve pour accompagner les nourrissons vers un sommeil apaisé. »",
         testiGoogleVerified: "Avis Google vérifié",
         whyMainTitle: "Un Accompagnement Sur-Mesure Pour Votre Bébé et Vous",
         whyAllaitTitle: "Conseillère en Allaitement Certifiée",
