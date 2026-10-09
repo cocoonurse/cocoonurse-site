@@ -7,3 +7,4 @@ dist/
 auth-login.js
 
 .vercel
+serve.log

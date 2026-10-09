@@ -24,11 +24,19 @@ const CREDENTIALS_EN = {
 const OFFER_TRANSLATIONS = {
     "Nuit Découverte": {
         name: "Discovery Night",
+        description: "An 8-hour night (10pm-6am, flexible timing) of baby monitoring and care.",
+    },
+    "Nuit Confort": {
+        name: "Comfort Night",
         description: "A 10-hour night (9pm-7am, flexible timing) of baby monitoring and care.",
     },
-    "Nuit Longue": {
-        name: "Long Night",
+    "Nuit Confort 12h": {
+        name: "Comfort Night 12h",
         description: "A 12-hour night (8pm-8am, flexible timing) of baby monitoring and care.",
+    },
+    "Garde de jour": {
+        name: "Day Care",
+        description: "An 8-hour day of baby monitoring and care.",
     },
     "Pack Retour Maison": {
         name: "Coming Home Pack",
@@ -36,7 +44,7 @@ const OFFER_TRANSLATIONS = {
     },
     "Semaine Sérénité": {
         name: "Serenity Week",
-        description: "7 full nights with care training and breastfeeding guidance.",
+        description: "7 full nights (8h) with care training and breastfeeding guidance.",
     },
     "Massage Bébé - Séance Découverte": {
         name: "Baby Massage - Discovery Session",

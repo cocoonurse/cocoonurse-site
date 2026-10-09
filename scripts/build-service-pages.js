@@ -281,8 +281,8 @@ function buildNightMain(doc) {
     const formulasSub = el(doc, `<p class="text-center text-sand-600 text-sm mb-10 -mt-6" data-i18n="pageNightFormulasSubtitle">${fr.pageNightFormulasSubtitle}</p>`)[0];
     formulasSection.appendChild(formulasSub);
     const grid = doc.createElement('div');
-    grid.className = 'grid md:grid-cols-3 gap-6';
-    ['pric1Title', 'pric2Title', 'pric3Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
+    grid.className = 'grid md:grid-cols-2 gap-6';
+    ['pric1Title', 'pric1bTitle', 'pric2Title', 'pric3Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
     formulasSection.appendChild(grid);
     formulasSection.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
     main.appendChild(formulasSection);
@@ -560,9 +560,9 @@ const PAGES = [
         buildMain: buildNightMain,
         breadcrumbName: fr.pageNightBreadcrumb,
         titleFr: 'Garde de Nuit Bébé à Genève | Cocoonurse — Puéricultrice Diplômée',
-        descFr: "Garde de nuit bébé à domicile à Genève par une puéricultrice diplômée, 11 ans d'expérience en néonatologie. Nuit découverte dès 400 CHF. Réponse sous 2h.",
+        descFr: "Garde de nuit bébé à domicile à Genève par une puéricultrice diplômée, 11 ans d'expérience en néonatologie. Dès 350 CHF la nuit. Réponse sous 2h.",
         titleEn: 'Overnight Baby Care in Geneva | Cocoonurse — Certified Newborn Specialist',
-        descEn: 'At-home overnight baby care in Geneva by a certified newborn care specialist with 11 years of neonatal experience. Discovery night from CHF 400. Reply within 2 hours.',
+        descEn: 'At-home overnight baby care in Geneva by a certified newborn care specialist with 11 years of neonatal experience. Overnight care from CHF 350. Reply within 2 hours.',
         faqKeys: ['faq3', 'faq4', 'faq6', 'faq7', 'faq8'],
         serviceName: 'Garde de Nuit Bébé',
         serviceNameEn: 'Overnight Baby Care',
@@ -586,9 +586,9 @@ const PAGES = [
         buildMain: buildTarifsMain,
         breadcrumbName: fr.pageTarifsBreadcrumb,
         titleFr: 'Tarifs Garde de Nuit & Puéricultrice à Genève | Cocoonurse',
-        descFr: 'Tarifs transparents : garde de nuit dès 400 CHF, pack retour maison, semaine sérénité, massage bébé, bain thalasso. Devis gratuit, réponse sous 2h.',
+        descFr: 'Tarifs transparents : garde de nuit dès 350 CHF, pack retour maison, semaine sérénité, massage bébé, bain thalasso. Devis gratuit, réponse sous 2h.',
         titleEn: 'Overnight Care & Newborn Specialist Pricing in Geneva | Cocoonurse',
-        descEn: 'Transparent pricing: overnight care from CHF 400, homecoming package, serenity week, baby massage, thalasso bath. Free quote, reply within 2 hours.',
+        descEn: 'Transparent pricing: overnight care from CHF 350, homecoming package, serenity week, baby massage, thalasso bath. Free quote, reply within 2 hours.',
         faqKeys: ['faq5', 'faq6', 'faq8'],
         serviceName: null, // page tarifs : pas de Service schema dédié, la home + les 2 autres pages suffisent
     },
@@ -636,9 +636,9 @@ const PAGES = [
         buildMain: buildRetourMain,
         breadcrumbName: fr.pageRetourBreadcrumb,
         titleFr: 'Accompagnement Retour de Maternité à Genève | Cocoonurse',
-        descFr: 'Accompagnement au retour de maternité à Genève par une puéricultrice diplômée : soins jour et nuit, formation complète, suivi WhatsApp. Dès 2000 CHF.',
+        descFr: 'Accompagnement au retour de maternité à Genève par une puéricultrice diplômée : soins jour et nuit, formation complète, suivi WhatsApp. Dès 1700 CHF.',
         titleEn: 'Postpartum Homecoming Support in Geneva | Cocoonurse',
-        descEn: 'Postpartum homecoming support in Geneva by a certified newborn care specialist: day and night care, full training, WhatsApp follow-up. From CHF 2000.',
+        descEn: 'Postpartum homecoming support in Geneva by a certified newborn care specialist: day and night care, full training, WhatsApp follow-up. From CHF 1700.',
         faqKeys: ['faq1', 'faq2', 'faq5', 'faq7'],
         serviceName: 'Retour de Maternité',
         serviceNameEn: 'Postpartum Homecoming Support',
