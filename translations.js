@@ -26,7 +26,7 @@ const translations = {
         
         // About
         aboutMainTitle: "À Propos de Cocoonurse",
-        aboutPhilosophyQuote: "\"Je crois profondément que chaque famille mérite un accompagnement respectueux de ses valeurs, de son rythme et de ses choix. Mon rôle n'est pas d'imposer une méthode, mais de vous guider, vous soutenir et vous transmettre les outils pour gagner en confiance et en sérénité. Votre bien-être et celui de votre bébé sont au cœur de chaque geste, chaque conseil, chaque moment partagé.\"",
+        aboutPhilosophyQuote: "« Je crois profondément que chaque famille mérite un accompagnement respectueux de ses valeurs, de son rythme et de ses choix. Mon rôle n'est pas d'imposer une méthode, mais de vous guider, vous soutenir et vous transmettre les outils pour gagner en confiance et en sérénité. »",
         aboutQualTitle: "Qualifications",
         
         // Experience
@@ -163,7 +163,7 @@ const translations = {
         faq1Q: "Quand engager une infirmière de maternité ?",
         faq1A: "Idéalement pendant la grossesse pour préparer l'arrivée du bébé, ou immédiatement après la naissance pour un soutien complet.",
         faq2Q: "Quelle est la durée typique d'intervention ?",
-        faq2A: "Varie selon les besoins: de quelques jours à plusieurs semaines, souvent 2-4 semaines pour établir de bonnes routines.",
+        faq2A: "Varie selon les besoins : de quelques jours à plusieurs semaines, souvent 2-4 semaines pour établir de bonnes routines.",
         faq3Q: "Prenez-vous en charge les bébés prématurés ?",
         faq3A: "Oui, mon expérience néonatale me permet de prendre en charge spécifiquement les bébés prématurés ou ayant des besoins particuliers.",
         faq4Q: "Quelle est votre disponibilité ?",
@@ -482,7 +482,7 @@ const translations = {
         
         // About
         aboutMainTitle: "About Cocoonurse",
-        aboutPhilosophyQuote: "I deeply believe that every family deserves support that respects their values, their rhythm and their choices. My role is not to impose a method, but to guide, support and give you the tools to gain confidence and serenity. Your well-being and that of your baby are at the heart of every gesture, every piece of advice, every shared moment.",
+        aboutPhilosophyQuote: "“I deeply believe that every family deserves support that respects their values, their rhythm and their choices. My role is not to impose a method, but to guide, support and give you the tools to gain confidence and serenity.”",
         aboutQualTitle: "Qualifications",
         
         // Experience
