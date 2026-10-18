@@ -13,7 +13,7 @@ function loginPage(error) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Cocoonurse — Accès privé</title>
+<title>Cocoonurse | Accès privé</title>
 <style>
   body{font-family:system-ui,-apple-system,sans-serif;background:#FBF6F4;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;}
   form{background:#fff;padding:32px;border-radius:16px;box-shadow:0 10px 28px rgba(55,43,40,0.10);width:100%;max-width:320px;box-sizing:border-box;}
@@ -25,7 +25,7 @@ function loginPage(error) {
 </head>
 <body>
   <form method="POST">
-    <h1>Cocoonurse — Accès privé</h1>
+    <h1>Cocoonurse | Accès privé</h1>
     ${error ? '<p class="err">Mot de passe incorrect.</p>' : ''}
     <input type="password" name="password" placeholder="Mot de passe" autofocus required>
     <button type="submit">Entrer</button>
