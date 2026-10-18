@@ -81,7 +81,8 @@
     "Breastfeeding support",
     "Neonatology",
     "Postpartum home support",
-    "Therapeutic baby baths"
+    "Therapeutic baby baths",
+    "Baby sleep training"
   ],
   "areaServed": [
     {
@@ -260,6 +261,33 @@
       },
       {
         "@type": "Offer",
+        "name": "Sleep Training - Remote Essentials",
+        "price": "320",
+        "priceCurrency": "CHF",
+        "description": "Full remote sleep training support: kickoff call, written program, 1 week of message follow-up, final review call."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - In-Person",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "390",
+          "priceCurrency": "CHF"
+        },
+        "description": "An 8-hour coaching day (CHF 390) or a 12-hour accompanied night (CHF 600) on-site, with the sleep training program applied live."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Intensive Support",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "2290",
+          "priceCurrency": "CHF"
+        },
+        "description": "On-site nights and days combined over one to two weeks, with remote support on the other days. Length and price set by custom quote."
+      },
+      {
+        "@type": "Offer",
         "name": "Custom",
         "priceSpecification": {
           "@type": "PriceSpecification",
@@ -347,6 +375,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Standard childcare watches the child without medical training, and a home nurse handles one-off medical care. Cocoonurse combines both: I'm a qualified pediatric nurse (puéricultrice) and Swiss Red Cross childcare assistant with 11 years of neonatal experience — bringing together supervision, care, and parental support in a single service, day and night."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "At what age can sleep training start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally from 4 to 6 months, once baby's circadian rhythm is established and there's no longer an essential nighttime feeding need. We assess the right timing together during the initial assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to let my baby cry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Baby may cry a little between my check-ins, but never alone for long: I come back very regularly to reassure them by voice and touch, at increasingly spaced intervals (a method inspired by Ferber)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference with the Sleep and Crying Consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Sleep and Crying Consultation (CHF 90) is a one-off remote exchange for targeted advice. Sleep Training is a complete program, with support over several days and, depending on the formula, my physical presence at your home, day or night."
       }
     }
   ]
@@ -581,6 +633,41 @@
             <h2 class="text-3xl font-serif font-bold mb-16 text-center text-champagne-700" data-i18n="servicesTitle">My Services</h2>
             <div class="grid md:grid-cols-2 gap-8">
 
+                <!-- SERVICE — Sleep Training (mis en avant en premier) -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="moon" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard9P1">After the first months of overnight care and support, many families want to help their baby build more independent sleep. My sleep training program is a natural extension of my maternity nurse experience: a gentle, progressive method that I apply every day with several families in Geneva.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard9P2">No crying it out: I reduce my presence gradually, over one to two weeks, the time it takes for a new habit to truly set in. Every program is built together with you, based on your baby's temperament and your daily life.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li1_html"><strong class="text-sand-800">Gentle, progressive method:</strong> gradual reduction of my presence, never leaving baby to cry alone</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li2_html"><strong class="text-sand-800">Personalized program:</strong> initial assessment, custom written plan, adjustments along the way</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li3_html"><strong class="text-sand-800">In-person presence available:</strong> unlike a simple phone call, I can apply the program at your home, day or night</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li4_html"><strong class="text-sand-800">From remote support to full immersion:</strong> a formula for every level of need</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li5_html"><strong class="text-sand-800">Support until independence:</strong> final review and adjustments so you feel confident once I'm no longer there</span>
+                        </li>
+                    </ul>
+                    <a href="/sleep-training/" class="card-more-link inline-block mt-4 text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaLearnMoreSleep">Learn more about sleep training →</a>
+                </div>
+
                 <!-- SERVICE 1 — Soins Quotidiens -->
                 <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
                     <div class="flex items-center mb-5">
@@ -651,74 +738,36 @@
                     <a href="/garde-de-nuit-bebe-geneve/" class="card-more-link inline-block mt-4 text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaLearnMoreNight">Learn more about overnight care →</a>
                 </div>
 
-                <!-- SERVICE 3 — Éveil & Développement -->
+                <!-- SERVICE 3 — Éveil, Développement & Soutien aux Parents (fusion ex-servCard3 + ex-servCard4) -->
                 <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
                     <div class="flex items-center mb-5">
                         <div class="bg-champagne-100 p-3 rounded-full mr-4">
                             <i data-feather="sun" class="text-champagne-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard3Title">Development &amp; Stimulation</h3>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard3Title">Stimulation, Development &amp; Parental Support</h3>
                     </div>
-                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard3P1">The first months are crucial for your baby's cognitive, motor and sensory development. I offer age-appropriate stimulation activities at every stage of development, respecting your baby's rhythm and abilities.</p>
-                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard3P2">From tummy time to sensory play, nursery rhymes to stimulating massage, every interaction is designed to foster their flourishing while strengthening the attachment bond. I don't just look after your baby — I actively accompany them in their discovery of the world.</p>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard3P1">The first months matter as much for your baby's development as for your own confidence as a parent. I offer age-appropriate stimulation activities at every stage, while staying available to answer your questions, without judgement, at any time.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard3P2">From tummy time to sensory play, from breastfeeding support to baby blues management: my support covers your baby's development as much as your own peace of mind.</p>
                     <ul class="space-y-3 text-sm text-sand-600">
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li1_html"><strong class="text-sand-800">Adapted sensory stimulation:</strong> visual, tactile and auditory stimulation by age, toys and objects suited to development</span>
+                            <span data-i18n="servCard3Li1_html"><strong class="text-sand-800">Adapted sensory stimulation:</strong> visual, tactile and auditory stimulation by age, toys and nursery rhymes</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li2_html"><strong class="text-sand-800">Educational games and interactions:</strong> nursery rhymes, reading, hand games, texture discovery, musical awakening</span>
+                            <span data-i18n="servCard3Li2_html"><strong class="text-sand-800">Tracking key milestones and motor skills:</strong> tummy time, grasping, rolling over, plagiocephaly prevention</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li3_html"><strong class="text-sand-800">Tracking key milestones:</strong> social smile, grasping, rolling over, babbling — I guide you on normal developmental acquisitions</span>
+                            <span data-i18n="servCard3Li3_html"><strong class="text-sand-800">Certified breastfeeding support:</strong> optimal positions, resolving difficulties, weaning support if desired</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li4_html"><strong class="text-sand-800">Tummy time and motor skills:</strong> progressive muscle strengthening, plagiocephaly prevention, motor development support</span>
+                            <span data-i18n="servCard3Li4_html"><strong class="text-sand-800">Listening and support without judgement:</strong> stress and baby blues management, teaching gestures (bathing, changing, babywearing, massage)</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li5_html"><strong class="text-sand-800">Quality time:</strong> I never leave a baby without appropriate and caring stimulation</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- SERVICE 4 — Soutien Parental -->
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
-                    <div class="flex items-center mb-5">
-                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
-                            <i data-feather="users" class="text-champagne-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard4Title">Parental Support &amp; Guidance</h3>
-                    </div>
-                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard4P1">Becoming a parent is a wonderful yet sometimes unsettling adventure. I am there not only for your baby, but for you too. My role is to give you confidence, tools and know-how so that you find your own parenting style.</p>
-                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard4P2">I answer all your questions without judgement, reassure you in moments of doubt, and teach you the essential gestures to help you gain independence. My support is caring, respectful of your choices, and always oriented towards your family's well-being.</p>
-                    <ul class="space-y-3 text-sm text-sand-600">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li1_html"><strong class="text-sand-800">Certified breastfeeding support:</strong> optimal positions, resolving difficulties (cracked nipples, engorgement, tongue-tie), weaning support if desired</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li2_html"><strong class="text-sand-800">Stress and baby blues management:</strong> empathetic listening, practical advice, referral to professionals if necessary</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li3_html"><strong class="text-sand-800">Safe environment:</strong> optimal bedroom layout, home safety, accident prevention</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li4_html"><strong class="text-sand-800">Understanding crying:</strong> appropriate responses, shaken baby syndrome prevention</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li5_html"><strong class="text-sand-800">Skills transfer:</strong> I teach you bathing, changing, babywearing and massage so you become independent and confident</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li6_html"><strong class="text-sand-800">Co-parent support:</strong> balanced involvement, task sharing, harmonious family dynamics</span>
+                            <span data-i18n="servCard3Li5_html"><strong class="text-sand-800">Safe environment and co-parenting:</strong> bedroom setup, accident prevention, balanced involvement of the co-parent</span>
                         </li>
                     </ul>
                 </div>
@@ -1126,6 +1175,58 @@
 
             </div>
 
+            <!-- Sous-section : Sleep Training -->
+            <h3 class="text-2xl font-serif font-bold text-center mt-16 mb-3 text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+            <p class="text-center text-sand-600 text-sm mb-10" data-i18n="pageSleepFormulasSubtitle">Remote for more independence, in-person for a faster transformation: each formula meets a different need.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Sleep Training — Essentiel à Distance -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep1Title">Remote Essentials</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">320 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep1Desc">Full remote support</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep1Context">For independent families comfortable applying the program on their own.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li1">1 kickoff call (45 min)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li2">Personalized written program</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li3">Daily message follow-up for 1 week</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li4">1 final review call (30 min)</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Book</a>
+                </div>
+
+                <!-- Sleep Training — Sur Place -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep2Title">In-Person</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 390 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep2Desc">Coaching day or accompanied night</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep2Context">To learn alongside me or speed up the transition, whichever formula suits you.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li1">Coaching day (8h): CHF 390</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li2">Accompanied night (12h): CHF 600</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li3">Program applied live with baby</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li4">Report handed over at the end</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Book</a>
+                </div>
+
+                <!-- Sleep Training — Accompagnement Intensif -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep3Title">Intensive Support</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 2 290 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep3Desc">Over several days, for a complete transformation</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep3Context">Nights and days combined over one to two weeks. We set the length and the price together, based on your needs.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li1">Nights and days on-site</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li2">Remote support on the other days</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li3">Custom quote based on the length chosen</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pric4Book">Free quote</a>
+                </div>
+
+            </div>
+
             <!-- Infos paiement & zone -->
             <div class="mt-10 text-center text-sm text-sand-600 space-y-2">
                 <div class="flex items-center justify-center gap-3 flex-wrap">
@@ -1375,6 +1476,18 @@
                     <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq9Q">What's the difference between childcare, a home nurse, and a maternity nurse?</h3>
                     <p class="text-sm text-sand-600" data-i18n="faq9A">Standard childcare watches the child without medical training, and a home nurse handles one-off medical care. Cocoonurse combines both: I'm a qualified pediatric nurse (puéricultrice) and Swiss Red Cross childcare assistant with 11 years of neonatal experience — bringing together supervision, care, and parental support in a single service, day and night.</p>
                 </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep1Q">At what age can sleep training start?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep1A">Generally from 4 to 6 months, once baby's circadian rhythm is established and there's no longer an essential nighttime feeding need. We assess the right timing together during the initial assessment.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep2Q">Do I have to let my baby cry?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep2A">Baby may cry a little between my check-ins, but never alone for long: I come back very regularly to reassure them by voice and touch, at increasingly spaced intervals (a method inspired by Ferber).</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep3Q">What's the difference with the Sleep and Crying Consultation?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep3A">The Sleep and Crying Consultation (CHF 90) is a one-off remote exchange for targeted advice. Sleep Training is a complete program, with support over several days and, depending on the formula, my physical presence at your home, day or night.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1473,6 +1586,7 @@
                     <a href="/massage-bebe-geneve/" class="hover:text-white transition" data-i18n="pageMassageBreadcrumb">Baby Massage Geneva</a>
                     <a href="/bain-thalasso-bebe-geneve/" class="hover:text-white transition" data-i18n="pageBainBreadcrumb">Baby Thalasso Bath Geneva</a>
                     <a href="/consultation-sommeil-bebe/" class="hover:text-white transition" data-i18n="pageSommeilBreadcrumb">Baby Sleep Consultation</a>
+                    <a href="/sleep-training/" class="hover:text-white transition" data-i18n="pageSleepBreadcrumb">Sleep Training</a>
                     <a href="/tarifs/" class="hover:text-white transition" data-i18n="navPricing">Pricing</a>
                     <a href="#contact" class="hover:text-white transition" data-translate="contact">Contact</a>
                     <a href="https://www.instagram.com/cocoonurse" target="_blank" class="hover:text-white transition flex items-center gap-1.5" aria-label="Cocoonurse Instagram">

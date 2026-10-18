@@ -111,7 +111,8 @@
     "Breastfeeding support",
     "Neonatology",
     "Postpartum home support",
-    "Therapeutic baby baths"
+    "Therapeutic baby baths",
+    "Baby sleep training"
   ],
   "areaServed": [
     {
@@ -287,6 +288,33 @@
         "price": "90",
         "priceCurrency": "CHF",
         "description": "At-home babywearing workshop, 1h: choosing and safely learning to use a wrap, sling or carrier."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Remote Essentials",
+        "price": "320",
+        "priceCurrency": "CHF",
+        "description": "Full remote sleep training support: kickoff call, written program, 1 week of message follow-up, final review call."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - In-Person",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "390",
+          "priceCurrency": "CHF"
+        },
+        "description": "An 8-hour coaching day (CHF 390) or a 12-hour accompanied night (CHF 600) on-site, with the sleep training program applied live."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Intensive Support",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "2290",
+          "priceCurrency": "CHF"
+        },
+        "description": "On-site nights and days combined over one to two weeks, with remote support on the other days. Length and price set by custom quote."
       },
       {
         "@type": "Offer",
@@ -612,6 +640,58 @@
 
             </div>
 
+            <!-- Sous-section : Sleep Training -->
+            <h3 class="text-2xl font-serif font-bold text-center mt-16 mb-3 text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+            <p class="text-center text-sand-600 text-sm mb-10" data-i18n="pageSleepFormulasSubtitle">Remote for more independence, in-person for a faster transformation: each formula meets a different need.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Sleep Training — Essentiel à Distance -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep1Title">Remote Essentials</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">320 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep1Desc">Full remote support</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep1Context">For independent families comfortable applying the program on their own.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li1">1 kickoff call (45 min)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li2">Personalized written program</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li3">Daily message follow-up for 1 week</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li4">1 final review call (30 min)</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Book</a>
+                </div>
+
+                <!-- Sleep Training — Sur Place -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep2Title">In-Person</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 390 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep2Desc">Coaching day or accompanied night</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep2Context">To learn alongside me or speed up the transition, whichever formula suits you.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li1">Coaching day (8h): CHF 390</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li2">Accompanied night (12h): CHF 600</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li3">Program applied live with baby</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li4">Report handed over at the end</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Book</a>
+                </div>
+
+                <!-- Sleep Training — Accompagnement Intensif -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep3Title">Intensive Support</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 2 290 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep3Desc">Over several days, for a complete transformation</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep3Context">Nights and days combined over one to two weeks. We set the length and the price together, based on your needs.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li1">Nights and days on-site</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li2">Remote support on the other days</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li3">Custom quote based on the length chosen</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pric4Book">Free quote</a>
+                </div>
+
+            </div>
+
             <!-- Infos paiement & zone -->
             <div class="mt-10 text-center text-sm text-sand-600 space-y-2">
                 <div class="flex items-center justify-center gap-3 flex-wrap">
@@ -675,6 +755,7 @@
                     <a href="/massage-bebe-geneve/" class="hover:text-white transition" data-i18n="pageMassageBreadcrumb">Baby Massage Geneva</a>
                     <a href="/bain-thalasso-bebe-geneve/" class="hover:text-white transition" data-i18n="pageBainBreadcrumb">Baby Thalasso Bath Geneva</a>
                     <a href="/consultation-sommeil-bebe/" class="hover:text-white transition" data-i18n="pageSommeilBreadcrumb">Baby Sleep Consultation</a>
+                    <a href="/sleep-training/" class="hover:text-white transition" data-i18n="pageSleepBreadcrumb">Sleep Training</a>
                     <a href="/tarifs/" class="hover:text-white transition" data-i18n="navPricing">Pricing</a>
                     <a href="/#contact" class="hover:text-white transition" data-translate="contact">Contact</a>
                     <a href="https://www.instagram.com/cocoonurse" target="_blank" class="hover:text-white transition flex items-center gap-1.5" aria-label="Cocoonurse Instagram">

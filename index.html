@@ -63,7 +63,7 @@
         "opens": "00:00",
         "closes": "23:59"
       },
-      "knowsAbout": ["Garde d'enfant à domicile", "Soins infirmiers du nouveau-né", "Garde de nuit bébé", "Maternity nurse", "Allaitement maternel", "Néonatologie", "Retour de maternité", "Bains thérapeutiques bébé"],
+      "knowsAbout": ["Garde d'enfant à domicile", "Soins infirmiers du nouveau-né", "Garde de nuit bébé", "Maternity nurse", "Allaitement maternel", "Néonatologie", "Retour de maternité", "Bains thérapeutiques bébé", "Sleep training bébé"],
       "areaServed": [
         { "@type": "City", "name": "Genève" },
         { "@type": "City", "name": "Carouge" },
@@ -193,6 +193,33 @@
           },
           {
             "@type": "Offer",
+            "name": "Sleep Training - Essentiel à Distance",
+            "price": "320",
+            "priceCurrency": "CHF",
+            "description": "Accompagnement sleep training complet à distance : appel de lancement, programme écrit, suivi message 1 semaine, bilan final."
+          },
+          {
+            "@type": "Offer",
+            "name": "Sleep Training - Sur Place",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "390",
+              "priceCurrency": "CHF"
+            },
+            "description": "Journée coaching (8h, 390 CHF) ou nuit accompagnée (12h, 600 CHF) sur place, avec application en direct du programme sleep training."
+          },
+          {
+            "@type": "Offer",
+            "name": "Sleep Training - Accompagnement Intensif",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "2290",
+              "priceCurrency": "CHF"
+            },
+            "description": "Nuits et journées combinées sur place sur une à deux semaines, accompagnement à distance les autres jours. Durée et tarif ajustés sur devis."
+          },
+          {
+            "@type": "Offer",
             "name": "Sur-Mesure",
             "priceSpecification": {
               "@type": "PriceSpecification",
@@ -280,6 +307,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Une garde d'enfant classique surveille l'enfant sans formation médicale, une infirmière à domicile intervient pour des soins ponctuels. Cocoonurse combine les deux : je suis puéricultrice diplômée et auxiliaire de puériculture CRS, avec 11 ans d'expérience en néonatologie — je réunis la surveillance, les soins et l'accompagnement parental en une seule prestation, jour et nuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À partir de quel âge peut-on commencer le sleep training ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Généralement à partir de 4 à 6 mois, lorsque le rythme circadien de bébé est posé et qu'il n'a plus de besoin nutritionnel nocturne essentiel. On évalue ensemble le bon moment lors du bilan initial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que je dois laisser pleurer mon bébé ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bébé peut pleurer un peu entre mes passages, mais jamais seul sur une longue durée : je reviens très régulièrement le rassurer par la voix et le toucher, à intervalles de plus en plus espacés (méthode inspirée du Ferber)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence avec la Consultation Sommeil et Pleurs ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Consultation Sommeil et Pleurs (90 CHF) est un échange ponctuel à distance pour un conseil ciblé. Le Sleep Training est un programme complet, avec suivi sur plusieurs jours et, selon la formule, ma présence physique chez vous de jour ou de nuit."
           }
         }
       ]
@@ -514,6 +565,41 @@
             <h2 class="text-3xl font-serif font-bold mb-16 text-center text-champagne-700" data-i18n="servicesTitle">Mes Services</h2>
             <div class="grid md:grid-cols-2 gap-8">
 
+                <!-- SERVICE — Sleep Training (mis en avant en premier) -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
+                    <div class="flex items-center mb-5">
+                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
+                            <i data-feather="moon" class="text-champagne-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+                    </div>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard9P1">Après les premiers mois de garde de nuit et d'accompagnement, de nombreuses familles cherchent à consolider un sommeil plus autonome pour bébé. Mon programme de sleep training est le prolongement naturel de mon expérience de maternity nurse : une méthode progressive et bienveillante, que j'applique au quotidien auprès de plusieurs familles genevoises.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard9P2">Jamais de pleurs laissés seuls : je réduis ma présence graduellement, sur une à deux semaines, le temps nécessaire pour ancrer une nouvelle habitude. Chaque programme est co-construit avec vous, selon le tempérament de bébé et votre quotidien.</p>
+                    <ul class="space-y-3 text-sm text-sand-600">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li1_html"><strong class="text-sand-800">Méthode progressive et douce :</strong> réduction graduelle de ma présence, sans jamais laisser bébé pleurer seul</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li2_html"><strong class="text-sand-800">Programme personnalisé :</strong> bilan initial, plan écrit sur-mesure, ajustements en cours de route</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li3_html"><strong class="text-sand-800">Présence physique possible :</strong> contrairement à un simple appel, je peux appliquer le programme chez vous, de jour comme de nuit</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li4_html"><strong class="text-sand-800">De l'accompagnement à distance à l'immersion complète :</strong> une formule pour chaque niveau de besoin</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
+                            <span data-i18n="servCard9Li5_html"><strong class="text-sand-800">Suivi jusqu'à l'autonomie :</strong> bilan final et ajustements pour que vous soyez sereins une fois le programme terminé</span>
+                        </li>
+                    </ul>
+                    <a href="/sleep-training/" class="card-more-link inline-block mt-4 text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaLearnMoreSleep">En savoir plus sur le sleep training →</a>
+                </div>
+
                 <!-- SERVICE 1 — Soins Quotidiens -->
                 <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
                     <div class="flex items-center mb-5">
@@ -584,74 +670,36 @@
                     <a href="/garde-de-nuit-bebe-geneve/" class="card-more-link inline-block mt-4 text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaLearnMoreNight">En savoir plus sur la garde de nuit →</a>
                 </div>
 
-                <!-- SERVICE 3 — Éveil & Développement -->
+                <!-- SERVICE 3 — Éveil, Développement & Soutien aux Parents (fusion ex-servCard3 + ex-servCard4) -->
                 <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
                     <div class="flex items-center mb-5">
                         <div class="bg-champagne-100 p-3 rounded-full mr-4">
                             <i data-feather="sun" class="text-champagne-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard3Title">Éveil & Développement</h3>
+                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard3Title">Éveil, Développement & Soutien aux Parents</h3>
                     </div>
-                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard3P1">Les premiers mois sont cruciaux pour le développement cognitif, moteur et sensoriel de votre bébé. Je propose des activités d'éveil adaptées à chaque étape de son développement, dans le respect de son rythme et de ses capacités.</p>
-                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard3P2">Du tummy time aux jeux sensoriels, des comptines aux massages stimulants, chaque interaction est pensée pour favoriser son épanouissement tout en renforçant le lien d'attachement. Je ne me contente pas de garder votre bébé : je l'accompagne activement dans sa découverte du monde.</p>
+                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard3P1">Les premiers mois sont aussi importants pour le développement de bébé que pour votre confiance de parent. Je propose des activités d'éveil adaptées à chaque étape, tout en restant disponible pour répondre à vos questions, sans jugement, à tout moment.</p>
+                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard3P2">Du tummy time aux jeux sensoriels, de l'allaitement à la gestion du baby-blues : mon accompagnement couvre le développement de votre bébé autant que votre sérénité de parent.</p>
                     <ul class="space-y-3 text-sm text-sand-600">
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li1_html"><strong class="text-sand-800">Éveil sensoriel adapté :</strong> stimulation visuelle, tactile, auditive selon l'âge, jouets et objets adaptés au développement</span>
+                            <span data-i18n="servCard3Li1_html"><strong class="text-sand-800">Éveil sensoriel adapté :</strong> stimulation visuelle, tactile et auditive selon l'âge, jeux et comptines</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li2_html"><strong class="text-sand-800">Jeux éducatifs et interactions :</strong> comptines, lectures, jeux de mains, découverte des textures, éveil musical</span>
+                            <span data-i18n="servCard3Li2_html"><strong class="text-sand-800">Suivi des étapes clés et motricité :</strong> tummy time, préhension, retournements, prévention de la plagiocéphalie</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li3_html"><strong class="text-sand-800">Suivi des étapes clés :</strong> sourire social, préhension, retournements, babillage — je vous guide sur les acquisitions normales</span>
+                            <span data-i18n="servCard3Li3_html"><strong class="text-sand-800">Conseils en allaitement certifiés :</strong> positions optimales, résolution des difficultés, accompagnement au sevrage si souhaité</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li4_html"><strong class="text-sand-800">Tummy time et motricité :</strong> renforcement musculaire progressif, prévention de la plagiocéphalie, accompagnement moteur</span>
+                            <span data-i18n="servCard3Li4_html"><strong class="text-sand-800">Écoute et soutien sans jugement :</strong> gestion du stress et du baby-blues, transmission des gestes (bain, change, portage, massage)</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard3Li5_html"><strong class="text-sand-800">Temps de qualité :</strong> je ne laisse jamais un bébé sans stimulation adaptée et bienveillante</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- SERVICE 4 — Soutien Parental -->
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-champagne-500">
-                    <div class="flex items-center mb-5">
-                        <div class="bg-champagne-100 p-3 rounded-full mr-4">
-                            <i data-feather="users" class="text-champagne-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-champagne-700" data-i18n="servCard4Title">Soutien & Accompagnement des Parents</h3>
-                    </div>
-                    <p class="text-sm text-sand-700 mb-4 leading-relaxed" data-i18n="servCard4P1">Devenir parent est une aventure merveilleuse mais parfois déstabilisante. Je suis là non seulement pour votre bébé, mais aussi pour vous. Mon rôle est de vous transmettre confiance, outils et savoir-faire pour que vous trouviez votre propre style parental.</p>
-                    <p class="text-sm text-sand-700 mb-5 leading-relaxed" data-i18n="servCard4P2">Je réponds à toutes vos questions sans jugement, je vous rassure dans vos moments de doute, et je vous apprends les gestes essentiels pour gagner en autonomie. Mon accompagnement est bienveillant, respectueux de vos choix, et toujours orienté vers votre bien-être familial.</p>
-                    <ul class="space-y-3 text-sm text-sand-600">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li1_html"><strong class="text-sand-800">Conseils en allaitement certifiés :</strong> positions optimales, résolution des difficultés (crevasses, engorgement, frein), accompagnement au sevrage si souhaité</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li2_html"><strong class="text-sand-800">Gestion du stress et du baby-blues :</strong> écoute empathique, conseils pratiques, orientation vers professionnels si nécessaire</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li3_html"><strong class="text-sand-800">Environnement sécurisant :</strong> aménagement optimal de la chambre, sécurité domestique, prévention accidents</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li4_html"><strong class="text-sand-800">Décryptage des pleurs :</strong> réponses adaptées, prévention du syndrome du bébé secoué</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li5_html"><strong class="text-sand-800">Transmission de compétences :</strong> je vous apprends bain, change, portage, massage pour que vous deveniez autonomes et confiants</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check" class="text-champagne-500 mt-0.5 w-4 h-4 flex-shrink-0"></i>
-                            <span data-i18n="servCard4Li6_html"><strong class="text-sand-800">Soutien au co-parent :</strong> implication équilibrée, partage des tâches, dynamique familiale harmonieuse</span>
+                            <span data-i18n="servCard3Li5_html"><strong class="text-sand-800">Environnement sécurisant et co-parentalité :</strong> aménagement de la chambre, prévention des accidents, implication équilibrée du co-parent</span>
                         </li>
                     </ul>
                 </div>
@@ -1059,6 +1107,58 @@
 
             </div>
 
+            <!-- Sous-section : Sleep Training -->
+            <h3 class="text-2xl font-serif font-bold text-center mt-16 mb-3 text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+            <p class="text-center text-sand-600 text-sm mb-10" data-i18n="pageSleepFormulasSubtitle">À distance pour plus d'autonomie, sur place pour une transformation accélérée : chaque formule répond à un besoin différent.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Sleep Training — Essentiel à Distance -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep1Title">Essentiel à Distance</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">320 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep1Desc">Accompagnement complet, à distance</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep1Context">Pour les familles autonomes, à l'aise pour appliquer le programme seules.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li1">1 appel de lancement (45 min)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li2">Programme écrit personnalisé</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li3">Suivi quotidien par message pendant 1 semaine</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li4">1 appel bilan final (30 min)</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Sleep Training — Sur Place -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep2Title">Sur Place</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 390 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep2Desc">Journée coaching ou nuit accompagnée</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep2Context">Pour apprendre les gestes à mes côtés ou accélérer la transition, selon la formule qui vous convient.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li1">Journée coaching (8h) : 390 CHF</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li2">Nuit accompagnée (12h) : 600 CHF</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li3">Programme appliqué en temps réel avec bébé</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li4">Compte-rendu remis en fin de séance</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Sleep Training — Accompagnement Intensif -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep3Title">Accompagnement Intensif</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 2 290 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep3Desc">Sur plusieurs jours, pour une transformation complète</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep3Context">Nuits et journées combinées sur une à deux semaines. On ajuste la durée et le tarif ensemble, selon vos besoins.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li1">Nuits et journées sur place</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li2">Accompagnement à distance les autres jours</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li3">Devis personnalisé selon la durée choisie</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pric4Book">Devis gratuit</a>
+                </div>
+
+            </div>
+
             <!-- Infos paiement & zone -->
             <div class="mt-10 text-center text-sm text-sand-600 space-y-2">
                 <div class="flex items-center justify-center gap-3 flex-wrap">
@@ -1308,6 +1408,18 @@
                     <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faq9Q">Quelle différence entre garde d'enfant, infirmière à domicile et puéricultrice ?</h3>
                     <p class="text-sm text-sand-600" data-i18n="faq9A">Une garde d'enfant classique surveille l'enfant sans formation médicale, une infirmière à domicile intervient pour des soins ponctuels. Cocoonurse combine les deux : je suis puéricultrice diplômée et auxiliaire de puériculture CRS, avec 11 ans d'expérience en néonatologie — je réunis la surveillance, les soins et l'accompagnement parental en une seule prestation, jour et nuit.</p>
                 </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep1Q">À partir de quel âge peut-on commencer le sleep training ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep1A">Généralement à partir de 4 à 6 mois, lorsque le rythme circadien de bébé est posé et qu'il n'a plus de besoin nutritionnel nocturne essentiel. On évalue ensemble le bon moment lors du bilan initial.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep2Q">Est-ce que je dois laisser pleurer mon bébé ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep2A">Bébé peut pleurer un peu entre mes passages, mais jamais seul sur une longue durée : je reviens très régulièrement le rassurer par la voix et le toucher, à intervalles de plus en plus espacés (méthode inspirée du Ferber).</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-base font-semibold text-champagne-700 mb-2" data-i18n="faqSleep3Q">Quelle est la différence avec la Consultation Sommeil et Pleurs ?</h3>
+                    <p class="text-sm text-sand-600" data-i18n="faqSleep3A">La Consultation Sommeil et Pleurs (90 CHF) est un échange ponctuel à distance pour un conseil ciblé. Le Sleep Training est un programme complet, avec suivi sur plusieurs jours et, selon la formule, ma présence physique chez vous de jour ou de nuit.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1406,6 +1518,7 @@
                     <a href="/massage-bebe-geneve/" class="hover:text-white transition" data-i18n="pageMassageBreadcrumb">Massage Bébé Genève</a>
                     <a href="/bain-thalasso-bebe-geneve/" class="hover:text-white transition" data-i18n="pageBainBreadcrumb">Bain Thalasso Bébé Genève</a>
                     <a href="/consultation-sommeil-bebe/" class="hover:text-white transition" data-i18n="pageSommeilBreadcrumb">Consultation Sommeil Bébé</a>
+                    <a href="/sleep-training/" class="hover:text-white transition" data-i18n="pageSleepBreadcrumb">Sleep Training</a>
                     <a href="/tarifs/" class="hover:text-white transition" data-i18n="navPricing">Tarifs</a>
                     <a href="#contact" class="hover:text-white transition" data-translate="contact">Contact</a>
                     <a href="https://www.instagram.com/cocoonurse" target="_blank" class="hover:text-white transition flex items-center gap-1.5" aria-label="Instagram Cocoonurse">

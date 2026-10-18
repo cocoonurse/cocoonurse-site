@@ -552,6 +552,82 @@ function buildRetourMain(doc) {
 }
 
 // ============================================================
+// PAGE 8 — Sleep Training
+// ============================================================
+function buildSleepMain(doc) {
+    const main = doc.createElement('main');
+    main.appendChild(breadcrumbBar(doc, 'pageSleepBreadcrumb', fr.pageSleepBreadcrumb));
+    main.appendChild(pageHeader(doc, {
+        kickerKey: 'pageSleepKicker', kickerFallback: fr.pageSleepKicker,
+        h1Key: 'pageSleepH1', h1Fallback: fr.pageSleepH1,
+        introKey: 'pageSleepIntro_html', introFallback: fr.pageSleepIntro_html,
+    }));
+
+    const diffSection = el(doc, `
+    <section class="container mx-auto max-w-3xl px-6 py-6">
+        <div class="rounded-2xl p-8" style="background: linear-gradient(135deg, rgba(230,168,184,0.12), rgba(212,137,157,0.08)); border:1px solid rgba(212,137,157,0.25);">
+            <h2 class="text-xl font-serif font-bold mb-3 text-champagne-700" data-i18n="pageSleepDiffTitle">${fr.pageSleepDiffTitle}</h2>
+            <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageSleepDiffText_html">${fr.pageSleepDiffText_html}</p>
+        </div>
+    </section>`)[0];
+    main.appendChild(diffSection);
+
+    const approachSection = el(doc, `
+    <section class="container mx-auto max-w-3xl px-6 py-8">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6 text-champagne-700" data-i18n="pageSleepApproachTitle">${fr.pageSleepApproachTitle}</h2>
+        <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageSleepApproachText1">${fr.pageSleepApproachText1}</p>
+        <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageSleepApproachText2">${fr.pageSleepApproachText2}</p>
+    </section>`)[0];
+    main.appendChild(approachSection);
+
+    const stepsSection = el(doc, `
+    <section class="container mx-auto max-w-3xl px-6 py-10">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-2 text-champagne-700" data-i18n="pageSleepStepsTitle">${fr.pageSleepStepsTitle}</h2>
+        <p class="text-center text-sand-600 text-sm mb-10" data-i18n="pageSleepStepsSubtitle">${fr.pageSleepStepsSubtitle}</p>
+        <div class="space-y-8"></div>
+    </section>`)[0];
+    const stepsContainer = stepsSection.querySelector('.space-y-8');
+    [1, 2, 3, 4].forEach((n) => {
+        stepsContainer.appendChild(el(doc, `
+        <div class="flex gap-4 items-start">
+            <div class="text-3xl font-serif text-champagne-400 flex-shrink-0" style="width:2.5rem;">${String(n).padStart(2, '0')}</div>
+            <div>
+                <h3 class="text-base font-semibold text-champagne-700 mb-1" data-i18n="pageSleepStep${n}Title">${fr[`pageSleepStep${n}Title`]}</h3>
+                <p class="text-sm text-sand-600 leading-relaxed" data-i18n="pageSleepStep${n}Text">${fr[`pageSleepStep${n}Text`]}</p>
+            </div>
+        </div>`)[0]);
+    });
+    main.appendChild(stepsSection);
+
+    const includedSection = doc.createElement('section');
+    includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
+    includedSection.appendChild(sectionTitle(doc, fr.pageSleepIncludedTitle, 'pageSleepIncludedTitle'));
+    includedSection.appendChild(extractCard(doc, 'servCard9Title'));
+    main.appendChild(includedSection);
+
+    const formulasSection = doc.createElement('section');
+    formulasSection.className = 'container mx-auto max-w-6xl px-6 py-10';
+    formulasSection.appendChild(sectionTitle(doc, fr.pageSleepFormulasTitle, 'pageSleepFormulasTitle'));
+    const formulasSub = el(doc, `<p class="text-center text-sand-600 text-sm mb-10 -mt-6" data-i18n="pageSleepFormulasSubtitle">${fr.pageSleepFormulasSubtitle}</p>`)[0];
+    formulasSection.appendChild(formulasSub);
+    const grid = doc.createElement('div');
+    grid.className = 'grid md:grid-cols-3 gap-6';
+    ['pricSleep1Title', 'pricSleep2Title', 'pricSleep3Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
+    formulasSection.appendChild(grid);
+    formulasSection.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
+    main.appendChild(formulasSection);
+
+    main.appendChild(zoneSection(doc));
+    main.appendChild(testimonialSection(doc, 1));
+    main.appendChild(faqSection(doc, { titleKey: 'pageSleepFaqTitle', titleFallback: fr.pageSleepFaqTitle, keys: ['faqSleep1', 'faqSleep2', 'faqSleep3'] }));
+    main.appendChild(ctaBand(doc, {
+        titleKey: 'pageSleepCtaTitle', titleFallback: fr.pageSleepCtaTitle,
+        textKey: 'pageSleepCtaText', textFallback: fr.pageSleepCtaText,
+    }));
+    return main;
+}
+
+// ============================================================
 // Assemblage générique d'une page + écriture FR/EN
 // ============================================================
 const PAGES = [
@@ -643,6 +719,23 @@ const PAGES = [
         serviceName: 'Retour de Maternité',
         serviceNameEn: 'Postpartum Homecoming Support',
         serviceOfferNames: ['Pack Retour Maison', 'Semaine Sérénité'],
+    },
+    {
+        slug: 'sleep-training',
+        buildMain: buildSleepMain,
+        breadcrumbName: fr.pageSleepBreadcrumb,
+        titleFr: 'Sleep Training Bébé à Genève | Cocoonurse — Maternity Nurse',
+        descFr: "Accompagnement sleep training à domicile à Genève : méthode douce et progressive, par une maternity nurse expérimentée auprès de plusieurs familles. À distance dès 320 CHF, sur place dès 390 CHF. Réponse sous 2h.",
+        titleEn: 'Baby Sleep Training in Geneva | Cocoonurse — Maternity Nurse',
+        descEn: 'At-home sleep training support in Geneva: a gentle, progressive method from an experienced maternity nurse. Remote from CHF 320, in-person from CHF 390. Reply within 2 hours.',
+        faqKeys: ['faqSleep1', 'faqSleep2', 'faqSleep3'],
+        serviceName: 'Sleep Training',
+        serviceNameEn: 'Sleep Training',
+        serviceOfferNames: [
+            'Sleep Training - Essentiel à Distance',
+            'Sleep Training - Sur Place',
+            'Sleep Training - Accompagnement Intensif',
+        ],
     },
 ];
 

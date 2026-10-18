@@ -111,7 +111,8 @@
     "Allaitement maternel",
     "Néonatologie",
     "Retour de maternité",
-    "Bains thérapeutiques bébé"
+    "Bains thérapeutiques bébé",
+    "Sleep training bébé"
   ],
   "areaServed": [
     {
@@ -287,6 +288,33 @@
         "price": "90",
         "priceCurrency": "CHF",
         "description": "Atelier de portage bébé à domicile, 1h : choix et apprentissage sécurisé de l'écharpe, du sling ou du porte-bébé."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Essentiel à Distance",
+        "price": "320",
+        "priceCurrency": "CHF",
+        "description": "Accompagnement sleep training complet à distance : appel de lancement, programme écrit, suivi message 1 semaine, bilan final."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Sur Place",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "390",
+          "priceCurrency": "CHF"
+        },
+        "description": "Journée coaching (8h, 390 CHF) ou nuit accompagnée (12h, 600 CHF) sur place, avec application en direct du programme sleep training."
+      },
+      {
+        "@type": "Offer",
+        "name": "Sleep Training - Accompagnement Intensif",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "2290",
+          "priceCurrency": "CHF"
+        },
+        "description": "Nuits et journées combinées sur place sur une à deux semaines, accompagnement à distance les autres jours. Durée et tarif ajustés sur devis."
       },
       {
         "@type": "Offer",
@@ -612,6 +640,58 @@
 
             </div>
 
+            <!-- Sous-section : Sleep Training -->
+            <h3 class="text-2xl font-serif font-bold text-center mt-16 mb-3 text-champagne-700" data-i18n="servCard9Title">Sleep Training</h3>
+            <p class="text-center text-sand-600 text-sm mb-10" data-i18n="pageSleepFormulasSubtitle">À distance pour plus d'autonomie, sur place pour une transformation accélérée : chaque formule répond à un besoin différent.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Sleep Training — Essentiel à Distance -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep1Title">Essentiel à Distance</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">320 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep1Desc">Accompagnement complet, à distance</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep1Context">Pour les familles autonomes, à l'aise pour appliquer le programme seules.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li1">1 appel de lancement (45 min)</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li2">Programme écrit personnalisé</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li3">Suivi quotidien par message pendant 1 semaine</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep1li4">1 appel bilan final (30 min)</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Sleep Training — Sur Place -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep2Title">Sur Place</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 390 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep2Desc">Journée coaching ou nuit accompagnée</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep2Context">Pour apprendre les gestes à mes côtés ou accélérer la transition, selon la formule qui vous convient.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li1">Journée coaching (8h) : 390 CHF</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li2">Nuit accompagnée (12h) : 600 CHF</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li3">Programme appliqué en temps réel avec bébé</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep2li4">Compte-rendu remis en fin de séance</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pricBook">Réserver</a>
+                </div>
+
+                <!-- Sleep Training — Accompagnement Intensif -->
+                <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-champagne-700 mb-2" data-i18n="pricSleep3Title">Accompagnement Intensif</h4>
+                    <div class="text-3xl font-bold mb-1" style="color: #D4899D;">Dès 2 290 CHF</div>
+                    <p class="text-sm text-sand-500 mb-2" data-i18n="pricSleep3Desc">Sur plusieurs jours, pour une transformation complète</p>
+                    <p class="text-xs italic text-sand-400 mb-4" data-i18n="pricSleep3Context">Nuits et journées combinées sur une à deux semaines. On ajuste la durée et le tarif ensemble, selon vos besoins.</p>
+                    <ul class="space-y-2 text-sm text-sand-700 mb-6 flex-1">
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li1">Nuits et journées sur place</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li2">Accompagnement à distance les autres jours</span></li>
+                        <li class="flex items-center gap-2"><i data-feather="check" class="w-4 h-4 flex-shrink-0" style="color:#E6A8B8"></i><span data-i18n="pricSleep3li3">Devis personnalisé selon la durée choisie</span></li>
+                    </ul>
+                    <a href="https://wa.me/41784500624" target="_blank" class="block text-center text-white py-2 rounded-full text-sm font-medium transition" style="background: linear-gradient(135deg, #E6A8B8, #D4899D);" data-i18n="pric4Book">Devis gratuit</a>
+                </div>
+
+            </div>
+
             <!-- Infos paiement & zone -->
             <div class="mt-10 text-center text-sm text-sand-600 space-y-2">
                 <div class="flex items-center justify-center gap-3 flex-wrap">
@@ -675,6 +755,7 @@
                     <a href="/massage-bebe-geneve/" class="hover:text-white transition" data-i18n="pageMassageBreadcrumb">Massage Bébé Genève</a>
                     <a href="/bain-thalasso-bebe-geneve/" class="hover:text-white transition" data-i18n="pageBainBreadcrumb">Bain Thalasso Bébé Genève</a>
                     <a href="/consultation-sommeil-bebe/" class="hover:text-white transition" data-i18n="pageSommeilBreadcrumb">Consultation Sommeil Bébé</a>
+                    <a href="/sleep-training/" class="hover:text-white transition" data-i18n="pageSleepBreadcrumb">Sleep Training</a>
                     <a href="/tarifs/" class="hover:text-white transition" data-i18n="navPricing">Tarifs</a>
                     <a href="/#contact" class="hover:text-white transition" data-translate="contact">Contact</a>
                     <a href="https://www.instagram.com/cocoonurse" target="_blank" class="hover:text-white transition flex items-center gap-1.5" aria-label="Instagram Cocoonurse">

@@ -10,6 +10,7 @@ const LOCAL_BUSINESS_DESCRIPTION_EN =
 const KNOWS_ABOUT_EN = [
     "Home childcare", "Newborn nursing care", "Overnight baby care", "Maternity nurse",
     "Breastfeeding support", "Neonatology", "Postpartum home support", "Therapeutic baby baths",
+    "Baby sleep training",
 ];
 
 const FOUNDER_JOB_TITLE_EN = "Certified Newborn Care Specialist";
@@ -78,12 +79,24 @@ const OFFER_TRANSLATIONS = {
         name: "Custom",
         description: "Full 2 to 4 week support, days and nights — twins, premature babies or high availability, custom quote.",
     },
+    "Sleep Training - Essentiel à Distance": {
+        name: "Sleep Training - Remote Essentials",
+        description: "Full remote sleep training support: kickoff call, written program, 1 week of message follow-up, final review call.",
+    },
+    "Sleep Training - Sur Place": {
+        name: "Sleep Training - In-Person",
+        description: "An 8-hour coaching day (CHF 390) or a 12-hour accompanied night (CHF 600) on-site, with the sleep training program applied live.",
+    },
+    "Sleep Training - Accompagnement Intensif": {
+        name: "Sleep Training - Intensive Support",
+        description: "On-site nights and days combined over one to two weeks, with remote support on the other days. Length and price set by custom quote.",
+    },
 };
 
 // Reconstruit le FAQPage JSON-LD en anglais à partir de translations.js (en.faqNQ/faqNA),
 // dans le même ordre que le FAQPage FR source (voir index.html).
 function buildFaqPageEn(en) {
-    const order = ['faq1', 'faq6', 'faq2', 'faq3', 'faq4', 'faq7', 'faq5', 'faq8', 'faq9'];
+    const order = ['faq1', 'faq6', 'faq2', 'faq3', 'faq4', 'faq7', 'faq5', 'faq8', 'faq9', 'faqSleep1', 'faqSleep2', 'faqSleep3'];
     return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
