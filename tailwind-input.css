@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@source "./*.html";
+@source "./en/**/*.html";
+@source "./garde-de-nuit-bebe-geneve/**/*.html";
+@source "./puericultrice-domicile-geneve/**/*.html";
+@source "./tarifs/**/*.html";
+@source "./bain-thalasso-bebe-geneve/**/*.html";
+@source "./massage-bebe-geneve/**/*.html";
+@source "./consultation-sommeil-bebe/**/*.html";
+@source "./retour-maternite-geneve/**/*.html";
+@source "./sleep-training/**/*.html";
+@source "./script.js";
+@source "./translations.js";
+@source "./components/**/*.js";
+@source "./scripts/build-service-pages.js";
+
+@theme {
+  --color-champagne-50: #fcf9f5;
+  --color-champagne-100: #f8f1e6;
+  --color-champagne-200: #f0e0c5;
+  --color-champagne-300: #e6c99c;
+  --color-champagne-400: #d9a969;
+  --color-champagne-500: #d19c5a;
+  --color-champagne-600: #c2874b;
+  --color-champagne-700: #a16c3e;
+  --color-champagne-800: #825836;
+  --color-champagne-900: #6a4730;
+
+  --color-sand-50: #faf9f6;
+  --color-sand-100: #f4f2ea;
+  --color-sand-200: #e8e2d3;
+  --color-sand-300: #d8cdb0;
+  --color-sand-400: #c4b386;
+  --color-sand-500: #b5a16d;
+  --color-sand-600: #9f8a5a;
+  --color-sand-700: #806e47;
+  --color-sand-800: #6a5b3d;
+  --color-sand-900: #584c34;
+}
