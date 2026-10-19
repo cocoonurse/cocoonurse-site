@@ -438,6 +438,10 @@ const translations = {
  faqBain2A: "Oui, chaque bain est encadré à chaque instant par une professionnelle de santé diplômée, avec une eau à température contrôlée et une surveillance continue.",
  faqBain3Q: "Puis-je assister au bain avec mon bébé ?",
  faqBain3A: "Bien sûr, les parents sont invités à participer pour renforcer ce moment d'émotion et de connexion partagé en famille.",
+ faqBain4Q: "Quelle est la durée d'une séance de bain thalasso ?",
+ faqBain4A: "Chaque séance dure environ 20 à 25 minutes, le temps idéal pour profiter des bienfaits apaisants sans fatiguer bébé.",
+ faqBain5Q: "Dois-je préparer quelque chose avant la séance ?",
+ faqBain5A: "Rien de particulier : j'apporte tout le matériel nécessaire. Il suffit de prévoir une pièce chauffée et calme pour accueillir bébé.",
 
  // Page dédiée, Massage Bébé Genève
  pageMassageBreadcrumb: "Massage Bébé Genève",
@@ -455,6 +459,10 @@ const translations = {
  faqMassage2A: "Oui, des gestes ciblés permettent d'apaiser les tensions digestives et de soulager les coliques, en plus de stimuler la circulation sanguine et le système immunitaire.",
  faqMassage3Q: "Combien de séances faut-il pour apprendre les gestes ?",
  faqMassage3A: "Une séance découverte suffit pour démarrer, mais le pack de 4 ou 8 séances permet un suivi de progression et une adaptation aux différentes étapes du développement de bébé.",
+ faqMassage4Q: "Quels bienfaits concrets apporte le massage bébé ?",
+ faqMassage4A: "Le massage favorise la digestion, détend le système nerveux, améliore le sommeil et renforce le lien d'attachement entre bébé et ses parents.",
+ faqMassage5Q: "Puis-je reproduire les gestes moi-même après la séance ?",
+ faqMassage5A: "Oui, c'est justement l'objectif : je vous transmets les gestes pas à pas pour que vous puissiez les refaire sereinement à la maison.",
 
  // Page dédiée, Consultation Sommeil et Pleurs
  pageSommeilBreadcrumb: "Consultation Sommeil Bébé",
@@ -950,6 +958,10 @@ const translations = {
  faqBain2A: "Yes, every bath is supervised at all times by a certified healthcare professional, with water at a controlled temperature and continuous monitoring.",
  faqBain3Q: "Can I be present for the bath with my baby?",
  faqBain3A: "Of course, parents are invited to take part, making it a shared moment of emotion and connection for the whole family.",
+ faqBain4Q: "How long does a thalasso bath session last?",
+ faqBain4A: "Each session lasts around 20 to 25 minutes, the ideal time to enjoy the soothing benefits without tiring your baby.",
+ faqBain5Q: "Do I need to prepare anything before the session?",
+ faqBain5A: "Nothing in particular: I bring all the necessary equipment. Just make sure the room is warm and calm to welcome baby.",
 
  // Dedicated page, Baby Massage Geneva
  pageMassageBreadcrumb: "Baby Massage Geneva",
@@ -967,6 +979,10 @@ const translations = {
  faqMassage2A: "Yes, targeted techniques help ease digestive tension and relieve colic, while also stimulating blood circulation and the immune system.",
  faqMassage3Q: "How many sessions does it take to learn the techniques?",
  faqMassage3A: "A single discovery session is enough to get started, but the 4- or 8-session pack allows for progress tracking and adapts to your baby's developmental stages.",
+ faqMassage4Q: "What concrete benefits does baby massage bring?",
+ faqMassage4A: "Massage aids digestion, relaxes the nervous system, improves sleep, and strengthens the bond between baby and parents.",
+ faqMassage5Q: "Can I do the techniques myself after the session?",
+ faqMassage5A: "Yes, that's exactly the goal: I teach you the techniques step by step so you can confidently repeat them at home.",
 
  // Dedicated page, Baby Sleep and Crying Consultation
  pageSommeilBreadcrumb: "Baby Sleep Consultation",

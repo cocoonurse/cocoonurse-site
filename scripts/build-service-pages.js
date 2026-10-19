@@ -430,7 +430,7 @@ function buildBainMain(doc) {
  main.appendChild(singleFormulaSection(doc, { titleKey: 'pageBainFormulaTitle', titleFallback: fr.pageBainFormulaTitle, cardKey: 'pric8Title' }));
  main.appendChild(zoneSection(doc));
  main.appendChild(testimonialSection(doc, 1));
- main.appendChild(faqSection(doc, { titleKey: 'pageBainFaqTitle', titleFallback: fr.pageBainFaqTitle, keys: ['faqBain1', 'faqBain2', 'faqBain3'] }));
+ main.appendChild(faqSection(doc, { titleKey: 'pageBainFaqTitle', titleFallback: fr.pageBainFaqTitle, keys: ['faqBain1', 'faqBain2', 'faqBain3', 'faqBain4', 'faqBain5'] }));
  main.appendChild(ctaBand(doc, {
  titleKey: 'pageBainCtaTitle', titleFallback: fr.pageBainCtaTitle,
  textKey: 'pageBainCtaText', textFallback: fr.pageBainCtaText,
@@ -468,7 +468,7 @@ function buildMassageMain(doc) {
 
  main.appendChild(zoneSection(doc));
  main.appendChild(testimonialSection(doc, 0));
- main.appendChild(faqSection(doc, { titleKey: 'pageMassageFaqTitle', titleFallback: fr.pageMassageFaqTitle, keys: ['faqMassage1', 'faqMassage2', 'faqMassage3'] }));
+ main.appendChild(faqSection(doc, { titleKey: 'pageMassageFaqTitle', titleFallback: fr.pageMassageFaqTitle, keys: ['faqMassage1', 'faqMassage2', 'faqMassage3', 'faqMassage4', 'faqMassage5'] }));
  main.appendChild(ctaBand(doc, {
  titleKey: 'pageMassageCtaTitle', titleFallback: fr.pageMassageCtaTitle,
  textKey: 'pageMassageCtaText', textFallback: fr.pageMassageCtaText,
@@ -675,7 +675,7 @@ const PAGES = [
  descFr: 'Bain thalasso thérapeutique à domicile à Genève pour bébés de la naissance à 1 mois, encadré par une professionnelle de santé diplômée. Dès 140 CHF.',
  titleEn: 'Baby Thalasso Bath in Geneva | Cocoonurse',
  descEn: 'At-home therapeutic thalasso bath in Geneva for newborns up to 1 month, supervised by a certified healthcare professional. From CHF 140.',
- faqKeys: ['faqBain1', 'faqBain2', 'faqBain3'],
+ faqKeys: ['faqBain1', 'faqBain2', 'faqBain3', 'faqBain4', 'faqBain5'],
  serviceName: 'Bain Thalasso Thérapeutique',
  serviceNameEn: 'Therapeutic Thalasso Bath',
  serviceOfferNames: ['Bain Thalasso Thérapeutique', 'Bain Thalasso Thérapeutique - Pack 3 Séances'],
@@ -688,7 +688,7 @@ const PAGES = [
  descFr: 'Atelier massage bébé à domicile à Genève : soulagement des coliques, sommeil plus paisible, éveil sensoriel. Séance découverte dès 90 CHF.',
  titleEn: 'Baby Massage Workshop in Geneva | Cocoonurse',
  descEn: 'At-home baby massage workshop in Geneva: colic relief, more peaceful sleep, sensory development. Discovery session from CHF 90.',
- faqKeys: ['faqMassage1', 'faqMassage2', 'faqMassage3'],
+ faqKeys: ['faqMassage1', 'faqMassage2', 'faqMassage3', 'faqMassage4', 'faqMassage5'],
  serviceName: 'Massage Bébé',
  serviceNameEn: 'Baby Massage',
  serviceOfferNames: ['Massage Bébé - Séance Découverte', 'Massage Bébé - Pack 4 Séances', 'Massage Bébé - Pack 8 Séances'],
