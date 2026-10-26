@@ -14,7 +14,7 @@ const translations = {
  ariaContactSection: "Aller à la section contact",
 
  // Hero
- heroSubtitle: "Maternity Nurse & Garde de Nuit Bébé | Genève",
+ heroSubtitle: "Puéricultrice & Garde de Nuit Bébé | Genève",
  heroTagline: "Reposez-vous. Je m'occupe de tout.",
  heroYears: "ans",
  heroYearsLabel: "d'expérience",
@@ -142,6 +142,7 @@ const translations = {
  contactPhone: "Téléphone",
  contactAddress: "Adresse",
  contactBirthdate: "Date de naissance prévue du bébé",
+ contactBirthdatePlaceholder: "jj/mm/aaaa",
  contactAddressPlaceholder: "Rue, code postal, ville",
  contactBabies: "Nombre de bébés",
  contactNeeds: "Vos Besoins",
@@ -230,6 +231,7 @@ const translations = {
  pric1Context: "Idéal après la maternité ou pour une nuit de récupération ponctuelle.",
  pric1bTitle: "Nuit Confort",
  pric1bDesc: "Une nuit (21h-7h)",
+ pric1bOptionLabel: "Autre option —",
  pric1bAltDesc: "12h (20h-8h) · horaires flexibles",
  pric1bContext: "Pour une nuit complète, du coucher au réveil, sans aucune interruption de votre sommeil.",
  pric1bli1: "Surveillance complète (horaires flexibles)",
@@ -338,7 +340,7 @@ const translations = {
  footerCopyright: "© 2026 Cocoonurse | Tous droits réservés",
 
  // Select bébés
- contactBabiesPlaceholder: ", Sélectionner, ",
+ contactBabiesPlaceholder: "Sélectionner",
  contactBaby1: "1 bébé",
  contactBaby2: "2 bébés (jumeaux)",
  contactBaby3: "3 bébés (triplés)",
@@ -660,6 +662,7 @@ const translations = {
  contactPhone: "Phone",
  contactAddress: "Address",
  contactBirthdate: "Baby's expected birth date",
+ contactBirthdatePlaceholder: "dd/mm/yyyy",
  contactAddressPlaceholder: "Street, postal code, city",
  contactBabies: "Number of babies",
  contactNeeds: "Your Needs",
@@ -748,6 +751,7 @@ const translations = {
  pric1Context: "Ideal after leaving hospital or for a one-off recovery night.",
  pric1bTitle: "Comfort Night",
  pric1bDesc: "One night (9pm, 7am)",
+ pric1bOptionLabel: "Other option —",
  pric1bAltDesc: "12h (8pm, 8am) · flexible timing",
  pric1bContext: "A full night, from bedtime to wake-up, with no interruption to your sleep.",
  pric1bli1: "Full monitoring (flexible timing)",
@@ -858,7 +862,7 @@ const translations = {
  footerCopyright: "© 2026 Cocoonurse | All rights reserved",
 
  // Select babies
- contactBabiesPlaceholder: ", Select, ",
+ contactBabiesPlaceholder: "Select",
  contactBaby1: "1 baby",
  contactBaby2: "2 babies (twins)",
  contactBaby3: "3 babies (triplets)",

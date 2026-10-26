@@ -483,6 +483,31 @@ if (contactForm) {
         }
     });
 }
+    // Pré-remplissage du message WhatsApp selon le bouton cliqué (cartes tarifs, CTA génériques)
+(function() {
+    const isEn = document.documentElement.lang === 'en';
+    function waLink(text) {
+        return 'https://wa.me/41784500624?text=' + encodeURIComponent(text);
+    }
+    document.querySelectorAll('a[href^="https://wa.me/41784500624"]').forEach(function(link) {
+        const card = link.closest('.rounded-2xl');
+        const isQuote = link.getAttribute('data-i18n') === 'pric4Book';
+        let formula = null;
+        if (card) {
+            const heading = card.querySelector('h3, h4');
+            if (heading) formula = heading.textContent.trim();
+        }
+        let msg;
+        if (formula) {
+            msg = isEn
+                ? (isQuote ? 'Hello Alicia, I would like a quote for ' + formula + '.' : 'Hello Alicia, I would like to book ' + formula + '.')
+                : (isQuote ? 'Bonjour Alicia, je souhaite un devis pour la formule ' + formula + '.' : 'Bonjour Alicia, je souhaite réserver la formule ' + formula + '.');
+        } else {
+            msg = isEn ? 'Hello Alicia, I would like more information about your services.' : 'Bonjour Alicia, je souhaite en savoir plus sur vos prestations.';
+        }
+        link.setAttribute('href', waLink(msg));
+    });
+})();
     // Intersection Observer pour les animations au scroll
 const observerOptions = {
         threshold: 0.1
