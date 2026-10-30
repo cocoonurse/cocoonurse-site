@@ -358,6 +358,8 @@ const translations = {
  formWhatsApp: "Écrire sur WhatsApp",
  formSend: "Envoyer",
  formError: "Une erreur est survenue. Merci de réessayer ou de me contacter directement par WhatsApp.",
+ formMailtoSuccess: "Votre message est prêt à partir !",
+ formMailtoSuccessMsg: "Votre logiciel de messagerie va s'ouvrir avec le message déjà rempli : il ne reste qu'à cliquer sur <strong>Envoyer</strong>.<br>Ça ne s'ouvre pas ? Écrivez-moi directement sur WhatsApp.",
 
  // Mentions légales
  mentionsLink: "Mentions légales & Politique de confidentialité",
@@ -880,6 +882,8 @@ const translations = {
  formWhatsApp: "Message on WhatsApp",
  formSend: "Send",
  formError: "An error occurred. Please try again or contact me directly on WhatsApp.",
+ formMailtoSuccess: "Your message is ready to send!",
+ formMailtoSuccessMsg: "Your email app will open with the message already filled in: just click <strong>Send</strong>.<br>Doesn't open? Message me directly on WhatsApp.",
 
  // Legal notice
  mentionsLink: "Legal Notice & Privacy Policy",
