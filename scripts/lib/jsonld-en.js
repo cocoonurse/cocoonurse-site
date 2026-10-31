@@ -87,6 +87,10 @@ const OFFER_TRANSLATIONS = {
  name: "Sleep Training - 15 Nights",
  description: "At-home sleep support for babies 0 to 6 months: 15 nights of 12h, 2 days for assessment and handover, personalized plan, 4 weeks of remote follow-up after the nights.",
  },
+ "Sleep Training - Sur Mesure": {
+ name: "Sleep Training - Custom",
+ description: "At-home sleep support for babies 0 to 6 months, custom daytime, nighttime and follow-up volumes based on the family's needs. Free quote.",
+ },
 };
 
 // Reconstruit le FAQPage JSON-LD en anglais à partir de translations.js (en.faqNQ/faqNA),
