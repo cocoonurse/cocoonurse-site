@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/admin", "destination": "https://cocoonurse-planning.vercel.app" },
     { "source": "/admin/:path*", "destination": "https://cocoonurse-planning.vercel.app/:path*" },
+    { "handle": "filesystem" },
     { "source": "/api/:path*", "destination": "https://cocoonurse-planning.vercel.app/api/:path*" }
   ],
   "headers": [
