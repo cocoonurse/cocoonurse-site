@@ -1946,11 +1946,23 @@ section:nth-child(even) {
     }
 
     /* --- Back to top --- */
+    /* Cette règle vient après celle du premier bloc mobile (même
+       max-width:768px) et la remplaçait silencieusement : elle porte donc
+       elle-même la taille réduite, le tassement dans le coin et la
+       semi-transparence au repos, pour que le texte recouvert en
+       défilant reste lisible au travers. */
     #back-to-top {
-        bottom: 20px;
-        right: 16px;
-        width: 46px;
-        height: 46px;
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        opacity: 0.55;
+        transition: opacity 0.2s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+    #back-to-top:hover,
+    #back-to-top:focus-visible,
+    #back-to-top:active {
+        opacity: 1;
     }
 
     /* --- Lightbox --- */
