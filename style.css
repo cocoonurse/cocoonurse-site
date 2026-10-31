@@ -884,25 +884,43 @@ contact-modal .close-btn:hover {
         border-radius: 20px;
         max-width: 320px;
     }
-    /* Boutons flottants réduits sur mobile pour ne plus chevaucher le texte */
+    /* Boutons flottants réduits sur mobile, tassés dans le coin et
+       semi-transparents au repos : leur empreinte est minimale et le texte
+       qu'ils recouvrent transitoirement en défilant reste lisible au travers.
+       Ils redeviennent pleinement opaques au doigt/au survol/au focus, sans
+       perdre leur taille de zone cliquable. */
     #back-to-top {
-        width: 44px;
-        height: 44px;
-        bottom: 16px;
-        right: 16px;
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+        opacity: 0.55;
+        transition: opacity 0.2s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
     #back-to-top i {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+    }
+    #back-to-top:hover,
+    #back-to-top:focus-visible,
+    #back-to-top:active {
+        opacity: 1;
     }
     #floating-contact-btn {
-        padding: 0.65rem !important;
-        bottom: 68px !important;
-        right: 16px !important;
+        padding: 0.55rem !important;
+        bottom: 58px !important;
+        right: 10px !important;
+        opacity: 0.55;
+        transition: opacity 0.2s ease, background-color 0.3s ease;
+    }
+    #floating-contact-btn:hover,
+    #floating-contact-btn:focus-visible,
+    #floating-contact-btn:active {
+        opacity: 1;
     }
     #floating-contact-btn svg {
-        width: 20px !important;
-        height: 20px !important;
+        width: 18px !important;
+        height: 18px !important;
     }
 }
 

@@ -332,7 +332,7 @@ const translations = {
  pricPaymentBank: "Virement bancaire",
  pricPaymentCash: "Espèces",
  pricZones_html: "📍 <strong>Genève inclus</strong> &nbsp;|&nbsp; Vaud (proche) +50 CHF",
- pricOvertime_html: "⏱ Heure supplémentaire (nuit) : 45 CHF/h",
+ pricOvertime_html: "⏱ Heure supplémentaire (nuit) : 45 CHF/h &nbsp;|&nbsp; Heure supplémentaire (jour) : 35 CHF/h",
 
  // Stats
  stat1: "Familles accompagnées",
