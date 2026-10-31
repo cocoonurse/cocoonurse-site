@@ -1657,9 +1657,11 @@ nav a, nav button {
     font-size: 0.88rem;
 }
 
-/* Espacement section plus généreux */
+/* Espacement section plus généreux : uniquement vertical, pour ne jamais
+   écraser les marges latérales (ex. px-6) posées sur les sections. */
 section {
-    padding: 5rem 0 !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
 }
 
 /* Cartes FAQ modernisées */
@@ -1835,8 +1837,10 @@ section:nth-child(even) {
     }
 
     /* --- Sections générales (sauf hero) --- */
+    /* Uniquement vertical : ne jamais écraser les marges latérales (px-6) */
     section:not(.hero-asymmetric) {
-        padding: 3rem 0 !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
     }
 
     /* --- About --- */
@@ -2071,9 +2075,10 @@ section:nth-child(even) {
     /* Cacher le lien "Découvrir" (chevron) en paysage */
     .hero-scroll-abs { display: none !important; }
 
-    /* Sections : padding réduit */
+    /* Sections : padding réduit (vertical uniquement) */
     section:not(.hero-asymmetric) {
-        padding: 2rem 0 !important;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
 
     /* --- Gallery Moments de Soin : grille fiable en paysage --- */
