@@ -79,17 +79,13 @@ const OFFER_TRANSLATIONS = {
  name: "Custom",
  description: "Full 2 to 4 week support, days and nights, twins, premature babies or high availability, custom quote.",
  },
- "Sleep Training - Essentiel à Distance": {
- name: "Sleep Training - Remote Essentials",
- description: "Full remote sleep training support: kickoff call, written program, 1 week of message follow-up, final review call.",
+ "Sleep Training - 7 Nuits": {
+ name: "Sleep Training - 7 Nights",
+ description: "At-home sleep support for babies 0 to 6 months: 7 nights of 12h, 1 day for assessment and handover, personalized plan, 2 weeks of remote follow-up after the nights.",
  },
- "Sleep Training - Sur Place": {
- name: "Sleep Training - In-Person",
- description: "An 8-hour coaching day (CHF 390) or a 12-hour accompanied night (CHF 600) on-site, with the sleep training program applied live.",
- },
- "Sleep Training - Accompagnement Intensif": {
- name: "Sleep Training - Intensive Support",
- description: "On-site nights and days combined over one to two weeks, with remote support on the other days. Length and price set by custom quote.",
+ "Sleep Training - 15 Nuits": {
+ name: "Sleep Training - 15 Nights",
+ description: "At-home sleep support for babies 0 to 6 months: 15 nights of 12h, 2 days for assessment and handover, personalized plan, 4 weeks of remote follow-up after the nights.",
  },
 };
 

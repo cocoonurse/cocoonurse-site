@@ -610,8 +610,8 @@ function buildSleepMain(doc) {
  const formulasSub = el(doc, `<p class="text-center text-sand-600 text-sm mb-10 -mt-6" data-i18n="pageSleepFormulasSubtitle">${fr.pageSleepFormulasSubtitle}</p>`)[0];
  formulasSection.appendChild(formulasSub);
  const grid = doc.createElement('div');
- grid.className = 'grid md:grid-cols-3 gap-6';
- ['pricSleep1Title', 'pricSleep2Title', 'pricSleep3Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
+ grid.className = 'grid md:grid-cols-2 gap-6';
+ ['pricSleep1Title', 'pricSleep2Title'].forEach((k) => grid.appendChild(extractCard(doc, k)));
  formulasSection.appendChild(grid);
  formulasSection.appendChild(el(doc, `<p class="text-center mt-8"><a href="/tarifs/" class="text-sm font-medium underline hover:text-champagne-600" style="color:#D4899D;" data-i18n="ctaSeeAllPricing">${fr.ctaSeeAllPricing}</a></p>`)[0]);
  main.appendChild(formulasSection);
@@ -724,16 +724,15 @@ const PAGES = [
  buildMain: buildSleepMain,
  breadcrumbName: fr.pageSleepBreadcrumb,
  titleFr: 'Sleep Training Bébé à Genève | Cocoonurse | Maternity Nurse',
- descFr: "Accompagnement sleep training à domicile à Genève : méthode douce et progressive, par une maternity nurse expérimentée auprès de plusieurs familles. À distance dès 320 CHF, sur place dès 390 CHF. Réponse sous 2h.",
+ descFr: "Accompagnement sommeil à domicile à Genève pour bébés de 0 à 6 mois : approche douce et progressive, journées et nuits sur place, suivi à distance inclus. Formules dès 3500 CHF. Réponse sous 2h.",
  titleEn: 'Baby Sleep Training in Geneva | Cocoonurse | Maternity Nurse',
- descEn: 'At-home sleep training support in Geneva: a gentle, progressive method from an experienced maternity nurse. Remote from CHF 320, in-person from CHF 390. Reply within 2 hours.',
+ descEn: 'At-home sleep support in Geneva for babies 0 to 6 months: a gentle, progressive approach, in-person days and nights, remote follow-up included. Packages from CHF 3,500. Reply within 2 hours.',
  faqKeys: ['faqSleep1', 'faqSleep2', 'faqSleep3'],
  serviceName: 'Sleep Training',
  serviceNameEn: 'Sleep Training',
  serviceOfferNames: [
- 'Sleep Training - Essentiel à Distance',
- 'Sleep Training - Sur Place',
- 'Sleep Training - Accompagnement Intensif',
+ 'Sleep Training - 7 Nuits',
+ 'Sleep Training - 15 Nuits',
  ],
  },
 ];
