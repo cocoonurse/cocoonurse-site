@@ -130,8 +130,8 @@ class ContactModal extends HTMLElement {
         <div class="contact-info">
           <div class="contact-item">
             <i data-feather="mail" class="contact-icon"></i>
-            <a href="mailto:alicia.carli2@gmail.com" class="contact-link">alicia.carli2@gmail.com</a>
-            <button class="copy-btn" data-text="alicia.carli2@gmail.com" data-translate="copy">Copier</button>
+            <a href="mailto:contact@cocoonurse.ch" class="contact-link">contact@cocoonurse.ch</a>
+            <button class="copy-btn" data-text="contact@cocoonurse.ch" data-translate="copy">Copier</button>
           </div>
           <div class="contact-item">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">

@@ -421,6 +421,15 @@ function buildBainMain(doc) {
  introKey: 'pageBainIntro_html', introFallback: fr.pageBainIntro_html,
  }));
 
+ main.appendChild(el(doc, `
+ <section class="container mx-auto max-w-3xl px-6 py-8">
+ <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6 text-champagne-700" data-i18n="pageBainApproachTitle">${fr.pageBainApproachTitle}</h2>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageBainApproachText1">${fr.pageBainApproachText1}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageBainApproachText2">${fr.pageBainApproachText2}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageBainApproachText3">${fr.pageBainApproachText3}</p>
+ <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageBainApproachText4">${fr.pageBainApproachText4}</p>
+ </section>`)[0]);
+
  const includedSection = doc.createElement('section');
  includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
  includedSection.appendChild(sectionTitle(doc, fr.pageBainIncludedTitle, 'pageBainIncludedTitle'));
@@ -449,6 +458,14 @@ function buildMassageMain(doc) {
  h1Key: 'pageMassageH1', h1Fallback: fr.pageMassageH1,
  introKey: 'pageMassageIntro_html', introFallback: fr.pageMassageIntro_html,
  }));
+
+ main.appendChild(el(doc, `
+ <section class="container mx-auto max-w-3xl px-6 py-8">
+ <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6 text-champagne-700" data-i18n="pageMassageApproachTitle">${fr.pageMassageApproachTitle}</h2>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageMassageApproachText1">${fr.pageMassageApproachText1}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageMassageApproachText2">${fr.pageMassageApproachText2}</p>
+ <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageMassageApproachText3">${fr.pageMassageApproachText3}</p>
+ </section>`)[0]);
 
  const includedSection = doc.createElement('section');
  includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
@@ -488,6 +505,23 @@ function buildSommeilMain(doc) {
  introKey: 'pageSommeilIntro_html', introFallback: fr.pageSommeilIntro_html,
  }));
 
+ main.appendChild(el(doc, `
+ <section class="container mx-auto max-w-3xl px-6 py-6">
+ <div class="rounded-2xl p-8" style="background: linear-gradient(135deg, rgba(230,168,184,0.12), rgba(212,137,157,0.08)); border:1px solid rgba(212,137,157,0.25);">
+ <h2 class="text-xl font-serif font-bold mb-3 text-champagne-700" data-i18n="pageSommeilDiffTitle">${fr.pageSommeilDiffTitle}</h2>
+ <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageSommeilDiffText_html">${fr.pageSommeilDiffText_html}</p>
+ </div>
+ </section>`)[0]);
+
+ main.appendChild(el(doc, `
+ <section class="container mx-auto max-w-3xl px-6 py-8">
+ <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6 text-champagne-700" data-i18n="pageSommeilApproachTitle">${fr.pageSommeilApproachTitle}</h2>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageSommeilApproachText1">${fr.pageSommeilApproachText1}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageSommeilApproachText2">${fr.pageSommeilApproachText2}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageSommeilApproachText3">${fr.pageSommeilApproachText3}</p>
+ <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageSommeilApproachText4">${fr.pageSommeilApproachText4}</p>
+ </section>`)[0]);
+
  const includedSection = doc.createElement('section');
  includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
  includedSection.appendChild(sectionTitle(doc, fr.pageSommeilIncludedTitle, 'pageSommeilIncludedTitle'));
@@ -516,6 +550,14 @@ function buildRetourMain(doc) {
  h1Key: 'pageRetourH1', h1Fallback: fr.pageRetourH1,
  introKey: 'pageRetourIntro_html', introFallback: fr.pageRetourIntro_html,
  }));
+
+ main.appendChild(el(doc, `
+ <section class="container mx-auto max-w-3xl px-6 py-8">
+ <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6 text-champagne-700" data-i18n="pageRetourApproachTitle">${fr.pageRetourApproachTitle}</h2>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageRetourApproachText1">${fr.pageRetourApproachText1}</p>
+ <p class="text-sm text-sand-700 leading-relaxed mb-4" data-i18n="pageRetourApproachText2">${fr.pageRetourApproachText2}</p>
+ <p class="text-sm text-sand-700 leading-relaxed" data-i18n="pageRetourApproachText3">${fr.pageRetourApproachText3}</p>
+ </section>`)[0]);
 
  const includedSection = doc.createElement('section');
  includedSection.className = 'container mx-auto max-w-3xl px-6 py-8';
@@ -771,7 +813,7 @@ function buildPage(page) {
  meta('og:type', 'website', true);
  meta('og:url', url, true);
  meta('og:image', `${SITE}/images/hero-new.webp`, true);
- meta('og:image:alt', 'Alicia Carli, Cocoonurse | Maternity Nurse à Genève', true);
+ meta('og:image:alt', 'Cocoonurse | Maternity Nurse à Genève', true);
  meta('og:locale', 'fr_CH', true);
  meta('twitter:card', 'summary_large_image');
  meta('twitter:title', page.titleFr);
@@ -821,7 +863,7 @@ function buildPage(page) {
  setMeta('meta[property="og:title"]', 'content', page.titleEn);
  setMeta('meta[property="og:description"]', 'content', page.descEn);
  setMeta('meta[property="og:url"]', 'content', urlEn);
- setMeta('meta[property="og:image:alt"]', 'content', 'Alicia Carli, Cocoonurse | Maternity Nurse in Geneva');
+ setMeta('meta[property="og:image:alt"]', 'content', 'Cocoonurse | Maternity Nurse in Geneva');
  setMeta('meta[property="og:locale"]', 'content', 'en_US');
  setMeta('meta[name="twitter:title"]', 'content', page.titleEn);
  setMeta('meta[name="twitter:description"]', 'content', page.descEn);
@@ -830,6 +872,10 @@ function buildPage(page) {
  if (a.getAttribute('data-lang') === 'en') a.setAttribute('aria-current', 'true');
  else a.removeAttribute('aria-current');
  });
+ // Le lien mentions légales du footer FR pointe vers la page FR : sur la
+ // version EN, il doit pointer vers son équivalent anglais.
+ const enMentionsLink = enDoc.querySelector('a[href="/mentions-legales/"]');
+ if (enMentionsLink) enMentionsLink.setAttribute('href', '/en/mentions-legales/');
  // JSON-LD Breadcrumb + FAQ en anglais (le nom de page/FAQ change de langue)
  enDoc.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
  try {

@@ -4,8 +4,8 @@
 
 const ALT_TEXT_EN = {
     "Logo Cocoonurse": "Cocoonurse logo",
-    "Alicia Carli, puéricultrice à domicile à Genève, avec un nouveau-né":
-        "Alicia Carli, newborn care specialist at home in Geneva, with a newborn",
+    "Puéricultrice à domicile à Genève, avec un nouveau-né":
+        "Newborn care specialist at home in Geneva, with a newborn",
     "Bain thérapeutique bébé à domicile, Genève": "Therapeutic baby bath at home, Geneva",
     "Soins du nouveau-né à domicile, Genève": "Newborn care at home, Geneva",
     "Pieds de nouveau-né tenus dans des mains": "A newborn's feet held in hands",

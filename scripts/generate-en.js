@@ -80,7 +80,7 @@ setMeta('meta[property="og:locale"]', 'content', 'en_US');
 setMeta('meta[name="twitter:title"]', 'content', 'Cocoonurse | Newborn Care Specialist & Night Nanny in Geneva');
 setMeta('meta[name="twitter:description"]', 'content',
     'Newborn care, overnight baby care, breastfeeding support, therapeutic baths at home, Geneva and Vaud.');
-setMeta('meta[property="og:image:alt"]', 'content', 'Alicia Carli, Cocoonurse, Newborn Care Specialist in Geneva');
+setMeta('meta[property="og:image:alt"]', 'content', 'Cocoonurse, Newborn Care Specialist in Geneva');
 
 // hreflang links déjà présents dans le HTML source (identiques sur les deux pages) — rien à changer.
 
@@ -92,6 +92,10 @@ document.querySelectorAll('a.lang-btn').forEach((a) => {
     if (a.getAttribute('data-lang') === 'en') a.setAttribute('aria-current', 'true');
     else a.removeAttribute('aria-current');
 });
+
+// --- 6b. Lien mentions légales du footer : équivalent anglais ---
+const enMentionsLink = document.querySelector('a[href="/mentions-legales/"]');
+if (enMentionsLink) enMentionsLink.setAttribute('href', '/en/mentions-legales/');
 
 // --- 7. Écrire le fichier ---
 const outDir = path.join(ROOT, 'en');

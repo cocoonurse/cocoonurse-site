@@ -348,13 +348,17 @@ const progressBar = document.createElement('div');
         const scrollProgress = (scrollTop / scrollHeight) * 100;
         progressBar.style.width = scrollProgress + '%';
     });
-// Bouton flottant Contact
-const contactBtn = document.createElement('a');
-    contactBtn.href = '#contact';
+// Bouton flottant Contact (ouvre le widget email/WhatsApp rapide, <contact-modal>)
+const contactBtn = document.createElement('button');
+    contactBtn.type = 'button';
     contactBtn.id = 'floating-contact-btn';
-    contactBtn.setAttribute('aria-label', (typeof translations !== 'undefined' && typeof currentLang !== 'undefined' && translations[currentLang] && translations[currentLang].ariaContactSection) || 'Aller à la section contact');
+    contactBtn.setAttribute('aria-label', (typeof translations !== 'undefined' && typeof currentLang !== 'undefined' && translations[currentLang] && translations[currentLang].ariaContactSection) || 'Contact rapide');
     contactBtn.className = 'fixed bottom-28 right-6 bg-champagne-500 text-white p-4 rounded-full shadow-lg z-40 hover:bg-champagne-600 transition-all opacity-0 invisible pointer-events-none';
     contactBtn.innerHTML = '<i data-feather="mail" class="w-6 h-6"></i>';
+    contactBtn.addEventListener('click', () => {
+        const modal = document.querySelector('contact-modal');
+        if (modal) modal.open();
+    });
     document.body.appendChild(contactBtn);
     feather.replace();
     // Style pour le bouton contact flottant
@@ -498,10 +502,10 @@ if (contactForm) {
         let msg;
         if (formula) {
             msg = isEn
-                ? (isQuote ? 'Hello Alicia, I would like a quote for ' + formula + '.' : 'Hello Alicia, I would like to book ' + formula + '.')
-                : (isQuote ? 'Bonjour Alicia, je souhaite un devis pour la formule ' + formula + '.' : 'Bonjour Alicia, je souhaite réserver la formule ' + formula + '.');
+                ? (isQuote ? 'Hello, I would like a quote for ' + formula + '.' : 'Hello, I would like to book ' + formula + '.')
+                : (isQuote ? 'Bonjour, je souhaite un devis pour la formule ' + formula + '.' : 'Bonjour, je souhaite réserver la formule ' + formula + '.');
         } else {
-            msg = isEn ? 'Hello Alicia, I would like more information about your services.' : 'Bonjour Alicia, je souhaite en savoir plus sur vos prestations.';
+            msg = isEn ? 'Hello, I would like more information about your services.' : 'Bonjour, je souhaite en savoir plus sur vos prestations.';
         }
         link.setAttribute('href', waLink(msg));
     });

@@ -1,8 +1,8 @@
 # Cocoonurse
 
-> Cocoonurse est le site d'Alicia Carli, puéricultrice diplômée indépendante à Genève, spécialisée dans les soins du nouveau-né à domicile : garde de nuit, retour de maternité, allaitement, bains thérapeutiques.
+> Cocoonurse est un service de puéricultrice diplômée indépendante à Genève, spécialisé dans les soins du nouveau-né à domicile : garde de nuit, retour de maternité, allaitement, bains thérapeutiques.
 
-Cocoonurse propose un accompagnement professionnel des nouveau-nés et de leurs familles, 24h/24 et 7j/7, à domicile. Alicia Carli cumule 11 ans d'expérience en périnatalité, formée à l'Hôpital des Enfants des Hôpitaux Universitaires de Genève (HUG) en soins intensifs, néonatologie, oncologie et chirurgie pédiatrique, puis dans plusieurs cliniques privées genevoises et à l'Hôpital Lenval (Nice). Elle est puéricultrice diplômée, auxiliaire de puériculture CRS, et conseillère en allaitement certifiée.
+Cocoonurse propose un accompagnement professionnel des nouveau-nés et de leurs familles, 24h/24 et 7j/7, à domicile, porté par 11 ans d'expérience en périnatalité, acquise à l'Hôpital des Enfants des Hôpitaux Universitaires de Genève (HUG) en soins intensifs, néonatologie, oncologie et chirurgie pédiatrique, puis dans plusieurs cliniques privées genevoises et à l'Hôpital Lenval (Nice). Qualifications : puéricultrice diplômée, auxiliaire de puériculture CRS, et conseillère en allaitement certifiée.
 
 ## Zone d'intervention
 

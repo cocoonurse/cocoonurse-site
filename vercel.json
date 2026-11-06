@@ -2,7 +2,36 @@
   "rewrites": [
     { "source": "/admin", "destination": "https://cocoonurse-planning.vercel.app" },
     { "source": "/admin/:path*", "destination": "https://cocoonurse-planning.vercel.app/:path*" },
-    { "source": "/api/:path*", "destination": "https://cocoonurse-planning.vercel.app/api/:path*" }
+    { "source": "/api/db", "destination": "https://cocoonurse-planning.vercel.app/api/db" },
+    { "source": "/api/calendar-feed", "destination": "https://cocoonurse-planning.vercel.app/api/calendar-feed" },
+    { "source": "/api/send-invoice-telegram", "destination": "https://cocoonurse-planning.vercel.app/api/send-invoice-telegram" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.cocoonurse.ch" }],
+      "destination": "https://cocoonurse.ch/:path*",
+      "permanent": true
+    },
+    { "source": "/en", "destination": "/en/", "permanent": true },
+    { "source": "/garde-de-nuit-bebe-geneve", "destination": "/garde-de-nuit-bebe-geneve/", "permanent": true },
+    { "source": "/en/garde-de-nuit-bebe-geneve", "destination": "/en/garde-de-nuit-bebe-geneve/", "permanent": true },
+    { "source": "/puericultrice-domicile-geneve", "destination": "/puericultrice-domicile-geneve/", "permanent": true },
+    { "source": "/en/puericultrice-domicile-geneve", "destination": "/en/puericultrice-domicile-geneve/", "permanent": true },
+    { "source": "/tarifs", "destination": "/tarifs/", "permanent": true },
+    { "source": "/en/tarifs", "destination": "/en/tarifs/", "permanent": true },
+    { "source": "/bain-thalasso-bebe-geneve", "destination": "/bain-thalasso-bebe-geneve/", "permanent": true },
+    { "source": "/en/bain-thalasso-bebe-geneve", "destination": "/en/bain-thalasso-bebe-geneve/", "permanent": true },
+    { "source": "/massage-bebe-geneve", "destination": "/massage-bebe-geneve/", "permanent": true },
+    { "source": "/en/massage-bebe-geneve", "destination": "/en/massage-bebe-geneve/", "permanent": true },
+    { "source": "/consultation-sommeil-bebe", "destination": "/consultation-sommeil-bebe/", "permanent": true },
+    { "source": "/en/consultation-sommeil-bebe", "destination": "/en/consultation-sommeil-bebe/", "permanent": true },
+    { "source": "/retour-maternite-geneve", "destination": "/retour-maternite-geneve/", "permanent": true },
+    { "source": "/en/retour-maternite-geneve", "destination": "/en/retour-maternite-geneve/", "permanent": true },
+    { "source": "/sleep-training", "destination": "/sleep-training/", "permanent": true },
+    { "source": "/en/sleep-training", "destination": "/en/sleep-training/", "permanent": true },
+    { "source": "/mentions-legales", "destination": "/mentions-legales/", "permanent": true },
+    { "source": "/en/mentions-legales", "destination": "/en/mentions-legales/", "permanent": true }
   ],
   "headers": [
     {
@@ -29,6 +58,14 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    },
+    {
+      "source": "/((?!admin|api).*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=(), payment=(), usb=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://*.analytics.google.com; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; base-uri 'self'" }
       ]
     }
   ]

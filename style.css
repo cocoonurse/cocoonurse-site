@@ -14,13 +14,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-.text-champagne-600 {
-    color: white; /* Blanc pour les liens */
-}
-
-.text-sand-900 {
-    color: white; /* Blanc pour le texte */
-}
 body::before {
     content: "";
     position: fixed;
@@ -288,10 +281,6 @@ h1 {
     max-width: 100%;
     margin: 0 auto;
 }
-@font-face {
-    font-family: 'Parisienne';
-    src: url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-}
 /* Citation en rose vif avec ombre massive */
 .hero-quote {
     color: #4A4A4A !important;
@@ -322,11 +311,6 @@ h1 {
         transform: translateX(-50%);
         width: 90%;
     }
-}
-.logo-text {
-    font-family: 'Parisienne', cursive;
-    font-weight: 400;
-    letter-spacing: 0.05em;
 }
 /* Smooth scrolling for anchor links */
 @media (prefers-reduced-motion: no-preference) {

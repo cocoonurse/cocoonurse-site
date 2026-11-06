@@ -93,6 +93,20 @@ const OFFER_TRANSLATIONS = {
  },
 };
 
+// FR reviewBody -> EN reviewBody, reprend mot pour mot les traductions déjà
+// approuvées et affichées sur la section Témoignages (translations.js, clés
+// testiReview1-4 EN), sans les guillemets décoratifs utilisés pour l'affichage.
+const REVIEW_TRANSLATIONS = {
+ "Alicia s'est occupée de mon fils plusieurs semaines, la nuit. Elle a été d'une grande aide, avec un professionnalisme discret et sérieux, tout en étant douce et attentionnée avec lui. Je la recommande sans hésiter pour accompagner les tout-petits et régler leur sommeil.":
+ "Alicia looked after my son for several weeks, overnight. She was a great help, with discreet and serious professionalism, while being gentle and attentive with him. I recommend her without hesitation to care for little ones and settle their sleep.",
+ "J'ai fait confiance à Alicia pour veiller sur mes jumelles pendant plusieurs nuits. Son approche patiente et rassurante, alliée à un vrai sérieux professionnel, a permis d'instaurer des nuits plus calmes et sereines pour les filles.":
+ "I trusted Alicia to watch over my twin girls for several nights. Her patient, reassuring approach, combined with genuine professional seriousness, helped bring about calmer, more peaceful nights for the girls.",
+ "Alicia s'est occupée de ma fille pendant plusieurs nuits. Elle a fait preuve d'un grand professionnalisme, de douceur et de bienveillance. J'ai particulièrement apprécié l'attention qu'elle portait à son bien-être et la qualité de ses soins.":
+ "Alicia looked after my daughter for several nights. She showed great professionalism, gentleness and kindness. I particularly appreciated the attention she paid to my daughter's well-being and the quality of her care.",
+ "Nous avons eu les services d'Alicia pour des gardes de nuit de notre fille pendant plusieurs jours, et nous en sommes très contents. Elle fait preuve de grand professionnalisme, et les retours des nuits ont été très précis et détaillés.":
+ "We used Alicia's services for night care for our daughter over several days, and we are very happy with them. She shows great professionalism, and the night reports were very precise and detailed.",
+};
+
 // Reconstruit le FAQPage JSON-LD en anglais à partir de translations.js (en.faqNQ/faqNA),
 // dans le même ordre que le FAQPage FR source (voir index.html).
 function buildFaqPageEn(en) {
@@ -132,6 +146,11 @@ function translateLocalBusiness(business) {
  });
  }
  if (business.hasOfferCatalog) business.hasOfferCatalog.name = "Cocoonurse Packages";
+ if (Array.isArray(business.review)) {
+ business.review.forEach((r) => {
+ if (REVIEW_TRANSLATIONS[r.reviewBody]) r.reviewBody = REVIEW_TRANSLATIONS[r.reviewBody];
+ });
+ }
  return business;
 }
 

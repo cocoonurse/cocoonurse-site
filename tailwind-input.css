@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./style.css" layer(base);
 
 @source "./*.html";
 @source "./en/**/*.html";
@@ -10,6 +11,7 @@
 @source "./consultation-sommeil-bebe/**/*.html";
 @source "./retour-maternite-geneve/**/*.html";
 @source "./sleep-training/**/*.html";
+@source "./mentions-legales/**/*.html";
 @source "./script.js";
 @source "./translations.js";
 @source "./components/**/*.js";
