@@ -123,6 +123,22 @@ class ContactModal extends HTMLElement {
           height: 20px;
           flex-shrink: 0;
         }
+
+        .privacy-note {
+          margin-top: 1.25rem;
+          font-size: 0.75rem;
+          color: #8A7A6A;
+          text-align: center;
+        }
+
+        .privacy-note a {
+          color: #8A7A6A;
+          text-decoration: underline;
+        }
+
+        .privacy-note a:hover {
+          color: #d9a969;
+        }
       </style>
       <div class="modal-content">
         <button class="close-btn">&times;</button>
@@ -138,6 +154,7 @@ class ContactModal extends HTMLElement {
             <a href="https://wa.me/41784500624" target="_blank" class="contact-link">+41 78 450 06 24</a>
           </div>
         </div>
+        <p class="privacy-note">Pour savoir comment vos données sont utilisées, consultez notre <a href="/mentions-legales/">politique de confidentialité</a>.</p>
       </div>
 `;
 

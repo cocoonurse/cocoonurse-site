@@ -208,6 +208,10 @@ function updatePageLanguage() {
         shadowRoot.querySelectorAll('.copy-btn').forEach(btn => {
             btn.textContent = lang.copy;
         });
+        const privacyNote = shadowRoot.querySelector('.privacy-note');
+        if (privacyNote && lang.contactPrivacyNote_html) {
+            privacyNote.innerHTML = lang.contactPrivacyNote_html;
+        }
     }
     // Mise à jour de tous les éléments avec l'attribut data-translate
     document.querySelectorAll('[data-translate]').forEach(el => {
